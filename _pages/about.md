@@ -1,13 +1,46 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+I am an **Associate Professor** at the School of Sciences of [UCLan Cyprus](https://www.uclancyprus.ac.cy/), specializing in **Telecommunications Engineering**, and I also serve as the **Deputy Head of the School**. My research interests encompass **Wireless Communication, Radio Wave Propagation and Modelling, Internet of Things, and Indoor Navigation and Positioning**.
+
+I am also a member of the **INterdisciplinary Science Promotion &
+Innovative Research Exploration Centre** ([INSPIRE](http://inspirecenter.org/)) . 
+
+News
+======
+
+Selected Publications
+======
+<img src="/images/journal_icon.png" width="80" >
+A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**Radar-Based Millimeter-Wave Sensing for Accurate 3-D Indoor Positioning: Potentials and Challenges**," in *IEEE Journal of Indoor and Seamless Positioning and Navigation*, vol. 2, pp. 61-75, 2024, doi: 10.1109/JISPIN.2024.3359151.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10415170)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:iH-uZ7U-co4C)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/10415170.pdf)
+
+<img src="/images/journal_icon.png" width="80" >
+**M. Raspopoulos**, "**Multidevice Map-Constrained Fingerprint-Based Indoor Positioning Using 3-D Ray Tracing**," in *IEEE Transactions on Instrumentation and Measurement*, vol. 67, no. 2, pp. 466-476, Feb. 2018, doi: 10.1109/TIM.2017.2774181.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/8167305)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:7PzlFSSx8tAC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/8167305.pdf)
+
+<img src="/images/journal_icon.png" width="80" >
+**M. Raspopoulos** and S. Stavrou, **"Frequency Selective Buildings Through Frequency Selective Surfaces**," *in IEEE Transactions on Antennas and Propagation*, vol. 59, no. 8, pp. 2998-3005, Aug. 2011, doi: 10.1109/TAP.2011.2158779.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/5783897)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:u5HHmVD_uO8C)
+
+Contact
+------
+[UCLan Cyprus](https://www.uclancyprus.ac.cy/)  
+12-14 University Avenue, Pyla 7080, Larnaka, Cyprus  
+Tel: +357 24694070  
+Accademic Profile: [https://www.uclancyprus.ac.cy/academic/dr-marios-raspopoulos/](https://www.uclancyprus.ac.cy/academic/dr-marios-raspopoulos/)
+
 
 A data-driven personal website
 ======
