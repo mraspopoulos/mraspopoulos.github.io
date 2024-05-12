@@ -139,3 +139,51 @@ table {
   </tr>
 </table>
 
+## Education
+---
+<table>
+  <tr>
+      <td style="text-align:left;"> <span style="font-size: 18px; "><b>Ph.D in <i>Telecommunications Engineering </i></b> </span>
+          <ul>
+            <li style="font-size: 16px;"><i>University of Surrey, UK</i> </li>
+            <li style="font-size: 16px;"><i>Setpember 2008 - March 2008</i></li>
+            <li style="font-size: 16px;"><i>PhD Thesis: <b>Radio Propagation in Frequency Selective Buildings</b></i></li>
+        </ul>
+      </td>
+          <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image"></a></td> 
+  </tr>
+  <tr>
+      <td style="text-align:left;"> <span style="font-size: 18px; "><b>MSc in <i>Communication Networks with Software </i></b> </span>
+          <ul>
+            <li style="font-size: 16px;"><i>University of Surrey, UK</i> </li>
+            <li style="font-size: 16px;"><i>September 2003 - September 2004</i></li>
+            <li style="font-size: 16px;"><i>MSc Thesis: <b>Deterministic modelling in an indoor wireless environment and the effect of Frequency Selective Surfaces</b></i></li>
+                <li style="font-size: 16px;"><i>Grade:<b>84%</b> - Distinction</i></li>
+        </ul>
+      </td>
+          <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image"></a></td> 
+  </tr>
+    <tr>
+      <td style="text-align:left;"> <span style="font-size: 18px; "><b>MEng in <i>Electronics with Mobile Communications </i></b> </span>
+          <ul>
+            <li style="font-size: 16px;"><i>University of Surrey, UK</i> </li>
+            <li style="font-size: 16px;"><i>September 2001 - June 2003</i></li>
+            <li style="font-size: 16px;"><i>Final Year Thesis: <b>Design and construction of a PC-Based Spectrum Analyser operating at the GSM band (890-960MHz)</b></i></li>
+                <li style="font-size: 16px;"><i>Grade:<b>80.6%</b> - Distinction</i></li>
+        </ul>
+      </td>
+          <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image"></a></td> 
+  </tr>
+  
+   <tr>
+      <td style="text-align:left;"> <span style="font-size: 18px; "><b>HND in <i>Electrical and Electronic Engineering </i></b> </span>
+          <ul>
+            <li style="font-size: 16px;"><i>Higher Technical Institute, Nicosia, Cyprus</i> </li>
+            <li style="font-size: 16px;"><i>September 1998 - June 2001</i></li>
+            <li style="font-size: 16px;"><i>Final Year Thesis: <b> Mobile Communication Systems</b></i></li>
+                <li style="font-size: 16px;"><i>Grade:<b>92.12%</b> - Distinction</i></li>
+        </ul>
+      </td>
+          <td style="text-align:right;"><img src="/images/hti_logo.jpeg" width="60" alt="Placeholder Image"></td> 
+  </tr>
+  </table>

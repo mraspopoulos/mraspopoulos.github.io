@@ -46,7 +46,7 @@ table {
 <ul>
     <li><b>Dates</b> January. 2024 – December 2025 (24 Months)</li>
     <li><b>Status</b> Ongoing </li>
-    <li><b>Role in the Project</b> Principlal Investigator - Leading UCLan's participation </li>
+    <li><b>Role in the Project</b> WL2 Leader - Leading UCLan's participation </li>
     <li><b>Funding Body</b> <a href="https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2">Erasmus+</a></li>
     <li><b>Funding Framework</b> Cooperation partnerships in higher education KA220-HED</li>
     <li><b>Total Budget</b> €400,000</li>
