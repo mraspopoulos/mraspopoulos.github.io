@@ -152,7 +152,7 @@ table {
 <table>
   <tr>
     <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>
-    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspirelogo.png" width="160" alt="Placeholder Image"></a></td>
+    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" width="120" alt="Placeholder Image"></a></td>
   </tr>
 </table>
 ---
