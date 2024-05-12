@@ -12,8 +12,9 @@ redirect_from:
 Download a PDF Version of my CV. [<img src="/images/pdf_link_icon.ico" width="20" >](/files/Marios_Raspopoulos - Accademic CV 04-05-2024.pdf)
 
 
-Work experience
-======
+## Work experience
+---
+
 <style>
   ul {
     list-style-type: none;
@@ -41,7 +42,7 @@ table {
   <tr>
       <td style="text-align:left;"> <span style="font-size: 20px; font-weight: bold;">UCLan Cyprus (Semptember 2015-Now)</span>
       </td>
-      <td style="text-align:right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" width="180" alt="Placeholder Image"></a></td>
+      <td style="text-align:right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" width="220" alt="Placeholder Image"></a></td>
   </tr>
   <tr>
         <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
@@ -81,4 +82,60 @@ table {
         <td> </td> 
   </tr>
 
+    <tr>
+    <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;">Sigint Solutions Ltd (June 2007-August 2015)</span></td>
+    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigLog.png" width="120" alt="Placeholder Image"></a></td> 
+    </tr>
+      <tr>
+        <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
+        <ul>     
+            <li><b>Chief Technology Officer (CTO) </b>    
+                <ul>
+                    <li style="font-size: 16px;"><i>Head of Research, Innovation and Development Activities-Coordination and participation in cutting-edge ICT R&D projects receiving 2.3 million euros in funding for the period 2006-2014.</i> </li>
+                    <li style="font-size: 16px;"><i>Head of Technical, Consulting and Education Activities</i> </li>
+                    <li style="font-size: 16px;"><i>Establishment, Coordination and Quality Management of an ISO 17025 Electromagnetic Radiation Measurement Laboratory</i> </li>
+                    <li style="font-size: 16px;"><i>Coordination of Software Development</i> </li>
+                    
+                </ul>
+            </li>
+        </ul>
+        </td>
+        <td> </td> 
+  </tr>
+
+    <tr>
+    <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;">Open University of Cyprus (2013-2018)</span></td>
+    <td style="text-align:right;"><a href="http://www.ouc.ac.cy/"><img src="/images/ouc_Logo.png" width="120" alt="Placeholder Image"></a></td> 
+    </tr>
+      <tr>
+        <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
+        <ul>     
+            <li><b>Adjunct Lecturer </b>    
+                <ul>
+                    <li style="font-size: 16px;"><i>Coordination, creation of Course material and Teaching of Telecommunications and Networking Courses.</i> </li>
+                </ul>
+            </li>
+        </ul>
+        </td>
+        <td> </td> 
+  </tr>
+
+    <tr>
+    <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;">University of Surrey (September 2004-August 2007)</span></td>
+    <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_Logo.png" width="120" alt="Placeholder Image"></a></td> 
+    </tr>
+      <tr>
+        <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
+        <ul>     
+            <li><b>Research Assistant (PhD candidate) </b>    
+                <ul>
+                    <li style="font-size: 16px;"><i>Participation in Research and Development Projects</i> </li>
+                    <li style="font-size: 16px;"><i>Teaching Assistant</i> </li>
+                </ul>
+            </li>
+        </ul>
+        </td>
+        <td> </td> 
+  </tr>
 </table>
+
