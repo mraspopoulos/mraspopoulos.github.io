@@ -202,7 +202,7 @@ table {
 <table>
   <tr>
     <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Sigint Solutions Ltd (2007-2015)</span></td>
-    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigint.webp" width="200" alt="Placeholder Image"></a></td>
+    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigint.png" width="200" alt="Placeholder Image"></a></td>
   </tr>
 </table>
 
