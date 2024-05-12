@@ -36,9 +36,27 @@ author_profile: true
     font-size: 14px; /* Reduced font size */
     margin-bottom: 5px; /* You can adjust this value to control the space between list items */
   }
+  
+  
+table {
+    border-collapse: collapse;
+    border: none; /* Make the outer border invisible */
+  }
+  td {
+    border: none;
+    padding: 10px; /* Add padding for better appearance */
+  }
 </style>
 
-## UCLan Cyprus (2015-Now)
+
+
+<table>
+  <tr>
+    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">UCLan Cyprus (2015-Now)</span></td>
+    <td style="text-align:right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" width="200" alt="Placeholder Image"></a></td>
+  </tr>
+</table>
+<!--## <img src="/images/UCLan_Cyprus_logo.png" width="200" >  UCLan Cyprus (2015-Now)-->
 ***
 
 ### <img src="/images/preventProjectLogo.png" width="80" >PREVENT– Prevention of natural disasters using deep technology for advanced HEI curricula
@@ -131,7 +149,12 @@ author_profile: true
 </ul>
 
 
-## INSPIRE Research Centre (2023-Now)
+<table>
+  <tr>
+    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>
+    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspirelogo.png" width="150" alt="Placeholder Image"></a></td>
+  </tr>
+</table>
 ---
 ### <img src="/images/thesisLogo.png" width="100" >   THESIS: THree dimEnSIonal millimeter-wave poSitioning
 <ul>
@@ -174,3 +197,250 @@ author_profile: true
     <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i></details>
     </li>
 </ul>
+
+
+<table>
+  <tr>
+    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Sigint Solutions Ltd (2007-2015)</span></td>
+    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigint.webp" width="200" alt="Placeholder Image"></a></td>
+  </tr>
+</table>
+
+
+### TruNet – 3D Wireless Network Planning Simulator
+<ul>
+    <li><b>Dates</b> January 2013 - December 2014 (24 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Project Manager/Principal Investigator </li>
+    <li><b>Funding Body</b>Ministry of Energy, Commerce, Trade and Tourism, Cyprus</li>
+        <li><b>Funding Body</b> Industrial Funding Schemes 2007-2013 </li>
+    <li><b>Total Budget</b> €130,857</li>
+    <li><b>Funding Received</b> €130,857 </li>
+    <li>
+<!--        <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> Design, Implementation and commercialization of a 3D Wireless Network Simulator. TruNet, is a 3D wireless network planning simulator based on a custom-developed Electromagnetic engine developed in-house.The product was launched as a company commercial product internationally in the first half of 2015. </i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Sigint Solutions Ltd - coordinator</b></i></details>
+    </li>
+</ul>
+
+### <img src="/images/WHERE2_Logo.png" width="80" >    WHERE-2 – Wireless Hybrid Enhanced Radio Estimators 2 
+<ul>
+    <li><b>Dates</b> July 2010 – June  2013 (36 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Researcher/Leader of the task T2.2 that investigated enhancements in localization precision through the development of advanced positioning algorithms by fusing together radio with non-radio context such as inertial sensor information and/or position constraints imposed by maps etc. Also lead specific tasks of the demonstration and proof of concept. </li>
+    <li><b>Funding Body</b> European Commision  </li>
+    <li><b>Funding Framework</b> FP7 ICT 2009 </li>
+    <li><b>Total Budget</b> €7,450,000</li>
+    <li><b>Funding Received</b> €271,125 </li>
+    <li>
+        <a href="https://cordis.europa.eu/project/id/248894/es"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> The availability of position information plays an increasing role in wireless communications networks already today and will be an integral part of future systems. They inherently can offer the ability for stand-alone positioning especially in situations where conventional satellite based positioning systems such as GPS fail (eg indoor). In this framework, positioning information is an important enabler either for location and context-aware services or even to improve the communications system itself. The WHERE2 project is a successor of the WHERE project and addresses the combination of positioning and communications in order to exploit synergies and to enhance the efficiency of future wireless communications systems. The key objective of WHERE2 is to assess the fundamental synergies between the two worlds of heterogeneous cooperative positioning and communications in the real world under realistic constraints. The estimation of the position of mobile terminals (MTs) is the main goal in WHERE2. The positioning algorithms combine measurements from heterogeneous infrastructure and complement them by cooperative measurements between MTs, additional information from inertial sensors, and context information. Based on the performance of the geo-aided positioning strategies (in the sense of accuracy, complexity, overhead of signaling, reliability of the provided information, etc.) the impact on coordinated, cooperative, and cognitive networks is assessed. This is done under realistic scenarios and system parameters following on-going standardization processes. A joint and integrated demonstration using multiple hardware platforms provides a verification of the performance of dedicated cooperative algorithms. All the tasks in WHERE2 are covered by different work packages, which are in close interaction to ensure an integral investigation of cooperative positioning and communications.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>German Aerospace Center (DLR) - coordinator</b>, Sigint Solutions Ltd. (CY),  Institute of Communications and Navigation (DE), Aalborg University (DN), Advanced Communications Research&Development S.A. (ES), Commissariat à L’Energie Atomique – LETI (FR), Institut Eurécom (FR), Siradel (FR), Université de Rennes 1 (FR), Instituto Telecomunicações (PT), Mitsubishi Electric ITE (FR), University of Surrey (UK), Universidad Politécnica de Madrid (SP), University of Alberta (CN), City University of Hong Kong (HK), Telefonica I+D (SP), OTE S.A (GR), University of Athens (GR), Portucal Telecom Inovacao S.A (PT)</i></details>
+    </li>
+</ul>
+
+
+### <img src="/images/c2power_logo_png.png" width="80" >    C2Power – Cognitive Radio and Cooperative strategies for power saving in multi-standard wireless devices
+<ul>
+    <li><b>Dates</b> Dates: January 2010 – December 2012 (36 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Work Package Leader and Principal Investigator in the Work Package (WP6) that investigated, implemented and demonstrated novel context-aware energy efficient vertical and horizontal handover algorithms through a custom-developed test-bed. </li>
+    <li><b>Funding Body</b> European Commision  </li>
+    <li><b>Funding Framework</b> FP7-ICT-2009-4  </li>
+    <li><b>Total Budget</b> €3,450,000</li>
+    <li><b>Funding Received</b> €342,510 </li>
+    <li>
+        <a href="https://cordis.europa.eu/project/id/248577"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> C2POWER main objective was to research, develop and demonstrate energy saving technologies for multi-standard wireless mobile devices, exploiting the combination of cognitive radio and cooperative strategies while still enabling the required performance in terms of data rate and QoS to support active applications.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Instituto Telecomunicações (PT) - coordinator</b>, Sigint Solutions Ltd,  Commissariat à L’Energie Atomique – LETI (FR), Portucal Telecom Inovacao S.A (PT), University of Surrey (UK), Center for Research and Telecomm. Experimentation for Networked Communities CREATE-NET (IT), Wroclawskie Centrum Badan EIT+ SP ZO.O (PL), EADS Defence and Security Systems (FR), Veebeem (UK), LANTIQ Deutschland GmbH (DE)</i></details>
+    </li>
+</ul>
+
+
+### <img src="/images/cog_long.png" width="80" >    CogEU – COGnitive radio systems for efficient sharing of TV white spaces in EUropean contex
+<ul>
+    <li><b>Dates</b> January 2010 – December 2012 (36 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Work Package (WP5) Leader and Principal Investigator in the WP that developed an experimental cognitive radio emulator to evaluate the interference between DVB-T systems and systems that are expected to use TV White Spaces (TVWS). </li>
+    <li><b>Funding Body</b> European Commision  </li>
+    <li><b>Funding Framework</b> FP7-ICT-2009-1.1  </li>
+    <li><b>Total Budget</b> €5,100,000</li>
+    <li><b>Funding Received</b> €342,510 </li>
+    <li>
+        <a href="https://cordis.europa.eu/project/id/248560"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> COGEU was a composite of technical, business, and regulatory/policy domains, with the objective of taking advantage of the TV digital switch-over (or analogue switch-off) by developing cognitive radio systems that leverage the favourable propagation characteristics of the TVWS through the introduction and promotion of real-time secondary spectrum trading and the creation of new spectrum commons regime.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Instituto Telecomunicações (PT) - coordinator</b> Sigint Solutions Ltd (CY), Thales (FR), Portucal Telecom Inovacao S.A (PT), Trinity  College (IR), University of Aegean (GR), Poznan University of Technology (PL), Institut für Rundfunktechnik (DE), Rohde & Schwarz (DE), Towercom A. S (SLO)</i></details>
+    </li>
+</ul>
+
+### <!--<img src="/images/cog_long.png" width="80" >-->    LOCME – Localization of Mobile Terminals
+<ul>
+    <li><b>Dates</b> October 2011 - September 2013 (24 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Task leader and Principal Investigator in the task that developed advanced fingerprinting positioning algorithms. Also coordinated the works for the development of a Mobile Android Application for the demonstration of the proof of concept.</li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> ΤΠΕ/ΕΠΙΚΟΙ/0609(ΒΙΕ)  </li>
+    <li><b>Total Budget</b> €164,736</li>
+    <li><b>Funding Received</b> €74,026 </li>
+    <li>
+<!--        <a href="https://cordis.europa.eu/project/id/248560"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> To investigate and develop advanced positioning algorithms by utilizing the building geometry extracted from satellite imagery.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Sigint Solutions (CY)</b> , Open University of Cyprus (CY), University of Cyprus (CY)</i></details>
+    </li>
+</ul>
+
+
+### <img src="/images/Mobilia_png_logo2.png" width="80" >    MOBILIA – Mobility concepts for IMT-Advanced. Networks
+<ul>
+    <li><b>Dates</b> December 2008– December 2010 (24 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Coordinator at a National level (local consortium). At an international level, I was the Task Leader and Principal Investigator of a task that investigated cooperative relaying and capacity improvements by utilizing Distributed MIMO technologies. A MIMO capacity module has been developed as add-on functionality to Sigint’s simulator (TruNET)</li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> EUREKA CELTIC  </li>
+    <li><b>Total Budget</b> €1,900,000</li>
+    <li><b>Funding Received</b> €74,026 </li>
+    <li>
+<!--        <a href="https://cordis.europa.eu/project/id/248560"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> MOBILIA targeted ITU IMT-advanced requirements for future wireless systems, i.e. peak data rates of 100 Mbps for mobile applications and 1 Gbps for low mobility. The IMT-advanced vision of future network as being formed of interworking access systems was also considered. A derived target was to obtain an increased aggregate throughput/user satisfaction vs. existing systems.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Instituto de Telecommunicacoes (PT)</b> , TTI Telecom (ES), CTTC (ES), Creativ IT (ES), TST Sistemas (ES), Universidad Cantabria (ES), Wavecom (PT), Sigint Solutions Ltd (CY)</i></details>
+    </li>
+</ul>
+
+### <img src="/images/futon_logo_png.png" width="80" >    FUTON - Fibre Optic Networks for Distributed, Extensible HeterogeneousRadio Architectures and Service provisioning
+<ul>
+    <li><b>Dates</b> January 2008 – Sep 2010 (30 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Work Package Leader of WP4 which designed and implemented a middleware platform based on Mobile-IP principles which performs vertical handovers between heterogeneous radio technologies in order to demonstrate seamless communication between heterogeneous networks.</li>
+    <li><b>Funding Body</b> European Commission</li>
+    <li><b>Funding Framework</b> FP7-ICT-2007  </li>
+    <li><b>Total Budget</b> €9,850,000</li>
+    <li><b>Funding Received</b> €349,120 </li>
+    <li>
+        <a href="https://cordis.europa.eu/project/id/215533"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> FUTON aimed to research, develop and validate a flexible architecture for wireless systems based on the joint processing of the radio signals from distinct remote antenna units and supported by a transparent fibre infrastructure. This architecture enables the high bit rates targeted in the broadband component of future wireless systems and provides a framework for the integration of heterogeneous wireless systems.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Nokia Siemens Networks (PT)</b> , Instituto de Telecomunicações (PT), Alcatel - Thales III - V Labs (FR), CEA-LIST (FR), Portugal Telecom Inovação (PT), VIVO (BR), OTE Research (GR), ACORDE (ES), Wavecom (PT), Sigint Solutions Ltd (CY),  University of Kent (GB), University of Patras (GR), Technical University of Dresden (DE), Valtion teknillinen tutkimuskeskus (FI), National Institute of Information  and Communications Technology (KO).</i></details>
+    </li>
+</ul>
+
+### <img src="/images/Logo_where.jpg" width="80" >    WHERE - Wireless Hybrid Enhanced Radio Estimators
+<ul>
+    <li><b>Dates</b> January 2008 – December 2010 (36 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Task Leader and Principal Investigator of the task that produced radio propagation predictions through Ray tracing, feeding this data into advanced radio location estimators. Also involved in the investigation of the accuracy of fingerprinting positioning when Ray tracing is used to calculate the fingerprinting maps, considering various uncertainties in the definition of the environment to be simulated.</li>
+    <li><b>Funding Body</b> European Commission</li>
+    <li><b>Funding Framework</b> FP7-ICT-2007  </li>
+    <li><b>Total Budget</b> €5,500,000</li>
+    <li><b>Funding Received</b> €179,630 </li>
+    <li>
+<!--        <a href="https://cordis.europa.eu/project/id/215533"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> The main objective of WHERE was to combine wireless communications and navigation for the benefit of the ubiquitous access for a future mobile radio system. The impact is manifold, such as real time localization knowledge in B3G/4G systems allows to increase efficiency in various ways.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>German Aerospace Center (DE)</b> , Aalborg University (DN), Advanced Communications Research&Development S.A. (ES), Commissariat à L’Energie Atomique – LETI (FR), Institut Eurécom (FR), Siradel (FR), Université de Rennes 1 (FR), Instituto Telecomunicações (PT), Mitsubishi Electric ITE (FR), Sigint Solutions Ltd. (CY), University of Surrey (UK), Universidad Politécnica de Madrid (ES), University of Alberta (CA), City University of Hong Kong (HK)</i></details>
+    </li>
+</ul>
+
+
+
+### 4GOpen -Optimization and Convergence for Next Generation Networks
+<ul>
+    <li><b>Dates</b> May 2009 – October 2011 (30 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Research Associate. Contributed in the integration of a physical layer (channel prediction) with a link layer simulator from Wavecom. </li>
+        <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> EUREKA-EUROSTARS  </li>
+<!--    <li><b>Total Budget</b> €5,500,000</li>-->
+    <li><b>Funding Received</b> €205,880</li>
+<!--    <li>-->
+<!--        <a href="https://cordis.europa.eu/project/id/215533"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+<!--        </li>-->
+    <li><details><summary><b>Description</b></summary><br><i> To interconnect two simulators working on different communication layers and to compare the output with real measurements. Simulators were geographically separated and have been interconnected through TCP/IP. </i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Sigint Solutions (CY) -coordinator </b> , Wavecom (PT)</i></details>
+    </li>
+</ul>
+
+### ASPIDA - Security in Sensor Network
+<ul>
+    <li><b>Dates</b> December 2006 – December 2010 (48 Months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Project Coordinator </li>
+        <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> Research for new Researchers (ΠΕΝΕΚ) </li>
+    <li><b>Total Budget</b> 214,412</li>
+    <li><b>Funding Received</b> 115,458</li>
+<!--    <li>-->
+<!--        <a href="https://cordis.europa.eu/project/id/215533"><img src="/images/link_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/where2Flyer.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+<!--        </li>-->
+    <li><details><summary><b>Description</b></summary><br><i>  To design and develop a prototype of a security layer that will offer security services to sensor nodes </i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>Sigint Solutions (CY) -coordinator </b> , University of Cyprus, University of Piraeus</i></details>
+    </li>
+</ul>
+
+<table>
+  <tr>
+    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">University of Surrey (2004-2007)</span></td>
+    <td style="text-align:right;"><a href="https://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="200" alt="Placeholder Image"></a></td>
+  </tr>
+</table>
+
+### Optimising Radio Tactical Positions
+<ul>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Researcher </li>
+        <li><b>Funding Body</b> Defence Science and Technology Laboratory (DSTL) – British Ministry of Defence</li>
+</ul>
+
+### Electromagnetic Propagation in Complex Aircraft Environments 
+<ul>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Research Associate. Participated to the radio measurement campaigns in emulated aircraft engine environments to evaluate transmission losses through the aircraft body. </li>
+        <li><b>Funding Body</b> Rolls-Royce ltd.</li>
+</ul>
+
+
