@@ -105,7 +105,7 @@ table {
 
     <tr>
     <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;">Open University of Cyprus (2013-2018)</span></td>
-    <td style="text-align:right;"><a href="http://www.ouc.ac.cy/"><img src="/images/ouc_Logo.png" width="120" alt="Placeholder Image"></a></td> 
+    <td style="text-align:right;"><a href="http://www.ouc.ac.cy/"><img src="/images/ouc_logo.png" width="120" alt="Placeholder Image"></a></td> 
     </tr>
       <tr>
         <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
@@ -122,7 +122,7 @@ table {
 
     <tr>
     <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;">University of Surrey (September 2004-August 2007)</span></td>
-    <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_Logo.png" width="120" alt="Placeholder Image"></a></td> 
+    <td style="text-align:right;"><a href="http://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image"></a></td> 
     </tr>
       <tr>
         <td style="text-align:left;"> <span style="font-size: 18px; font-weight: bold;"></span>
