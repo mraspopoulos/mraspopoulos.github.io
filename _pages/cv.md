@@ -187,3 +187,119 @@ table {
           <td style="text-align:right;"><img src="/images/hti_logo.jpeg" width="60" alt="Placeholder Image"></td> 
   </tr>
   </table>
+
+## Other Certificates
+---
+<table>
+  <tr>
+      <td style="text-align:left;"> <span style="font-size: 18px; "><b>Fellow of the Higher Education Academcy (FHEA)  </b> </span>
+          <ul>
+            <li style="font-size: 16px;"><i>Higher Education Academcy, UK</i> </li>
+            <li style="font-size: 16px;"><i>26 October 2021 </i></li>
+
+        </ul>
+      </td>
+          <td style="text-align:right;"><a href="https://www.advance-he.ac.uk/"><img src="/images/HEI_logo.svg" width="120" alt="Placeholder Image"></a></td> 
+  </tr>
+  </table>
+  
+## Research Interests
+---
+<ul>
+<li>Telecommunications – Wireless and Mobile Communications</li>
+<li>Indoor Positioning/Localization/Tracking</li>
+<li>Radio Propagation/Radio Planning/ Wireless Channel Modelling</li>
+<li>Human Exposure to Electromagnetic Radiation</li>
+<li>Internet of Things (IoT)</li>
+<li>Innovation and Entrepreneurship</li>
+</ul>
+
+
+  
+## Scholarships
+---
+<ul>
+<li> <b> University of Surrey</b>, Sept. 2004
+<p><i>University Research Scholarship (URS)– Full Scholarship (3 years) awarded by the University of Surrey to study for the degree of Doctor of Philosophy. Awarded based on exceptional performance during the M.Sc degree.</i></p></li> 
+
+<li> <b>Cyprus State Scholarship Foundation</b> , Sept. 2002
+<p><i>3-year Scholarship for Undergraduate studies in the UK, awarded based on exceptional performance during the HND degree at the Higher Technical Institute.</i></p></li> 
+</ul>
+
+
+## Research Projects
+---
+[Click here](/research/)
+
+## Publications
+---
+[Click here](/publications/)
+
+## Teaching
+---
+[Click here](/teaching/)
+
+## Professional Memberships
+---
+<ol>
+<li>Member in the Cyprus Scientific and Technical Chamber – ETEK (No. A090532)</li>
+<li>Member of the Institute of Electrical and Electronic Engineers -IEEE (No.91311193)</li>
+</ol>
+
+
+
+## Service
+---
+<ol type="A">
+<li><b>Conference Organization</b></li>
+<ol type="1">
+<li>Programme Co-Chair for the 26th International Conference on Information Systems Development, Larnaca-Cyprus (ISD2017)</li>
+<li>Workshops chair at the 10th EAI International Conference on Game Theory and Networks held online on the 16th of December 2021</li>
+<li>Publicity Chair to the IEEE ALIAS2022 Workshop held during the IEEE MDM2022 Conference</li>
+</ol>
+<li><b>Reviewer</b></li>
+<ol type="1">
+<li>IEEE Transactions on Antennas and Propagation. </li>
+<li>IEEE Communication Letters</li>
+<li>IET Circuits, Devices & Systems</li>
+<li>Springer Journals – Mobile Networks & Applications (MONE)</li>
+<li>Springer Journals – Wireless Networks (WINE)</li>
+<li>The Applied Computational Electromagnetics Society </li>
+<li>EURASIP Journal on Wireless Communications and Networking</li>
+<li>Progress in Electromagnetic Research (PIER) Journals</li>
+</ol>
+<li><b>PhD Examiner</b></li>
+<ol type="1">
+<li>June 2016: Firooz Bashshi Saghezchi, “Cooperative Strategies for Energy Efficiency in Multi-standard Wireless Devices”, University of Aveiro, Portugal.</li>
+</ol>
+<li><b>Technical Expert</b></li>
+<ol type="1">
+<li>EUROSTARS Technical Expert in the EUREKA Network</li>
+<li>Registered Expert in EC Research & Innovation Portal</li>
+<li>Approved Evaluator for the general secretariat of Research and Innovation in Greece</li>
+</ol>
+<li><b>Quality Assurance in Higher Education</b></li>
+<ol type="1">
+<li>Chair of the Expert Group to Evaluate the Information Systems filed of study (2 Study programmes; 1 undergraduate and 1 postgraduate) at ISMA University in Riga Latvia and its overseas campus in Fergana, Uzbekistan on behalf of the Latvian Higher Education Quality Agency (AIKA). April 2024. </li>
+</ol>
+<li><b>Standardization</b></li>
+<ol type="1">
+<li>Member of the Indoor Positioning Indoor Navigation (IPIN) International Standards Committee (ISC)</li>
+</ol>
+<li><b>Administrative Roles</b></li>
+<ol type="1">
+<li>Chair of the Research Subcommittee, UCLan Cyprus (2021- Now)</li>
+<li>Chair of the Innovation and Enterprise Subcommittee, UCLan Cyprus (2019- 2021)</li>
+<li>Member of the Research and Innovation Committee, UCLan Cyprus (2015-Now)</li>
+<li>Electrical and Electronic Engineering Course Leader, UCLan Cyprus (2015-Now)</li>
+<li>Mentor in the RIEMT Mentoring Scheme (2015-Now)</li>
+<li>Member of the Teaching and Learning Committee, UCLan Cyprus (2018-2020)</li>
+<li>Innovation Champion for the School of Sciences, UCLan Cyprus (2015-2018)</li>
+</ol>
+<li><b>Other</b></li>
+<ol type="1">
+<li>Member of the Parallel Parliament on the Environment, Sustainability and Public Health</li>
+<li>Member of the National Committee on Open Science (Deputy Ministry of Research Innovation and Digital Policy)</li>
+<li>Member of the 5G Specialists Group formed by the Ministry of Health.</li>
+</ol>
+</ol>

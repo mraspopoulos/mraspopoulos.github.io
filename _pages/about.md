@@ -14,9 +14,9 @@ I am an **Associate Professor** at the School of Sciences of [UCLan Cyprus](http
 I am also a member of the **INterdisciplinary Science Promotion &
 Innovative Research Exploration Centre** ([INSPIRE](http://inspirecenter.org/)) . 
 
-News
----
-No News yet
+<!--News-->
+<!------->
+<!--No News yet-->
 
 Currently-Running Projects
 ---
