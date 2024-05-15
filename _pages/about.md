@@ -7,7 +7,28 @@ redirect_from:
   - /about.html
 ---
 
-
+<style>
+  ul {
+    list-style-type: none;
+    padding: 80;
+    margin: 0;
+    line-height: 1.0; /* You can adjust this value to reduce line spacing */
+  }
+  li {
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 5px; /* You can adjust this value to control the space between list items */
+  }
+  
+  
+table {
+    border-collapse: collapse;
+    border: none; /* Make the outer border invisible */
+  }
+  td {
+    border: none;
+    padding: 10px; /* Add padding for better appearance */
+  }
+</style>
 
 I am an **Associate Professor** at the School of Sciences of [UCLan Cyprus](https://www.uclancyprus.ac.cy/), specializing in **Telecommunications Engineering**, and I also serve as the **Deputy Head of the School**. My research interests encompass **Wireless Communication, Radio Wave Propagation and Modelling, Internet of Things, and Indoor Navigation and Positioning**.
 
@@ -17,9 +38,10 @@ Innovative Research Exploration Centre** ([INSPIRE](http://inspirecenter.org/)) 
 <!--News-->
 <!------->
 <!--No News yet-->
-
-Currently-Running Projects
 ---
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>Currently-Running Projects</strong></td></tr></table>
+
+
 <style>
   ul {
     list-style-type: none;
@@ -64,8 +86,8 @@ table {
 </ul>
 
 
-Selected Publications
 ---
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>Selected Publications</strong></td></tr></table>
 <img src="/images/journal_icon.png" width="80" >
 A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**Radar-Based Millimeter-Wave Sensing for Accurate 3-D Indoor Positioning: Potentials and Challenges**," in *IEEE Journal of Indoor and Seamless Positioning and Navigation*, vol. 2, pp. 61-75, 2024, doi: 10.1109/JISPIN.2024.3359151.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10415170)
@@ -83,8 +105,8 @@ A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**Radar-Based Millimeter-Wave Sen
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/5783897)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:u5HHmVD_uO8C)
 
-Contact
-------
+---
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>Contact</strong></td></tr></table>
 [UCLan Cyprus](https://www.uclancyprus.ac.cy/)  
 12-14 University Avenue, Pyla 7080, Larnaka, Cyprus  
 Tel: +357 24694070  

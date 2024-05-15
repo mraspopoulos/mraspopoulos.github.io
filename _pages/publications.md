@@ -5,21 +5,44 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+  ul {
+    list-style-type: none;
+    padding: 80;
+    margin: 0;
+    line-height: 1.0; /* You can adjust this value to reduce line spacing */
+  }
+  li {
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 5px; /* You can adjust this value to control the space between list items */
+  }
+  
+  
+table {
+    border-collapse: collapse;
+    border: none; /* Make the outer border invisible */
+  }
+  td {
+    border: none;
+    padding: 10px; /* Add padding for better appearance */
+  }
+</style>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
-2024
-------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**Radar-Based Millimeter-Wave Sensing for Accurate 3-D Indoor Positioning: Potentials and Challenges**," in *IEEE Journal of Indoor and Seamless Positioning and Navigation*, vol. 2, pp. 61-75, 2024, doi: 10.1109/JISPIN.2024.3359151.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10415170)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:iH-uZ7U-co4C)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/10415170.pdf)
 
-
-2023
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2023</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**3D millimeter-Wave Indoor Localization**," 2023 *13th International Conference on Indoor Positioning and Indoor Navigation (IPIN)*, Nuremberg, Germany, 2023, pp. 1-7, doi: 10.1109/IPIN57070.2023.10332537.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10332537)
@@ -33,8 +56,9 @@ J. Ye, S. Ioannou, P. Nikolaou and **M. Raspopoulos**, "**CNN based Real-time Fo
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/10185692.pdf)
 
 
-2022
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2022</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 C. Laoudias, **M. Raspopoulos**, S. Christoforou and A. Kamilaris, "**Privacy-Preserving Presence Tracing for Pandemics Via Machine-to-Machine Exposure Notifications**," 2022 *23rd IEEE International Conference on Mobile Data Management (MDM)*, Paphos, Cyprus, 2022, pp. 355-360, doi: 10.1109/MDM55031.2022.00080.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/9861142)
@@ -47,8 +71,9 @@ Sesyuk, A.; Ioannou, S.; **Raspopoulos, M**. **A Survey of 3D Indoor Localizatio
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:RHpTSmoSYBkC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/s22239380.pdf)
 
-2021
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2021</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 S. Ioannou, M. C. Argyrou, P. Christodoulides, **M. Raspopoulos**, M. Darwish and C. C. Marouchos, "**Modulation Processes and Mathematical Models of the TCR**," *2021 International Conference on Electrical, Computer, Communications and Mechatronics Engineering (ICECCME)*, Mauritius, Mauritius, 2021, pp. 1-5, doi: 10.1109/ICECCME52200.2021.9591093.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/9591093)
@@ -66,15 +91,17 @@ IET Digital Library, https://digital-library.theiet.org/content/conferences/10.1
 [<img src="/images/link_icon.png" width="20" >](https://digital-library.theiet.org/content/conferences/10.1049/icp.2021.1227/)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:mB3voiENLucC)
 
-2019
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2019</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 **Raspopoulos, M.**, Paspallis, N. & Kaimakis, P. (2019). **PINSPOT: An oPen platform for INtelligent context-baSed Indoor POsiTioning**. In A. Siarheyeva, C. Barry, M. Lang, H. Linger, & C. Schneider (Eds.), *Information Systems Development: Information Systems Beyond 2020 (ISD2019 Proceedings)*. Toulon, France: ISEN Yncréa Méditerranée.
 [<img src="/images/link_icon.png" width="20" >](https://aisel.aisnet.org/isd2014/proceedings2019/CurrentTopics/9/)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:-f6ydRqryjwC)
 
-2018
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2018</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 Nearchos Paspallis, Irene Polycarpou, Panayiotis Andreou, Josephina Antoniou, Paris Kaimakis, **Marios Raspopoulos**, and Maria Terzi. 2018. **An experience report on the effectiveness of five themed workshops at inspiring high school students to learn coding**. In Proceedings of the *23rd Annual ACM Conference on Innovation and Technology in Computer Science Education (ITiCSE 2018)*. Association for Computing Machinery, New York, NY, USA, 105–110. https://doi.org/10.1145/3197091.3197093
 [<img src="/images/link_icon.png" width="20" >](https://dl.acm.org/doi/abs/10.1145/3197091.3197093)
@@ -86,30 +113,34 @@ Nearchos Paspallis, Irene Polycarpou, Panayiotis Andreou, Josephina Antoniou, Pa
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:7PzlFSSx8tAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/8167305.pdf)
 
-2018
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2017</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 Paspallis, N., **Raspopoulos, M.** (2017). **An Open Platform for Studying and Testing Context-Aware Indoor Positioning Algorithms.** *In: Goluchowski, J., Pankowska, M., Linger, H., Barry, C., Lang, M., Schneider, C. (eds) Complexity in Information Systems Development. Lecture Notes in Information Systems and Organisation*, vol 22. Springer, Cham. https://doi.org/10.1007/978-3-319-52593-8_3
 [<img src="/images/link_icon.png" width="20" >](https://link.springer.com/chapter/10.1007/978-3-319-52593-8_3)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:mVmsd5A6BfQC)
 
-2016
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2016</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 Andreou, P. and **Raspopoulos, M.**, "**Active Life Coach: Towards a Framework for Holistic Care of Citizens as They Age**" (2016). *MCIS 2016 Proceedings*. 42.
 https://aisel.aisnet.org/mcis2016/42
 [<img src="/images/link_icon.png" width="20" >](https://aisel.aisnet.org/mcis2016/42/)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:9ZlFYXVOiuMC)
 
-2015
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2015</strong></td></tr></table>
+
 <img src="/images/bookchapter_icon.png" width="80" >
 A. Radwan, J. Rodriguez, **M. Raspopoulos**, P. Trapps, L. Dussopt, A. Giry, F. Fraysse, S. Aissa and O. Perrin . (2015). **Showcasing 5G Handsets**. *In: Radwan, A., Rodriguez, J. (eds) Energy Efficient Smart Phones for 5G Networks. Signals and Communication Technology*. Springer, Cham. https://doi.org/10.1007/978-3-319-10314-3_8
 [<img src="/images/link_icon.png" width="20" >](https://link.springer.com/chapter/10.1007/978-3-319-10314-3_8)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:4TOpqqG69KYC)
 
-2014
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2014</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 A. Kokkinis, L. Kanaris, **M. Raspopoulos**, A. Liotta and S. Stavrou, "**Optimizing route prior knowledge for map-aided fingerprint-based positioning systems**," *The 8th European Conference on Antennas and Propagation (EuCAP 2014)*, The Hague, Netherlands, 2014, pp. 2141-2144, doi: 10.1109/EuCAP.2014.6902232.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/6902232)
@@ -120,8 +151,9 @@ L. Kanaris, A. Kokkinis, **M. Raspopoulos**, A. Liotta and S. Stavrou, "**Improv
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/6902090)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:Y0pCki6q_DkC)
 
-2013
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2013</strong></td></tr></table>
+
 
 <img src="/images/conference_icon.png" width="80" >
 A. Kokkinis, **M. Raspopoulos**, L. Kanaris, A. Liotta and S. Stavrou, "**Map-aided fingerprint-based indoor positioning**," *2013 IEEE 24th Annual International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC)*, London, UK, 2013, pp. 270-274, doi: 10.1109/PIMRC.2013.6666144.
@@ -138,8 +170,9 @@ I. Arambasic, J. Casajus Quiros, I. Raos, **M. Raspopoulos** and S. Stavrou, "**
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/6582829)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:Tyk-4Ss8FVUC)
 
-2012
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2012</strong></td></tr></table>
+
 
 <img src="/images/conference_icon.png" width="80" >
 M. Laaraiedh, B. Uguen, J. Stephan, Y. Corre, Y. Lostanlen, **M. Raspopoulos**, S. Stavrou, "**Ray tracing-based radio propagation modeling for indoor localization purposes**," *2012 IEEE 17th International Workshop on Computer Aided Modeling and Design of Communication Links and Networks (CAMAD)*, Barcelona, Spain, 2012, pp. 276-280, doi: 10.1109/CAMAD.2012.6335350.
@@ -178,16 +211,18 @@ J. Bastos, V. Monteiro, J.Rodriguez, R. Agüero, D. Gómez, Y. Fernández, M. Pe
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:5nxA0vEk-isC)
 
 
-2011
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2011</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 **M. Raspopoulos** and S. Stavrou, **"Frequency Selective Buildings Through Frequency Selective Surfaces**," *in IEEE Transactions on Antennas and Propagation*, vol. 59, no. 8, pp. 2998-3005, Aug. 2011, doi: 10.1109/TAP.2011.2158779.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/5783897)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:u5HHmVD_uO8C)
 
 
-2010
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2010</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 J., Paulo Marques, A. Radwan, K. Moessner, R. Tafazolli, **M. Raspopoulos**, S. Stavrou, P. Trapps, D. Noquet, K. Sithamparanathan, Á. Gomes, R. Piesiewicz, H. Mokrani, A. Foglar, C. Verikoukis, **"Cognitive radio and cooperative strategies for power saving in multi-standard wireless devices,"** *2010 Future Network & Mobile Summit*, Florence, Italy, 2010, pp. 1-8.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/5722470)
@@ -195,31 +230,35 @@ J., Paulo Marques, A. Radwan, K. Moessner, R. Tafazolli, **M. Raspopoulos**, S. 
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/5722470.pdf)
 
 
-2008
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2008</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 **Raspopoulos, M.**; King, P.; Stavrou, S.: **'Capacity of MIMO systems in FSS environments'**, *Electronics Letters*, 2008, 44, (4), p. 304-306, DOI: 10.1049/el:20082983
 IET Digital Library.
 [<img src="/images/link_icon.png" width="20" >](https://digital-library.theiet.org/content/journals/10.1049/el_20082983)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:W7OEmFMy1HYC)
 
-2007
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2007</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 **Raspopoulos, M.**; Stavrou, S.: **'Frequency selective surfaces on building materials – air gap impact'**, *Electronics Letters*, 2007, 43, (13), p. 700-702, DOI:10.1049/el:20071126, IET Digital Library, 
 [<img src="/images/link_icon.png" width="20" >](https://digital-library.theiet.org/content/journals/10.1049/el_20071126)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:d1gkVwhDpl0C)
 
-2006
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2006</strong></td></tr></table>
+
 <img src="/images/journal_icon.png" width="80" >
 **Raspopoulos, M.**, Chaudhry, F.A. and Stavrou, S. (2006), **Radio propagation in frequency selective buildings**. *Eur. Trans. Telecomm.*, 17: 407-413. [https://doi.org/10.1002/ett.1127](https://doi.org/10.1002/ett.1127)
 [<img src="/images/link_icon.png" width="20" >](https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.1127)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:2osOgNQ5qMEC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/eurpTrans.pdf)
 
-2005
 ------
+<table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2005</strong></td></tr></table>
+
 <img src="/images/conference_icon.png" width="80" >
 F. A. Chaudhry, **M. Raspopoulos** and S. Stavrou, **"Effect of Frequency Selective Surfaces on radio wave propagation in indoor environments,"** *11th European Wireless Conference 2005 - Next Generation wireless and Mobile Communications and Services*, Nicosia, Cyprus, 2006, pp. 1-5.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/5755370)

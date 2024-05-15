@@ -11,9 +11,11 @@ redirect_from:
 
 Download a PDF Version of my CV. [<img src="/images/pdf_link_icon.ico" width="20" >](/files/Marios_Raspopoulos - Accademic CV 04-05-2024.pdf)
 
-
-## Work experience
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Work Experience</strong></td>
+</tr>
+</table>
 
 <style>
   ul {
@@ -139,8 +141,12 @@ table {
   </tr>
 </table>
 
-## Education
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Education</strong></td>
+</tr>
+</table>
+
 <table>
   <tr>
       <td style="text-align:left;"> <span style="font-size: 18px; "><b>Ph.D in <i>Telecommunications Engineering </i></b> </span>
@@ -188,8 +194,13 @@ table {
   </tr>
   </table>
 
-## Other Certificates
----
+
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Other Certificates</strong></td>
+</tr>
+</table>
+
 <table>
   <tr>
       <td style="text-align:left;"> <span style="font-size: 18px; "><b>Fellow of the Higher Education Academcy (FHEA)  </b> </span>
@@ -203,8 +214,12 @@ table {
   </tr>
   </table>
   
-## Research Interests
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Research Interests</strong></td>
+</tr>
+</table>
+
 <ul>
 <li>Telecommunications – Wireless and Mobile Communications</li>
 <li>Indoor Positioning/Localization/Tracking</li>
@@ -216,8 +231,12 @@ table {
 
 
   
-## Scholarships
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Scholarships</strong></td>
+</tr>
+</table>
+
 <ul>
 <li> <b> University of Surrey</b>, Sept. 2004
 <p><i>University Research Scholarship (URS)– Full Scholarship (3 years) awarded by the University of Surrey to study for the degree of Doctor of Philosophy. Awarded based on exceptional performance during the M.Sc degree.</i></p></li> 
@@ -227,20 +246,33 @@ table {
 </ul>
 
 
-## Research Projects
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Research Projects</strong></td>
+</tr>
+</table>
+
 [Click here](/research/)
 
-## Publications
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Publications</strong></td>
+</tr>
+</table>
 [Click here](/publications/)
 
-## Teaching
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Teaching</strong></td>
+</tr>
+</table>
 [Click here](/teaching/)
 
-## Professional Memberships
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Professional Memberships</strong></td>
+</tr>
+</table>
 <ol>
 <li>Member in the Cyprus Scientific and Technical Chamber – ETEK (No. A090532)</li>
 <li>Member of the Institute of Electrical and Electronic Engineers -IEEE (No.91311193)</li>
@@ -248,8 +280,11 @@ table {
 
 
 
-## Service
----
+<table>
+<tr>
+    <td style="background-color: #f2f2f2; font-size: 24px;"><strong>Service</strong></td>
+</tr>
+</table>
 <ol type="A">
 <li><b>Conference Organization</b></li>
 <ol type="1">

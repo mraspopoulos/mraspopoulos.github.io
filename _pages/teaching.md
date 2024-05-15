@@ -36,11 +36,10 @@ table {
 
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">UCLan Cyprus (2015-Now)</span></td>
-    <td style="text-align:right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" width="150" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">UCLan Cyprus (2015-Now)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
   </tr>
 </table>
----
 
 ### Currently Teaching
 <ol>
@@ -61,13 +60,19 @@ table {
     <li><b>EL3995:</b> Undergraduate and Postgraduate Projects Supervision</li>
 </ol>
 
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Open University Cyprus (2012-2018)</span></td>-->
+<!--    <td style="text-align:right;"><a href="https://www.ouc.ac.cy"><img src="/images/ouc_logo.png" width="120" alt="Placeholder Image"></a></td>-->
+<!--  </tr>-->
+<!--</table>-->
+---
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Open University Cyprus (2012-2018)</span></td>
-    <td style="text-align:right;"><a href="https://www.ouc.ac.cy"><img src="/images/ouc_logo.png" width="120" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">Open University Cyprus (2012-2018)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="https://www.ouc.ac.cy"><img src="/images/ouc_logo.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
   </tr>
 </table>
----
 
 <ol>
     <li><b>PES 513:</b> Communication Networks (Spring Semester 2012-13 and 2013-14, Autumn 2016-17)  <i>(Postgraduate)</i></li>
@@ -77,13 +82,16 @@ table {
    
 </ol>
 
+---
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">University of Surrey (2004-2007)</span></td>
-    <td style="text-align:right;"><a href="https://www.surrey.ac.uk"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">University of Surrey (2004-2007)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="https://www.surrey.ac.uk"><img src="/images/surrey_logo.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
   </tr>
 </table>
----
+
+
+
 
 <ol>
     <li>Antennas and Propagation  <i>(Postgraduate)</i></li>

@@ -49,15 +49,14 @@ table {
 </style>
 
 
-
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">UCLan Cyprus (2015-Now)</span></td>
-    <td style="text-align:right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" width="200" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">UCLan Cyprus (2015-Now)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="https://www.uclan.ac.uk"><img src="/images/UCLan_Cyprus_logo.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
   </tr>
 </table>
 <!--## <img src="/images/UCLan_Cyprus_logo.png" width="200" >  UCLan Cyprus (2015-Now)-->
-***
+
 
 ### <img src="/images/preventProjectLogo.png" width="80" >PREVENT– Prevention of natural disasters using deep technology for advanced HEI curricula
 <ul>
@@ -148,13 +147,21 @@ table {
     </li>
 </ul>
 
-
+---
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>
-    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" width="120" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">INSPIRE Research Centre (2021-Now)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
   </tr>
 </table>
+
+
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>-->
+<!--    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" width="120" alt="Placeholder Image"></a></td>-->
+<!--  </tr>-->
+<!--</table>-->
 ---
 ### <img src="/images/thesisLogo.png" width="100" >   THESIS: THree dimEnSIonal millimeter-wave poSitioning
 <ul>
@@ -198,13 +205,20 @@ table {
     </li>
 </ul>
 
-
+---
 <table>
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Sigint Solutions Ltd (2007-2015)</span></td>
-    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigLog.png" width="200" alt="Placeholder Image"></a></td>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">Sigint Solutions Ltd (2007-2015)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigLog.png" width="130" alt="Placeholder Image" style="float: right;"></a></span></td>
   </tr>
 </table>
+
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">Sigint Solutions Ltd (2007-2015)</span></td>-->
+<!--    <td style="text-align:right;"><a href="http://www.sigintsolutions.com/"><img src="/images/sigLog.png" width="200" alt="Placeholder Image"></a></td>-->
+<!--  </tr>-->
+<!--</table>-->
 
 
 ### TruNet – 3D Wireless Network Planning Simulator
@@ -422,12 +436,24 @@ table {
     </li>
 </ul>
 
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">University of Surrey (2004-2007)</span></td>-->
+<!--    <td style="text-align:right;"><a href="https://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="200" alt="Placeholder Image"></a></td>-->
+<!--  </tr>-->
+<!--</table>-->
+
+---
 <table>
+
   <tr>
-    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">University of Surrey (2004-2007)</span></td>
-    <td style="text-align:right;"><a href="https://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="200" alt="Placeholder Image"></a></td>
-  </tr>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">University of Surrey (2004-2007)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="https://www.surrey.ac.uk/"><img src="/images/surrey_logo.png" width="120" alt="Placeholder Image" style="float: right;"></a></span></td>
+    </tr>
+
 </table>
+
+
 
 ### Optimising Radio Tactical Positions
 <ul>
@@ -442,5 +468,5 @@ table {
     <li><b>Role in the Project</b> Research Associate. Participated to the radio measurement campaigns in emulated aircraft engine environments to evaluate transmission losses through the aircraft body. </li>
         <li><b>Funding Body</b> Rolls-Royce ltd.</li>
 </ul>
-
+---
 
