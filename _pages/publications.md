@@ -35,6 +35,13 @@ table {
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
 
 <img src="/images/journal_icon.png" width="80" >
+I. Ioannou; **M. Raspopoulos**; P. Nagaradjane; C. Christophorou,W. A. Aziz, V. Vasiliou, A. Pistillides, "**DeepRISBeam: Deep Learning-based RIS Beam Management for Radio Channel Optimization**," in *IEEE Access*, 2024 doi: 10.1109/ACCESS.2024.3411929.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10552229)
+<!--[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:iH-uZ7U-co4C)-->
+[<img src="/images/pdf_link_icon.ico" width="20" >](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10552229)
+
+
+<img src="/images/journal_icon.png" width="80" >
 A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**Radar-Based Millimeter-Wave Sensing for Accurate 3-D Indoor Positioning: Potentials and Challenges**," in *IEEE Journal of Indoor and Seamless Positioning and Navigation*, vol. 2, pp. 61-75, 2024, doi: 10.1109/JISPIN.2024.3359151.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10415170)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:iH-uZ7U-co4C)
