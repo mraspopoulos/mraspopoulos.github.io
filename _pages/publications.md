@@ -34,11 +34,18 @@ table {
 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
 
+
+<img src="/images/conference_icon.png" width="80" >
+I. Ioannou, Μ. Savva, **M. Raspopoulos**, C. Christophorou, V. Vassiliou, "**Revolutionising IoT Network Security by Assessing ML Localisation Techniques Against Jamming Attacks**," *22nd IEEE Mediterranean Communication and Computer Networking Conference (MEDCOMNET)*, Nice, France, June 2024 (in press)
+<!--[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10332537)-->
+<!--[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:r0BpntZqJG4C)-->
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/Revolutionising_IoT.pdf)
+
 <img src="/images/journal_icon.png" width="80" >
 I. Ioannou; **M. Raspopoulos**; P. Nagaradjane; C. Christophorou,W. A. Aziz, V. Vasiliou, A. Pistillides, "**DeepRISBeam: Deep Learning-based RIS Beam Management for Radio Channel Optimization**," in *IEEE Access*, 2024 doi: 10.1109/ACCESS.2024.3411929.
-[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10552229)
+[<img src="/images/link_icon.png" width="20">](https://ieeexplore.ieee.org/document/10552229)
 <!--[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:iH-uZ7U-co4C)-->
-[<img src="/images/pdf_link_icon.ico" width="20" >](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10552229)
+[<img src="/images/pdf_link_icon.ico" width="20">](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10552229)
 
 
 <img src="/images/journal_icon.png" width="80" >
