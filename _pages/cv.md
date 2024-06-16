@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-Download a PDF Version of my CV. [<img src="/images/pdf_link_icon.ico" width="20" >](/files/Marios_Raspopoulos - Accademic CV 04-05-2024.pdf)
+Download a PDF Version of my CV. [<img src="/images/pdf_link_icon.ico" width="20" >](/files/Marios_Raspopoulos - Accademic CV.pdf)
 
 <table>
 <tr>
