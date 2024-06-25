@@ -63,7 +63,7 @@ A. Sesyuk, S. Ioannou and **M. Raspopoulos**, "**3D millimeter-Wave Indoor Local
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:r0BpntZqJG4C)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/10332537.pdf)
 
-<img src="/images/journal_icon.png" width="80" >
+<img src="/images/conference_icon.png" width="80" >
 J. Ye, S. Ioannou, P. Nikolaou and **M. Raspopoulos**, "**CNN based Real-time Forest Fire Detection System for Low-power Embedded Devices**," 2023 *31st Mediterranean Conference on Control and Automation (MED)*, Limassol, Cyprus, 2023, pp. 137-143, doi: 10.1109/MED59994.2023.10185692.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10185692)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:j3f4tGmQtD8C)
@@ -94,13 +94,13 @@ S. Ioannou, M. C. Argyrou, P. Christodoulides, **M. Raspopoulos**, M. Darwish an
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:R3hNpaxXUhUC)
 
 <img src="/images/conference_icon.png" width="80" >
-Hirodontis, S.; Ioannou, S.; **Raspopoulos, M.**: '**LOAD SHEDDING SCHEMES FOR ISLANDING DISTRIBUTION NETWORK OPERATION**', *IET Conference Proceedings*, , p. 97-102, DOI: 10.1049/icp.2021.1268
+Hirodontis, S.; Ioannou, S.; **Raspopoulos, M.**: '**Load Shedding Schemes For Islanding Distribution Network Operation**', *IET Conference Proceedings*, , p. 97-102, DOI: 10.1049/icp.2021.1268
 IET Digital Library, https://digital-library.theiet.org/content/conferences/10.1049/icp.2021.1268
 [<img src="/images/link_icon.png" width="20" >](https://digital-library.theiet.org/content/conferences/10.1049/icp.2021.1268)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:HDshCWvjkbEC)
 
 <img src="/images/conference_icon.png" width="80" >
-Hirodontis, S.; Ioannou, S.; **Raspopoulos, M.**: '**AN ADAPTIVE LOAD SHEDDING METHOD FOR BLACKOUT PREVENTION IN ACTIVE DISTRIBUTION NETWORKS**', *IET Conference Proceedings*, , p. 441-446, DOI: 10.1049/icp.2021.1227
+Hirodontis, S.; Ioannou, S.; **Raspopoulos, M.**: '**An Adaptive Load Shedding Method For Blackout Prevention In Active Distribution Networks**', *IET Conference Proceedings*, , p. 441-446, DOI: 10.1049/icp.2021.1227
 IET Digital Library, https://digital-library.theiet.org/content/conferences/10.1049/icp.2021.1227
 [<img src="/images/link_icon.png" width="20" >](https://digital-library.theiet.org/content/conferences/10.1049/icp.2021.1227/)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:mB3voiENLucC)
