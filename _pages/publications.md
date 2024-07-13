@@ -34,6 +34,16 @@ table {
 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
 
+<img src="/images/conference_icon.png" width="80" >
+L. Nisiotis, A. Anikina, **M. Raspopoulos**, "**Exploring Gaming Technologies, Digital Twins, and VR to Visualise Wireless Propagation Simulations**," *8th IEEE Intern. Conf. on Computers, Software, and Applications (COMPSAC 2024)*, 2-4 July 2024, Osaka, Japan (in press)
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10578201)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:TFP_iSt0sucC) -->
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/compsac2024.pdf.pdf)
+
+
+ M. Raspopoulos, “”, 48th IEEE Intern. Conf. on Computers, Software, and Applications (COMPSAC 2024), 
+
+
 
 <img src="/images/conference_icon.png" width="80" >
 I. Ioannou, M. Savva, **M. Raspopoulos**, C. Christophorou and V. Vassiliou, "**Revolutionising IoT Network Security By Assessing ML Localisation Techniques Against Jamming Attacks**," *2024 22nd Mediterranean Communication and Computer Networking Conference (MedComNet)*, Nice, France, 2024, pp. 1-10, doi: 10.1109/MedComNet62012.2024.10578201.
