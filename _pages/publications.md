@@ -34,19 +34,25 @@ table {
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2025</strong></td></tr></table>
 <img src="/images/journal_icon.png" width="80" >
 L. Nisiotis, A. Anikina and **M. Raspopoulos**, **"The Development of a VR Wireless Signal Propagation Simulator in Unreal Engine: A Device and Performance Testing,"** *in IT Professional*, 2024. [In Press]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)
-[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:k_IJM867U9cC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/compsac2024.pdf) -->
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:maZDTaKrznsC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/ITPro_2024.pdf) 
 
 <img src="/images/conference_icon.png" width="80" >
 I. Ioannou, A. Gregoriades, C. Christophorou, **M. Raspopoulos**, V. Vassiliou. **"Implementing a Cell-Free 6G Distributed AI Network With the Use of Deep ML Under a Traditional Multi-Cell Mobile Network"**. *In: 5th IEEE Middle East & North Africa COMMunications Conference Breaking Boundaries: Pioneering the Next Era of Communication*, 20-22 February 2025, Lebanese American University (LAU), Byblos, Lebanon / Virtual. (In Press) 
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)
-[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:k_IJM867U9cC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/compsac2024.pdf) -->
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf) 
 
 
 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
+
+<img src="/images/conference_icon.png" width="80" >
+I. Ioannou, **M. Raspopoulos**, P. Nagaradjane, C. Christophorou, A. Khalifeh and V. Vassiliou, **"Optimization of the D2D Topology Formation Using a Novel Two-Stage Deep ML Approach for 6G Mobile Networks**," *2024 Asian Conference on Communication and Networks (ASIANComNet), Bangkok, Thailand, 2024*,* pp. 1-9, doi: 10.1109/ASIANComNet63184.2024.10811034.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10811034)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:isC4tDSrTZIC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/ASIANComNet.pdf) 
 
 <img src="/images/conference_icon.png" width="80" >
 A. Sesyuk, S. Ioannou and **M. Raspopoulos**, **"3D millimeter-Wave Sensing vs Ultra-Wideband Positioning**," *2024 14th International Conference on Indoor Positioning and Indoor Navigation (IPIN)*, Kowloon, Hong Kong, 2024, pp. 1-6, doi: 10.1109/IPIN62893.2024.10786158.
