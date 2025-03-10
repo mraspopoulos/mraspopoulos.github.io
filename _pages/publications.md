@@ -49,7 +49,7 @@ I. Ioannou, A. Gregoriades, C. Christophorou, **M. Raspopoulos**, V. Vassiliou. 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2024</strong></td></tr></table>
 
 <img src="/images/conference_icon.png" width="80" >
-I. Ioannou, **M. Raspopoulos**, P. Nagaradjane, C. Christophorou, A. Khalifeh and V. Vassiliou, **"Optimization of the D2D Topology Formation Using a Novel Two-Stage Deep ML Approach for 6G Mobile Networks**," *2024 Asian Conference on Communication and Networks (ASIANComNet), Bangkok, Thailand, 2024*,* pp. 1-9, doi: 10.1109/ASIANComNet63184.2024.10811034.
+I. Ioannou, **M. Raspopoulos**, P. Nagaradjane, C. Christophorou, A. Khalifeh and V. Vassiliou, **"Optimization of the D2D Topology Formation Using a Novel Two-Stage Deep ML Approach for 6G Mobile Networks**," *2024 Asian Conference on Communication and Networks (ASIANComNet), Bangkok, Thailand, 2024*, pp. 1-9, doi: 10.1109/ASIANComNet63184.2024.10811034.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/10811034)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:isC4tDSrTZIC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/ASIANComNet.pdf) 
