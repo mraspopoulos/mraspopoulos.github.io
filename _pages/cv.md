@@ -305,8 +305,8 @@ table {
 </ol>
 <li><b>PhD Examiner</b></li>
 <ol type="1">
-<li>June 2016: Firooz Bashshi Saghezchi, “Cooperative Strategies for Energy Efficiency in Multi-standard Wireless Devices”, University of Aveiro, Portugal.</li>
-<li>February 2025: Juan José López Escobar, “Design of a new distributed Mist, Edge and Fog architecture in Beyond-5G environments for the Internet of Things”, University of Vigo, Spain.</li>
+<li>February 2025: Juan José López Escobar, “Design of a new distributed Mist, Edge and Fog architecture in Beyond-5G environments for the Internet of Things”, University of Vigo, Spain. (Chair)</li>
+<li>June 2016: Firooz Bashshi Saghezchi, “Cooperative Strategies for Energy Efficiency in Multi-standard Wireless Devices”, University of Aveiro, Portugal. (Member)</li>
 </ol>
 <li><b>Technical Expert</b></li>
 <ol type="1">
