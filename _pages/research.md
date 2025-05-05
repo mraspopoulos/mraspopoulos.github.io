@@ -49,6 +49,95 @@ table {
 </style>
 
 
+
+<table>
+  <tr>
+    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">INSPIRE Research Centre (2021-Now)</span></td>
+        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
+  </tr>
+</table>
+
+
+<!--<table>-->
+<!--  <tr>-->
+<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>-->
+<!--    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" width="120" alt="Placeholder Image"></a></td>-->
+<!--  </tr>-->
+<!--</table>-->
+---
+
+### <img src="/images/ERMIS_LOGO.png" width="100" >   ERMIS: AdvancemEnts in 3D IndooR Positioning Methods and ApplicatIons for Next-Gen Communication Systems
+<ul>
+    <li><b>Dates</b> May 2025-April 2027 (24 months) </li>
+    <li><b>Status</b> Ongoing </li>
+    <li><b>Role in the Project</b> Coordinator/Principal Investigator </li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+        <li><b>Funding Body</b> EXCELLENCE/0524 (EXCELLENCE/0524/0218)</li>
+    <li><b>Total Budget</b> €249.930,32</li>
+    <li><b>Funding Received</b> €249.930,32 </li>
+    <li>
+        <!-- <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a> -->
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> ERMIS's vision is to advance the state of the art in 3D positioning by designing, developing, and validating new 3D positioning techniques utilising the most up-to-date wireless technologies and networks while demonstrating the positioning applicability and importance in various modern applications and systems. The choice of the technology and the positioning approach are typically a trade-off between accuracy, cost, complexity, technological maturity, and efficiency. For this reason, in ERMIS we consider various modern technologies and approaches to develop techniques covering all the possible choices an application developer would like to consider when implementing a location-based system or application. The project aims to advance the state of the art and develop prototypes that will be validated in the lab reaching a technology readiness level 4. To achieve this, the project includes the following Scientific and Technological Objectives: (1) Achieve sub-meter accuracy by designing, developing and evaluating 3D positioning, (2) Demonstrate the applicability and impact of accurate positioning in modern, smart applications in various domains such as (a) Localization of Jamming Attacks in IoT Networks, (b) Positioning-Aided
+Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable Intelligent Surfaces)-enabled environments and (c) Auto calibration of positioning anchors for locating first responders in emergency applications., (3) Validate through measurements/simulations and assess the performance of the developed 3D positioning techniques and the studied position-based applications. To promote the openness of data and results ERMIS will make available all the data and algorithms developed in the project by releasing an Open Dataset and an open Positioning Toolbox.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator, CYENS</b></i></details>
+    </li>
+</ul>
+
+
+
+
+
+
+### <img src="/images/thesisLogo.png" width="100" >   THESIS: THree dimEnSIonal millimeter-wave poSitioning
+<ul>
+    <li><b>Dates</b> May 2023-January 2024 (9 months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Coordinator/Principal Investigator </li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+        <li><b>Funding Body</b> CONCEPT/0722 – Proof of Concept </li>
+    <li><b>Total Budget</b> €39,952</li>
+    <li><b>Funding Received</b> €39,952 </li>
+    <li>
+        <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> THESIS vision is to demonstrate the ability and applicability of the millimetre-wave (mmWave) radio technology towards achieving high precision 3D positioning. mmWave technology is defining a new era in wireless communication by providing very wide bandwidths. It is currently being used in some Wi-Fi systems (e.g., IEEE802.11ad) and is planned to be used in 5G and beyond-5G communications in the near future as the it offers much more flexibility to use wider bandwidths and hence achieving much higher data rates and capacity. This very large availability of bandwidth, together with the use of massive phase array antennas that allow better time resolution and estimation of the signal phase could be used for achieving the desired high accuracy. Additionally, positioning research so far was mostly focused in 2D, however the 3D nature of these days’ smart applications is making the need for 3D positioning even more predominant. The project adopts a System Engineering approach to prove this concept/technology by developing prototypes and validating them experimentally in the lab. In this context the project aims to contribute towards the ongoing research efforts in this direction to achieve cm-level accuracy. The goal is to validate and assess the performance of the developed 3D positioning techniques and assess their performance against set KPIs as well as the applicability of mmWave for this purpose.</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i></details>
+    </li>
+</ul>
+
+### <img src="/images/demetraLogo.png" width="60" >    DEMETRA: 3D Precision Farming using Internet of Things and Unmanned Aerial Vehicles in Greenhouses 
+<ul>
+    <li><b>Dates</b> April 2023-December 2023 (9 months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Researcher </li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> CONCEPT/0722 – Proof of Concept </li>
+    <li><b>Total Budget</b> €39,902</li>
+    <li><b>Funding Received</b> €39,902 </li>
+    <li>
+        <a href="https://mraspopoulos.github.io/demetraProject/"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li>
+    <li><details><summary><b>Description</b></summary><br><i> The general objective of this project is the adaptation of existing technologies used in a precision agriculture (PA), into an indoor (greenhouse) prototype system which includes the use of both an unmanned ground and aerial vehicles (UGV and UAV). The term precision agriculture refers to the use of information technologies (IT) to help farmers manage the optimal growth of their crops thus ensuring profitability and sustainability. Furthermore, PA has also been known to help the environment by avoiding unnecessary spaying of pesticides as well as excessive use of water and fertilisers. The use of unmanned systems offers higher spatial resolution data compared to satellites. The real-time data of interest to the farmers and management tools/software includes soil properties such as moisture, compaction, salinity and nutrients (nitrogen (N), phosphorus (P) and potassium (K)), and crop monitoring which includes vegetation indexes such as Chlorophyll, Leaf Water, Ground Cover, Leaf Area, Normalised Difference Vegetation Index (NDVI), etc. UAVs have been used in PA for bird eye view, for insect identification using cameras and Lidars, and even actuators for autonomous spraying of pesticides, whereas the use of UGVs provides bottom-up capabilities identifying insects hiding under the leaves and for crop planting and harvesting. The innovation of this project is the UGV and UAV for indoor (greenhouse) PA applications where GPS signals are very weak or non-existent. In addition, this work will validate high-precision cm-level, 3D positioning techniques required for unmanned vehicle indoor localisation and navigation</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i></details>
+    </li>
+</ul>
+
+---
+
+
 <table>
   <tr>
     <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">UCLan Cyprus (2015-Now)</span></td>
@@ -148,64 +237,8 @@ table {
 </ul>
 
 ---
-<table>
-  <tr>
-    <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">INSPIRE Research Centre (2021-Now)</span></td>
-        <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" alt="Placeholder Image" style="float: right; height: 50px;"></a></span></td>
-  </tr>
-</table>
 
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <td style="text-align:left;"> <span style="font-size: 24px; font-weight: bold;">INSPIRE Research Centre (2021-Now)</span></td>-->
-<!--    <td style="text-align:right;"><a href="http://inspirecenter.org/"><img src="/images/inspLog.png" width="120" alt="Placeholder Image"></a></td>-->
-<!--  </tr>-->
-<!--</table>-->
----
-### <img src="/images/thesisLogo.png" width="100" >   THESIS: THree dimEnSIonal millimeter-wave poSitioning
-<ul>
-    <li><b>Dates</b> May 2023-January 2024 (9 months) </li>
-    <li><b>Status</b> Completed </li>
-    <li><b>Role in the Project</b> Coordinator/Principal Investigator </li>
-    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
-        <li><b>Funding Body</b> CONCEPT/0722 – Proof of Concept </li>
-    <li><b>Total Budget</b> €39,952</li>
-    <li><b>Funding Received</b> €39,952 </li>
-    <li>
-        <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a>
-<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
-<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
-<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
-        </li>
-    <li><details><summary><b>Description</b></summary><br><i> THESIS vision is to demonstrate the ability and applicability of the millimetre-wave (mmWave) radio technology towards achieving high precision 3D positioning. mmWave technology is defining a new era in wireless communication by providing very wide bandwidths. It is currently being used in some Wi-Fi systems (e.g., IEEE802.11ad) and is planned to be used in 5G and beyond-5G communications in the near future as the it offers much more flexibility to use wider bandwidths and hence achieving much higher data rates and capacity. This very large availability of bandwidth, together with the use of massive phase array antennas that allow better time resolution and estimation of the signal phase could be used for achieving the desired high accuracy. Additionally, positioning research so far was mostly focused in 2D, however the 3D nature of these days’ smart applications is making the need for 3D positioning even more predominant. The project adopts a System Engineering approach to prove this concept/technology by developing prototypes and validating them experimentally in the lab. In this context the project aims to contribute towards the ongoing research efforts in this direction to achieve cm-level accuracy. The goal is to validate and assess the performance of the developed 3D positioning techniques and assess their performance against set KPIs as well as the applicability of mmWave for this purpose.</i></details>
-    </li>
-    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i></details>
-    </li>
-</ul>
-
-### <img src="/images/demetraLogo.png" width="60" >    DEMETRA: 3D Precision Farming using Internet of Things and Unmanned Aerial Vehicles in Greenhouses 
-<ul>
-    <li><b>Dates</b> April 2023-December 2023 (9 months) </li>
-    <li><b>Status</b> Completed </li>
-    <li><b>Role in the Project</b> Researcher </li>
-    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
-    <li><b>Funding Framework</b> CONCEPT/0722 – Proof of Concept </li>
-    <li><b>Total Budget</b> €39,902</li>
-    <li><b>Funding Received</b> €39,902 </li>
-    <li>
-        <a href="https://mraspopoulos.github.io/demetraProject/"><img src="/images/link_icon.png" width="20" ></a>
-<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
-<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
-<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
-        </li>
-    <li><details><summary><b>Description</b></summary><br><i> The general objective of this project is the adaptation of existing technologies used in a precision agriculture (PA), into an indoor (greenhouse) prototype system which includes the use of both an unmanned ground and aerial vehicles (UGV and UAV). The term precision agriculture refers to the use of information technologies (IT) to help farmers manage the optimal growth of their crops thus ensuring profitability and sustainability. Furthermore, PA has also been known to help the environment by avoiding unnecessary spaying of pesticides as well as excessive use of water and fertilisers. The use of unmanned systems offers higher spatial resolution data compared to satellites. The real-time data of interest to the farmers and management tools/software includes soil properties such as moisture, compaction, salinity and nutrients (nitrogen (N), phosphorus (P) and potassium (K)), and crop monitoring which includes vegetation indexes such as Chlorophyll, Leaf Water, Ground Cover, Leaf Area, Normalised Difference Vegetation Index (NDVI), etc. UAVs have been used in PA for bird eye view, for insect identification using cameras and Lidars, and even actuators for autonomous spraying of pesticides, whereas the use of UGVs provides bottom-up capabilities identifying insects hiding under the leaves and for crop planting and harvesting. The innovation of this project is the UGV and UAV for indoor (greenhouse) PA applications where GPS signals are very weak or non-existent. In addition, this work will validate high-precision cm-level, 3D positioning techniques required for unmanned vehicle indoor localisation and navigation</i></details>
-    </li>
-    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i></details>
-    </li>
-</ul>
-
----
 <table>
   <tr>
     <td style="background-color: #f2f2f2;"> <span style="font-size: 24px; font-weight: bold;text-align: left;">Sigint Solutions Ltd (2007-2015)</span></td>
