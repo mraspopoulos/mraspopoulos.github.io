@@ -34,8 +34,8 @@ table {
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2025</strong></td></tr></table>
 
 <img src="/images/conference_icon.png" width="80" >
-**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, Byblos, September 2025, Tampere, Finland [To be presented]
-[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986)
+**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, September 2025, Tampere, Finland [To be presented]
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
 <!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
 
