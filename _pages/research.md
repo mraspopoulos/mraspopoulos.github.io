@@ -135,6 +135,30 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
     </li>
 </ul>
 
+
+###  OpTec E-Charge - Optimized and Innovative Techniques for Energy-efficient operation of Electric Car Chargers
+<ul>
+    <li><b>Dates</b> Dec. 2022 – June 2023 (24 months) </li>
+    <li><b>Status</b> Completed </li>
+    <li><b>Role in the Project</b> Researcher </li>
+    <li><b>Funding Body</b> <a href="https://www.research.org.cy/">Cyprus Research and Innovation Foundation </a></li>
+    <li><b>Funding Framework</b> Innovation Coupons </li>
+    <li><b>Total Budget</b> €5,000</li>
+    <li><b>Funding Received</b> €5,0000 </li>
+    <!-- <li>
+        <a href="https://mraspopoulos.github.io/demetraProject/"><img src="/images/link_icon.png" width="20" ></a>
+<!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
+<!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
+<!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
+        </li> -->
+    <li><details><summary><b>Description</b></summary><br><i> Responsible research and innovation (RRI) is an approach that assesses potential implications and societal expectations related to research and innovation, aiming to foster the design of ethical, inclusive and sustainable research and innovation. Informed by RRI, the project focuses on empirical data collection to support the development of a set of guidelines for the implementation and use of smart environments that employ the technology of the Internet-of-Things (IoT)</i></details>
+    </li>
+    <li><details><summary><b>Partners</b></summary><br><i><b>INSPIRE - coordinator</b></i><i>BlueSun Automation Ltd.</i></details>
+    </li>
+</ul>
+
+
+
 ---
 
 
@@ -252,7 +276,7 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
         <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>
         <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>
         </li> -->
-    <li><details><summary><b>Description</b></summary><br><i> Responsible research and innovation (RRI) is an approach that assesses potential implications and societal expectations related to research and innovation, aiming to foster the design of ethical, inclusive and sustainable research and innovation. Informed by RRI, the project focuses on empirical data collection to support the development of a set of guidelines for the implementation and use of smart environments that employ the technology of the Internet-of-Things (IoT)
+    <li><details><summary><b>Description</b></summary><br><i> Responsible research and innovation (RRI) is an approach that assesses potential implications and societal expectations related to research and innovation, aiming to foster the design of ethical, inclusive and sustainable research and innovation. Informed by RRI, the project focuses on empirical data collection to support the development of a set of guidelines for the implementation and use of smart environments that employ the technology of the Internet-of-Things (IoT)</i></details>
     </li>
     <li><details><summary><b>Partners</b></summary><br><i>UCLan Cyprus, UCLan UK</i></details>
     </li>
