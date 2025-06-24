@@ -209,7 +209,7 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
 
 ### <img src="/images/ireeder_logo.png" width="120" >    IREEDER – Introducing Recent Electrical Engineering Developments into undErgraduate cuRriculum
 <ul>
-    <li><b>Dates</b> November 2019 – October 2022 (6 Months) </li>
+    <li><b>Dates</b> November 2019 – October 2022 (36 Months) </li>
     <li><b>Status</b> Completed </li>
     <li><b>Role in the Project</b> Principlal Investigator - Leading UCLan's participation </li>
     <li><b>Funding Body</b> <a href="https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2">Erasmus+</a></li>
