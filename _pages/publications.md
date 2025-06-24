@@ -32,6 +32,17 @@ table {
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2025</strong></td></tr></table>
+
+C1.	M. Raspopoulos, A. Sesyuk, I. Ioannou, “3D millimeter-Wave Multi-Target Sensing”, The 15th International Conference on Indoor Positioning and Indoor Navigation, September 2025, Tampere, Finland 
+
+
+
+<img src="/images/conference_icon.png" width="80" >
+**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, Byblos, September 2025, Tampere, Finland [To be presented]
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986)
+<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+
 <img src="/images/journal_icon.png" width="80" >
 L. Nisiotis, A. Anikina and **M. Raspopoulos**, **"The Development of a VR Wireless Signal Propagation Simulator in Unreal Engine: A Device and Performance Testing,"** *in IT Professional*, 2024. [In Press]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
