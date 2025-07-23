@@ -33,14 +33,37 @@ table {
 {% endif %}
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2025</strong></td></tr></table>
 
+
+<img src="/images/journal_icon.png" width="80" >
+I. Ioannou, **M. Raspopoulos**, P. Nagaradjane; C. Christophorou, A. Gregoriades, V. Vassiliou, **"Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network,"** *in IET Communications*, 2025. [To be published]
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
+<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:maZDTaKrznsC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/ITPro_2024.pdf)  -->
+
+
 <img src="/images/conference_icon.png" width="80" >
-**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, September 2025, Tampere, Finland [To be presented]
+**M. Raspopoulos**, I. Ioannou, L. Nisiotis, **"mmWave-based Crowd Sensing for Metaverse Applications,"** *IEEE International Symposium on Emerging Metaverse (ISEMV 2025)*, Honolulu, Hawaii, USA, October 2025 [Accepted - To be presented]
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
+<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+
+
+<img src="/images/conference_icon.png" width="80" >
+C2.	L. Nisiotis, N. Markov, C. Nikolaou, A. Hadjiliasi, **M. Raspopoulos**, **"Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System,"** *IEEE International Symposium on Emerging Metaverse (ISEMV 2025)*, Honolulu, Hawaii, USA, October 2025 [Accepted - To be presented]
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
+<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+
+
+
+<img src="/images/conference_icon.png" width="80" >
+**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, September 2025, Tampere, Finland [Accepted - To be presented]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
 <!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
 
 <img src="/images/journal_icon.png" width="80" >
-L. Nisiotis, A. Anikina and **M. Raspopoulos**, **"The Development of a VR Wireless Signal Propagation Simulator in Unreal Engine: A Device and Performance Testing,"** *in IT Professional*, 2024. [In Press]
+L. Nisiotis, A. Anikina and **M. Raspopoulos**, **"The Development of a VR Wireless Signal Propagation Simulator in Unreal Engine: A Device and Performance Testing,"** *in IT Professional*, 2025. [In Press]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:maZDTaKrznsC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/ITPro_2024.pdf) 
