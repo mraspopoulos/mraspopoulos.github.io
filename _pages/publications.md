@@ -35,7 +35,7 @@ table {
 
 
 <img src="/images/journal_icon.png" width="80" >
-I. Ioannou, **M. Raspopoulos**, P. Nagaradjane; C. Christophorou, A. Gregoriades, V. Vassiliou, **"Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network,"** *in IET Communications*, 2025. [To be published]
+I. Ioannou, **M. Raspopoulos**, P. Nagaradjane; C. Christophorou, A. Gregoriades, V. Vassiliou, **"Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network,"** *in IET Communications*, 2025. [To be published ]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
 <!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:maZDTaKrznsC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/ITPro_2024.pdf)  -->
