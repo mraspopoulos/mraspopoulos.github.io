@@ -42,7 +42,7 @@ I. Ioannou, P. Nagaradjane, **M. Raspopoulos**, V. Papadopoulou-Lesta, C. Christ
 
 
 <img src="/images/conference_icon.png" width="80" >
-I. Ioannou, C. Christophorou, C. Politi, S. Denazis, **M. Raspopoulos** and V. Vassiliou, **"A Deep Q-Network (DQN) Framework for Joint Optimization of EV Charging Station Placement and Vehicle Routing,"** *2025 IEEE International Smart Cities Conference (ISC2-2025) *, Patras, Greece, 6-9 October, 2025. [Accepted - To be presented]
+I. Ioannou, C. Christophorou, C. Politi, S. Denazis, **M. Raspopoulos** and V. Vassiliou, **"A Deep Q-Network (DQN) Framework for Joint Optimization of EV Charging Station Placement and Vehicle Routing,"** *2025 IEEE International Smart Cities Conference (ISC2)*, Patras, Greece, 2025, pp. 1-6, doi: 10.1109/ISC266238.2025.11293297.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:ns9cj8rnVeAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/A_Deep_Q_Network_Framework_for_Joint_Optimization_of_EV_Charging_Station_Placement_and_Vehicle_Routing.pdf) 
