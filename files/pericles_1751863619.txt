@@ -1,0 +1,23 @@
+
+TY  - JOUR
+AU  - Ioannou, Iakovos
+AU  - Raspopoulos, Marios
+AU  - Nagaradjane, Prabagarane
+AU  - Christophorou, Christophoros
+AU  - Gregoriades, Andreas
+AU  - Vassiliou, Vasos
+C7  - e70096
+TI  - Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network
+JO  - IET Communications
+JA  - IET Commun.
+VL  - 19
+IS  - 1
+SN  - 1751-8628
+UR  - https://doi.org/10.1049/cmu2.70096
+DO  - https://doi.org/10.1049/cmu2.70096
+SP  - e70096
+KW  - 6G
+KW  - mobile ad hoc networks
+PY  - 2025
+AB  - ABSTRACT The increasing demand for ultra-reliable, low-latency, and high-throughput connectivity in dense urban environments presents significant challenges for next-generation 6G networks. Traditional cellular networks, with their fixed cell boundaries and centralized base station control, are inadequate to meet the dynamic needs of such environments. A promising solution is the cell-free network architecture, where a distributed set of access points (APs) jointly serve users without fixed cell boundaries. However, efficient access point selection and accurate user localization are crucial to achieving high performance in such networks. This paper presents a decentralized approach using Belief-Desire-Intention eXtended (BDIx) agents for dynamic AP selection and localization within a cluster-based cell-free 6G communications network. Various clustering algorithms (K-means, DBSCAN, self-organizing maps, MeanShift, ClusterGAN, and Autoencoders) are evaluated for their ability to optimize network throughput, energy efficiency, and spectral utilization. A hybrid localization framework, such as centroid-based, differential circles, and multilateration methods, is employed to achieve accurate user positioning. The results demonstrate that machine learning-based clustering methods, notably Gaussian mixture model (GMM), self-organizing map (SOM), and ClusterGAN, offer significant improvements in throughput (up to 46.3%) and power reduction (up to 32.8%) over traditional methods. Regarding localization, deep learning models such as MLP, CNN, and TCN outperform deterministic methods, achieving sub-meter accuracy with minimal errors (MeanDist < 1 m, $R^2$ > 0.999). Overall, the proposed solution enhances system scalability, energy efficiency, and positioning accuracy, establishing a promising foundation for future 6G networks. In our reference implementation, we instantiate the pipeline with a GMM for AP/UE clustering and a multilayer perceptron (MLP) regressor for localization.
+ER  - 

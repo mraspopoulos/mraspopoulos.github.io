@@ -33,39 +33,47 @@ table {
 {% endif %}
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2025</strong></td></tr></table>
 
+
+<img src="/images/conference_icon.png" width="80" >
+I. Ioannou, P. Nagaradjane, **M. Raspopoulos**, V. Papadopoulou-Lesta, C. Christophorou, Ala' Khalifeh,  and V. Vassiliou, **"Topology-Aware Deep Reinforcement Learning for RIS Beamforming: A GNN-PPO and Risk-Sensitive Evaluation,"** *2025 Asian Conference on Communication and Networks (ASIANComNet 2025) *,  [Presented - To be published]
+<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297) -->
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf) 
+
+
 <img src="/images/conference_icon.png" width="80" >
 I. Ioannou, C. Christophorou, C. Politi, S. Denazis, **M. Raspopoulos** and V. Vassiliou, **"A Deep Q-Network (DQN) Framework for Joint Optimization of EV Charging Station Placement and Vehicle Routing,"** *2025 IEEE International Smart Cities Conference (ISC2-2025) *, Patras, Greece, 6-9 October, 2025. [Accepted - To be presented]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:ns9cj8rnVeAC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/A_Deep_Q_Network_Framework_for_Joint_Optimization_of_EV_Charging_Station_Placement_and_Vehicle_Routing.pdf) 
 
 <img src="/images/journal_icon.png" width="80" >
-I. Ioannou, **M. Raspopoulos**, P. Nagaradjane; C. Christophorou, A. Gregoriades, V. Vassiliou, **"Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network,"** *in IET Communications*, 2025. [To be published ]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10633571)-->
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:maZDTaKrznsC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/ITPro_2024.pdf)  -->
+I. Ioannou, **M. Raspopoulos**, P. Nagaradjane; C. Christophorou, A. Gregoriades, V. Vassiliou, **"Access Point Selection and Localization for Cluster-Based Realization of a Device-to-Device Cell-Free 6G Communications Network,"** *IET Communications* 19, no. 1 (2025): e70096. https://doi.org/10.1049/cmu2.70096
+[<img src="/images/link_icon.png" width="20" >](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/cmu2.70096)
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:YFjsv_pBGBYC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/Access_Point_Selection_and_Localization_for_Cluster_Based_Realization_of_a_Device_to_Device_Cell_Free_6G_Communications_Network.pdf) 
 
 
 <img src="/images/conference_icon.png" width="80" >
-**M. Raspopoulos**, I. Ioannou, L. Nisiotis, **"mmWave-based Crowd Sensing for Metaverse Applications,"** *IEEE International Symposium on Emerging Metaverse (ISEMV 2025)*, Honolulu, Hawaii, USA, October 2025 [Accepted - To be presented]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+**M. Raspopoulos**, I. Ioannou, L. Nisiotis, **"mmWave-based Crowd Sensing for Metaverse Applications,"** *2025 IEEE International Symposium on Emerging Metaverse (ISEMV)*, Honolulu, HI, USA, 2025, pp. 46-54, doi: 10.1109/ISEMV67326.2025.00019.
+[<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11327692) 
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:O3NaXMp0MMsC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/ISEMV2025___mmWave_based_Crowd_Sensing_for_Metaverse_Applications.pdf) 
 
 
 <img src="/images/conference_icon.png" width="80" >
-C2.	L. Nisiotis, N. Markov, C. Nikolaou, A. Hadjiliasi, **M. Raspopoulos**, **"Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System,"** *IEEE International Symposium on Emerging Metaverse (ISEMV 2025)*, Honolulu, Hawaii, USA, October 2025 [Accepted - To be presented]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+L. Nisiotis, N. Markov, C. Nikolaou, A. Hadjiliasi, **M. Raspopoulos**, **"Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System,"** *2025 IEEE International Symposium on Emerging Metaverse (ISEMV), Honolulu*, HI, USA, 2025, pp. 17-26, doi: 10.1109/ISEMV67326.2025.00016.
+ [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11327847) 
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:NMxIlDl6LWMC)
+<!-- [<img src="/images/pdf_link_icon.ico" width="20" >](/files/ISEMV2025___mmWave_based_Crowd_Sensing_for_Metaverse_Applications.pdf)  -->
 
 
 
 <img src="/images/conference_icon.png" width="80" >
-**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *The 15th International Conference on Indoor Positioning and Indoor Navigation*, September 2025, Tampere, Finland [Accepted - To be presented]
-<!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10910986) -->
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:blknAaTinKkC)
-[<img src="/images/pdf_link_icon.ico" width="20" >](/files/cellFree6G.pdf)  -->
+**M. Raspopoulos**, A. Sesyuk, and I. Ioannou, **"3D millimeter-Wave Multi-Target Sensing,"** *2025 International Conference on Indoor Positioning and Indoor Navigation (IPIN)*, Tampere, Finland, 2025, pp. 1-6, doi: 10.1109/IPIN66788.2025.11213372.
+ [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11213372) 
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:BqipwSGYUEgC)
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/3D_millimeter_Wave_Multi_Target_Sensing_IPIN2025.pdf)
 
 <img src="/images/journal_icon.png" width="80" >
 L. Nisiotis, A. Anikina and **M. Raspopoulos**, **"The Development of a VR Wireless Signal Propagation Simulator in Unreal Engine: A Device and Performance Testing,"** *in IT Professional*, 2025. [In Press]
