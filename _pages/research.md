@@ -76,7 +76,7 @@ table {
     <li><b>Total Budget</b> €249.930,32</li>
     <li><b>Funding Received</b> €249.930,32 </li>
     <li>
-        <!-- <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a> -->
+        <a href="https://netrl.github.io/ERMIS/"><img src="/images/link_icon.png" width="20" ></a>
 <!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
 <!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
 <!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->

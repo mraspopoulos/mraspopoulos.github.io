@@ -74,7 +74,7 @@ table {
     <li><b>Total Budget</b> €249.930,32</li>
     <li><b>Funding Received</b> 171.770,66 </li>
     <li>
-        <!-- <a href="https://mraspopoulos.github.io/thesisProject/"><img src="/images/link_icon.png" width="20" ></a> -->
+        <a href="https://netrl.github.io/ERMIS/"><img src="/images/link_icon.png" width="20" ></a>
 <!--        <a href="https://www.facebook.com/profile.php?id=100050551727966"><img src="/images/facebook_icon.png" width="20" ></a>-->
 <!--        <a href="https://www.linkedin.com/company/ireeder/"><img src="/images/linkedin_icon.png" width="20" ></a>-->
 <!--        <a href="/files/IREEDERBrochureEng.pdf"><img src="/images/pdf_link_icon.ico" width="20" ></a>-->
@@ -86,7 +86,7 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
     </li>
 </ul>
 
-### <img src="/images/preventProjectLogo.png" width="80" >PREVENT– Prevention of natural disasters using deep technology for advanced HEI curricula
+<!-- ### <img src="/images/preventProjectLogo.png" width="80" >PREVENT– Prevention of natural disasters using deep technology for advanced HEI curricula
 <ul>
     <li><b>Dates</b> January. 2024 – December 2025 (24 Months)</li>
     <li><b>Status</b> Ongoing </li>
@@ -105,7 +105,7 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
     </li>
     <li><details><summary><b>Partners</b></summary><br><i><b>Halmstad University (SWE) -coordinator </b>, UCLan Cyprus (CY), Citizens in Power (CY), University of Patras (GR), University of West Macedonia (GR), Helix-Connect (RO), University of Vigo (ESP)</i></details>
     </li>
-</ul>
+</ul> -->
 
 
 ---
