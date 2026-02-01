@@ -35,7 +35,7 @@ table {
 
 
 <img src="/images/conference_icon.png" width="80" >
-I. Ioannou, P. Nagaradjane, **M. Raspopoulos**, V. Papadopoulou-Lesta, C. Christophorou, Ala' Khalifeh,  and V. Vassiliou, **"Topology-Aware Deep Reinforcement Learning for RIS Beamforming: A GNN-PPO and Risk-Sensitive Evaluation,"** *2025 Asian Conference on Communication and Networks (ASIANComNet 2025) *,  [Presented - To be published]
+I. Ioannou, P. Nagaradjane, **M. Raspopoulos**, V. Papadopoulou-Lesta, C. Christophorou, Ala' Khalifeh,  and V. Vassiliou, **"Topology-Aware Deep Reinforcement Learning for RIS Beamforming: A GNN-PPO and Risk-Sensitive Evaluation,"** *2025 Asian Conference on Communication and Networks (ASIANComNet 2025)*,  [Presented - To be published]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297) -->
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf) 
