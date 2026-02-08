@@ -113,6 +113,15 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
 
 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>Selected Publications</strong></td></tr></table>
+
+
+<img src="/images/journal_icon.png" width="80" >
+Ioannou, I.; Vassiliou, V.; **Raspopoulos, M.** **Adaptive Multi-Stage Hybrid Localization for RIS-Aided 6G Indoor Positioning Systems: Combining Fingerprinting and Geometric Methods with Condition-Aware Fusion.** *Sensors* 2026, 26, 1084. https://doi.org/10.3390/s26041084
+[<img src="/images/link_icon.png" width="20" >](https://www.mdpi.com/1424-8220/26/4/1084)
+<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:YFjsv_pBGBYC) -->
+[<img src="/images/pdf_link_icon.ico" width="20" >](/files/sensors-26-01084.pdf) 
+
+
 <img src="/images/journal_icon.png" width="80" > I. Ioannou; **M. Raspopoulos**; P. Nagaradjane; C. Christophorou,W. A. Aziz, V. Vasiliou, A. Pistillides, "**DeepRISBeam: Deep Learning-based RIS Beam Management for Radio Channel Optimization**," in IEEE Access, vol. 12, pp. 81646-81681, 2024, doi: 10.1109/ACCESS.2024.3411929.
 [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/document/10552229)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:bEWYMUwI8FkC)
