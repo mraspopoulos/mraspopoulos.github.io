@@ -118,7 +118,7 @@ Machine Learning-based Beam Management in Multi-Antenna and RIS (Reconfigurable 
 <img src="/images/journal_icon.png" width="80" >
 Ioannou, I.; Vassiliou, V.; **Raspopoulos, M.** **Adaptive Multi-Stage Hybrid Localization for RIS-Aided 6G Indoor Positioning Systems: Combining Fingerprinting and Geometric Methods with Condition-Aware Fusion.** *Sensors* 2026, 26, 1084. https://doi.org/10.3390/s26041084
 [<img src="/images/link_icon.png" width="20" >](https://www.mdpi.com/1424-8220/26/4/1084)
-<!-- [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:YFjsv_pBGBYC) -->
+[<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:RGFaLdJalmkC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/sensors-26-01084.pdf) 
 
 
