@@ -34,15 +34,11 @@ table {
 
 <table><tr><td style="background-color: #f2f2f2; font-size: 24px;"><strong>2026</strong></td></tr></table>
 
-
-
 <img src="/images/conference_icon.png" width="80" >
 L. Nisiotis and **M. Raspopoulos**,  **VRadioSim: A GPU-Based Ray Tracing Simulator for Real-Time Wireless Propagation Visualisation in Virtual Reality** *IEEE Computers, Software, and Applications Conference (COMPSAC 2026) *, Madrid, Spain, July 7-10, 2026, [Accepted - To be presented]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf)  -->
-
-
 
 <img src="/images/conference_icon.png" width="80" >
 S. Ioannou, **M. Raspopoulos** and  S. Peng,  **Seamless Indoor Navigation: Leveraging AI Computer Vision and GPS Spoofing for UGV Autonomy** *The 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026) *, Bari, Italy, July 13-16, 2026, [Accepted - To be presented]
@@ -50,15 +46,11 @@ S. Ioannou, **M. Raspopoulos** and  S. Peng,  **Seamless Indoor Navigation: Leve
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf)  -->
 
-
 <img src="/images/conference_icon.png" width="80" >
 I. Ioannou, **M. Raspopoulos**, M. Georgiades, C. Christophorou, A. Khalifeh and V. Vassiliou **"DRL-based Position-Aided Beam-Management\\in RIS-Enabled Indoor Environments,"** *International Workshop on Intelligent Systems for the Internet of Things in The 22nd Annual International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT 2026)*, Reykjavik, Iceland, June 22-24, 2026, [Accepted - To be presented]
 <!-- [<img src="/images/link_icon.png" width="20" >](https://ieeexplore.ieee.org/abstract/document/11293297)
 [<img src="/images/googlescholar_icon.png" width="20" >](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC)
 [<img src="/images/pdf_link_icon.ico" width="20" >](/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf)  -->
-
-Authors : Iacovos Ioannou, Marios Raspopoulos, Michael Georgiades, Christophoros Christophorou, Ala Khalifeh and Vasos Vassiliou
-Title :   DRL-based Position-Aided Beam-Management\\in RIS-Enabled Indoor Environments
 
 <img src="/images/journal_icon.png" width="80" >
 I. Ioannou, C. Christophorou, A. Andreou, **M. Raspopoulos**, C. Mavromoustakis, V. Vassiliou, F. Granelli,
