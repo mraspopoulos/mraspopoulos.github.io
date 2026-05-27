@@ -46,7 +46,7 @@ const projects = (await getCollection('projects'))
 const selected = (await getCollection('publications'))
   .filter((p) => p.data.selected)
   .sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order)
-  .slice(0, 5);
+  .slice(0, 8);
 ---
 
 <Base title="Marios Raspopoulos" active="about">
