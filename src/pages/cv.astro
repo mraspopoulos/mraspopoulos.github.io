@@ -1,0 +1,319 @@
+---
+import Base from '../layouts/Base.astro';
+
+const appointments = [
+  {
+    place: 'UCLan Cyprus',
+    period: '2015 – present',
+    url: 'https://www.uclancyprus.ac.cy/',
+    logo: '/images/affiliations/UCLan_Cyprus_logo.png',
+    roles: [
+      { title: 'Associate Professor', period: 'Sep 2021 – present', notes: ['Deputy Head of School', 'Programme Coordinator, BEng (Hons) Computer Engineering', 'Chair of the Research Committee'] },
+      { title: 'Assistant Professor', period: 'Sep 2015 – Aug 2021', notes: ['Programme Coordinator, BEng (Hons) Electrical and Electronic Engineering', 'Chair of the Innovation & Enterprise Committee'] },
+    ],
+  },
+  {
+    place: 'INSPIRE Research Centre',
+    period: 'Apr 2023 – present',
+    url: 'http://inspirecenter.org/',
+    logo: '/images/affiliations/inspLog.png',
+    roles: [
+      { title: 'Research and Innovation Scientist', period: '', notes: ['Coordination and participation in cutting-edge ICT R&D projects'] },
+    ],
+  },
+  {
+    place: 'Sigint Solutions Ltd',
+    period: 'Jun 2007 – Aug 2015',
+    url: 'http://www.sigintsolutions.com/',
+    logo: '/images/affiliations/sigLog.png',
+    roles: [
+      { title: 'Chief Technology Officer', period: '', notes: [
+        'Head of Research, Innovation and Development — €2.3M ICT R&D funding 2006-2014',
+        'Head of Technical, Consulting and Education Activities',
+        'Establishment and quality management of an ISO 17025 Electromagnetic Radiation Measurement Laboratory',
+        'Coordination of software development and ICT platform development projects',
+      ] },
+    ],
+  },
+  {
+    place: 'Open University of Cyprus',
+    period: 'Jan 2013 – Jan 2018',
+    url: 'https://www.ouc.ac.cy/',
+    logo: '/images/affiliations/ouc_logo.png',
+    roles: [
+      { title: 'Adjunct Lecturer', period: '', notes: ['Coordination, creation of course material and teaching of telecommunications and networking courses'] },
+    ],
+  },
+  {
+    place: 'University of Surrey',
+    period: 'Sep 2004 – Aug 2007',
+    url: 'https://www.surrey.ac.uk/',
+    logo: '/images/affiliations/surrey_logo.png',
+    roles: [
+      { title: 'Research Assistant / Associate', period: '', notes: ['Centre for Communications Systems Research', 'Participation in research and development projects', 'Teaching Assistant'] },
+    ],
+  },
+];
+
+const education = [
+  { degree: 'PhD, Telecommunication Engineering', place: 'University of Surrey, UK', period: 'Sep 2004 – Mar 2008', detail: 'Thesis: "Radio Propagation in Frequency Selective Buildings". Supervised by Dr. Stavros Stavrou and Prof. Barry Evans. University Research Scholarship (URS).', logo: '/images/affiliations/surrey_logo.png' },
+  { degree: 'MSc, Communications Networks and Software', place: 'University of Surrey, UK', period: 'Sep 2003 – Sep 2004', detail: 'Grade 84% (Distinction). Thesis: "Deterministic modelling in an indoor wireless environment and the effect of Frequency Selective Surfaces". MSc Advisory Board Prize, Cable and Wireless Prize.', logo: '/images/affiliations/surrey_logo.png' },
+  { degree: 'MEng, Electronics with Mobile Communications', place: 'University of Surrey, UK', period: 'Sep 2001 – Jun 2003', detail: 'Grade 80.6% (Distinction). IEEE UK & RI Best Project in Telecommunications Prize, Certificate of Radio Frequency Engineering, Cyprus State Scholarship.', logo: '/images/affiliations/surrey_logo.png' },
+  { degree: 'HND, Electrical and Electronic Engineering', place: 'Higher Technical Institute, Cyprus', period: 'Sep 1998 – Sep 2001', detail: 'Grade 92.12% (Distinction). Presidential Prize, IEE Cyprus Prize, ΣΕΠΑΗΚ Prize, ΕΠΟΕΤ Prize, CyBC Prize.', logo: null },
+  { degree: 'Fellow of the Higher Education Academy (FHEA)', place: 'Advance HE', period: 'Oct 2021', detail: '', logo: null },
+];
+
+const phdStudents = [
+  { name: 'Theodosis Pasiali', topic: 'Reconfigurable Intelligent Surfaces (RIS) and their control using embedded systems and optimisation techniques for modern communication systems', period: '2025 – present', status: 'current' },
+  { name: 'Constantina Stavrou', topic: 'Advancing energy communities through flexible energy storage systems', period: '2025 – present', status: 'current' },
+  { name: 'Dr Andrey Sesyuk', topic: '3D indoor navigation and tracking for the Internet of Things', period: '2020 – 2024', status: 'completed' },
+];
+
+const awards = [
+  { date: 'Aug 2016', title: 'Best Paper Award — ISD2016, Katowice', detail: '"An Open Platform for Studying and Testing Context-Aware Indoor Positioning Algorithms"' },
+  { date: 'Apr 2005', title: 'Best Paper Award — 11th European Wireless, Nicosia', detail: '"Effect of Frequency Selective Surfaces on radio wave propagation in indoor environments"' },
+  { date: 'Sep 2004', title: 'Cable and Wireless Prize', detail: 'University of Surrey — best overall performance, MSc Communications Networks and Software' },
+  { date: 'Sep 2004', title: 'MSc Advisory Board Prize', detail: 'University of Surrey — best MSc project (taught programme)' },
+  { date: 'Jun 2002', title: 'IEEE UK&RI Project Prize', detail: 'Best final-year undergraduate project in Telecommunications (IEEE UK & Republic of Ireland)' },
+  { date: 'Jun 2001', title: 'Presidential Prize', detail: 'Highest overall performance at the Higher Technical Institute. Awarded by President Glafkos Clerides.' },
+  { date: 'Jun 2001', title: 'IEE Cyprus Prize', detail: 'Highest overall performance in the Electrical Engineering course at HTI' },
+];
+
+const service = [
+  {
+    label: 'Conference organisation',
+    items: [
+      'Programme Co-Chair, 26th International Conference on Information Systems Development (ISD2017), Larnaca',
+      'Workshops Chair, 10th EAI International Conference on Game Theory and Networks (2021)',
+      'Publicity Chair, IEEE ALIAS 2022 Workshop (IEEE MDM2022)',
+      'Publicity Chair, IEEE ALIAS 2023 Workshop (IEEE MDM2023)',
+    ],
+  },
+  {
+    label: 'Journal reviewing',
+    items: [
+      'IEEE Transactions on Antennas and Propagation',
+      'IEEE Communication Letters',
+      'IET Circuits, Devices & Systems',
+      'Springer Mobile Networks & Applications (MONE)',
+      'Springer Wireless Networks (WINE)',
+      'Applied Computational Electromagnetics Society',
+      'EURASIP Journal on Wireless Communications and Networking',
+      'Progress in Electromagnetic Research (PIER) Journals',
+    ],
+  },
+  {
+    label: 'PhD examiner',
+    items: [
+      'Feb 2025 — Juan José López Escobar, "Design of a new distributed Mist, Edge and Fog architecture in Beyond-5G environments for the IoT", University of Vigo (Chair)',
+      'Jun 2016 — Firooz Bashshi Saghezchi, "Cooperative Strategies for Energy Efficiency in Multi-standard Wireless Devices", University of Aveiro (Member)',
+    ],
+  },
+  {
+    label: 'Technical expert',
+    items: [
+      'EUROSTARS Technical Expert, EUREKA Network',
+      'Registered Expert, EC Research & Innovation Portal',
+      'Approved Evaluator, General Secretariat of Research and Innovation, Greece',
+    ],
+  },
+  {
+    label: 'Quality assurance in higher education',
+    items: [
+      'Chair of Expert Group evaluating Information Systems at ISMA University (Latvia) and its overseas campus in Fergana (Uzbekistan), on behalf of AIKA (Latvian HE Quality Agency), Apr 2024',
+    ],
+  },
+  {
+    label: 'Standardisation',
+    items: [
+      'Member, Indoor Positioning Indoor Navigation (IPIN) International Standards Committee',
+    ],
+  },
+  {
+    label: 'National and policy roles',
+    items: [
+      'Member, Parallel Parliament on the Environment, Sustainability and Public Health',
+      'Member, National Committee on Open Science (Deputy Ministry of Research Innovation and Digital Policy)',
+      'Member, 5G Specialists Group (Ministry of Health)',
+    ],
+  },
+];
+---
+
+<Base title="CV — Marios Raspopoulos" active="cv">
+  <h1>Curriculum vitae</h1>
+  <p style="color: var(--text-muted); margin-bottom: 0.5rem;">
+    A summary of academic appointments, education, students, awards, and service. The full PDF is the authoritative version.
+  </p>
+  <p style="margin-bottom: 2rem;">
+    <a href="/files/raspopoulos-cv.pdf" style="display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: var(--accent); color: white; border-radius: var(--radius-sm); font-size: 0.875rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download full CV (PDF · 18 pages)
+    </a>
+  </p>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <h2>Appointments</h2>
+    </div>
+    <div class="cv-timeline">
+      {appointments.map((a) => (
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <div class="cv-place">
+              {a.logo && (
+                <span class="cv-place-logo">
+                  <img src={a.logo} alt={`${a.place} logo`} loading="lazy" />
+                </span>
+              )}
+              {a.url ? <a href={a.url} style="color: inherit; text-decoration: none;">{a.place}</a> : <span>{a.place}</span>}
+            </div>
+            <span class="cv-period">{a.period}</span>
+          </div>
+          {a.roles.map((r) => (
+            <div>
+              <p class="cv-role">
+                {r.title}
+                {r.period && <span class="cv-role-period">{r.period}</span>}
+              </p>
+              {r.notes.length > 0 && (
+                <ul class="cv-notes">
+                  {r.notes.map((n) => <li>{n}</li>)}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <h2>Education</h2>
+    </div>
+    <div class="cv-timeline">
+      {education.map((e) => (
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <div class="cv-place">
+              {e.logo && (
+                <span class="cv-place-logo">
+                  <img src={e.logo} alt={`${e.place} logo`} loading="lazy" />
+                </span>
+              )}
+              <span>{e.degree}</span>
+            </div>
+            <span class="cv-period">{e.period}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0.2rem 0 0; line-height: 1.5;">
+            {e.place}{e.detail && ` · ${e.detail}`}
+          </p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h2>PhD students</h2>
+    </div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      {phdStudents.map((s) => (
+        <li style="border-top: 1px solid var(--border); padding: 0.85rem 0;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap;">
+            <strong style="font-family: var(--font-serif); font-weight: 500; font-size: 1rem;">{s.name}</strong>
+            <span class="cv-period">
+              {s.period}
+              {s.status === 'completed' && (
+                <span style="margin-left: 8px; font-size: 0.7rem; padding: 2px 8px; background: var(--accent-bg); color: var(--accent); border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em;">completed</span>
+              )}
+            </span>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin: 0.25rem 0 0; line-height: 1.5;">{s.topic}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <h2>Awards and honours</h2>
+    </div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      {awards.map((a) => (
+        <li style="border-top: 1px solid var(--border); padding: 0.7rem 0; display: flex; gap: 1rem; align-items: baseline;">
+          <span style="flex-shrink: 0; width: 80px; font-size: 0.78rem; color: var(--text-faint); font-variant-numeric: tabular-nums;">{a.date}</span>
+          <div style="flex: 1; min-width: 0;">
+            <strong style="font-family: var(--font-serif); font-weight: 500; font-size: 0.95rem;">{a.title}</strong>
+            {a.detail && <p style="font-size: 0.825rem; color: var(--text-muted); margin: 0.2rem 0 0; line-height: 1.5;">{a.detail}</p>}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+      </div>
+      <h2>Professional service</h2>
+    </div>
+    {service.map((s) => (
+      <div style="margin-top: 1rem;">
+        <h3 style="font-family: var(--font-serif); font-size: 1rem; font-weight: 500; margin: 0 0 0.4rem; color: var(--accent);">{s.label}</h3>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+          {s.items.map((it) => (
+            <li style="font-size: 0.875rem; color: var(--text-muted); padding: 0.2rem 0 0.2rem 1rem; position: relative; line-height: 1.5;">
+              <span style="position: absolute; left: 0; color: var(--accent); font-weight: 500;">·</span>{it}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      </div>
+      <h2>Memberships</h2>
+    </div>
+    <ul style="list-style: none; padding: 0; margin: 0;">
+      <li style="border-top: 1px solid var(--border); padding: 0.6rem 0; font-size: 0.9rem;">
+        <strong style="font-weight: 500;">IEEE</strong> · Member no. 91311193
+      </li>
+      <li style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.6rem 0; font-size: 0.9rem;">
+        <strong style="font-weight: 500;">ETEK</strong> · Cyprus Scientific and Technical Chamber, no. A090532
+      </li>
+    </ul>
+  </section>
+
+  <section class="cv-section">
+    <div class="cv-section-head">
+      <div class="cv-section-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <h2>Related pages</h2>
+    </div>
+    <p style="margin: 0;">
+      For the full list of <a href="/publications/">publications</a> and
+      <a href="/research/">research projects</a>, see the dedicated pages.
+      Teaching modules are listed on the <a href="/teaching/">teaching page</a>.
+    </p>
+  </section>
+</Base>

@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { getCollection } from 'astro:content';
+
+const all = await getCollection('projects');
+const ongoing = all.filter((p) => p.data.status === 'ongoing')
+  .sort((a, b) => a.data.order - b.data.order);
+const completed = all.filter((p) => p.data.status === 'completed')
+  .sort((a, b) => b.data.endDate.getTime() - a.data.endDate.getTime());
+const upcoming = all.filter((p) => p.data.status === 'upcoming')
+  .sort((a, b) => a.data.startDate.getTime() - b.data.startDate.getTime());
+---
+
+<Base title="Research — Marios Raspopoulos" active="research">
+  <h1>Research projects</h1>
+  <p style="color: var(--text-muted); margin-bottom: 2rem;">
+    Funded research projects, current and past. Each entry lists role, funder, dates, and partner institutions.
+  </p>
+
+  {ongoing.length > 0 && (
+    <div class="status-group">
+      <div class="status-group-head">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Ongoing
+        <span class="count">{ongoing.length}</span>
+      </div>
+      <div class="status-group-body">
+        <div class="project-list">
+          {ongoing.map((p) => <ProjectCard project={p} />)}
+        </div>
+      </div>
+    </div>
+  )}
+
+  {upcoming.length > 0 && (
+    <div class="status-group upcoming-group">
+      <div class="status-group-head upcoming">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Upcoming
+        <span class="count">{upcoming.length}</span>
+      </div>
+      <div class="status-group-body">
+        <div class="project-list">
+          {upcoming.map((p) => <ProjectCard project={p} />)}
+        </div>
+      </div>
+    </div>
+  )}
+
+  {completed.length > 0 && (
+    <div class="status-group completed-group">
+      <div class="status-group-head completed">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Completed
+        <span class="count">{completed.length}</span>
+      </div>
+      <div class="status-group-body">
+        <div class="project-list">
+          {completed.map((p) => <ProjectCard project={p} />)}
+        </div>
+      </div>
+    </div>
+  )}
+</Base>

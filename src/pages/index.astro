@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import StatCards from '../components/StatCards.astro';
+import NewsList from '../components/NewsList.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import { getCollection } from 'astro:content';
+
+const areas = [
+  {
+    name: 'Indoor positioning',
+    blurb: '3D fingerprinting, multi-device map-constrained positioning, sub-meter accuracy with 3D ray tracing.',
+  },
+  {
+    name: 'RIS-aided 6G',
+    blurb: 'Beam management and positioning in environments with reconfigurable intelligent surfaces.',
+  },
+  {
+    name: 'mmWave sensing',
+    blurb: 'Radar-based mmWave for 3D positioning, multi-target sensing, and metaverse applications.',
+  },
+  {
+    name: 'Radio propagation',
+    blurb: 'Frequency-selective surfaces, ray tracing, channel modelling, and propagation prediction.',
+  },
+  {
+    name: 'Internet of Things',
+    blurb: 'IoT network architecture, security, jamming localisation, and cell-free 6G integration.',
+  },
+  {
+    name: 'Machine learning for wireless',
+    blurb: 'Deep RL and supervised models for beamforming, link prediction, and resource allocation.',
+  },
+];
+
+const affiliations = [
+  { place: 'UCLan Cyprus', role: 'School of Sciences · Associate Professor', url: 'https://www.uclancyprus.ac.cy/', logo: '/images/affiliations/UCLan_Cyprus_logo.png' },
+  { place: 'INSPIRE Centre', role: 'Research & Innovation Scientist', url: 'http://inspirecenter.org/', logo: '/images/affiliations/inspLog.png' },
+];
+
+const projects = (await getCollection('projects'))
+  .filter((p) => p.data.status === 'ongoing')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const selected = (await getCollection('publications'))
+  .filter((p) => p.data.selected)
+  .sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order)
+  .slice(0, 5);
+---
+
+<Base title="Marios Raspopoulos" active="about">
+  <Hero />
+  <StatCards />
+
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Latest</span>
+      <h2>News</h2>
+    </div>
+  </div>
+  <NewsList limit={5} />
+
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Research focus</span>
+      <h2>Areas of expertise</h2>
+    </div>
+  </div>
+  <div class="areas-grid">
+    {areas.map((a) => (
+      <div class="area-card">
+        <h3>{a.name}</h3>
+        <p>{a.blurb}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Current work</span>
+      <h2>Active projects</h2>
+    </div>
+    <a class="section-link" href="/research/">All projects &rarr;</a>
+  </div>
+  <div class="project-list">
+    {projects.map((p) => <ProjectCard project={p} />)}
+  </div>
+
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Output</span>
+      <h2>Selected publications</h2>
+    </div>
+    <a class="section-link" href="/publications/">All publications &rarr;</a>
+  </div>
+  <ol class="pub-list">
+    {selected.map((pub) => <PublicationItem pub={pub} />)}
+  </ol>
+
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Roles</span>
+      <h2>Affiliations</h2>
+    </div>
+  </div>
+  <div class="affiliations">
+    {affiliations.map((a) => (
+      <a href={a.url} class="affiliation">
+        {a.logo && (
+          <div class="affiliation-logo">
+            <img src={a.logo} alt={`${a.place} logo`} loading="lazy" />
+          </div>
+        )}
+        <div class="affiliation-text">
+          <strong>{a.place}</strong>
+          <span>{a.role}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>

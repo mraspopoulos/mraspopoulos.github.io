@@ -1,0 +1,195 @@
+---
+import Base from '../layouts/Base.astro';
+
+const phdStudents = {
+  current: [
+    {
+      name: 'Theodosis Pasiali',
+      topic: 'Reconfigurable Intelligent Surfaces (RIS) and their control using embedded systems and optimisation techniques for modern communication systems',
+      period: '2025 – present',
+    },
+    {
+      name: 'Constantina Stavrou',
+      topic: 'Advancing energy communities through flexible energy storage systems',
+      period: '2025 – present',
+    },
+  ],
+  completed: [
+    {
+      name: 'Dr Andrey Sesyuk',
+      topic: '3D indoor navigation and tracking for the Internet of Things',
+      period: '2020 – 2024',
+    },
+  ],
+};
+
+const institutions = [
+  {
+    name: 'UCLan Cyprus',
+    period: '2015 – present',
+    url: 'https://www.uclancyprus.ac.cy/',
+    logo: '/images/affiliations/UCLan_Cyprus_logo.png',
+    sections: [
+      {
+        label: 'Currently teaching',
+        modules: [
+          { code: 'EL2006', name: 'Data Communications', level: 'Year 3 — Undergraduate' },
+          { code: 'CO3514', name: 'Wireless and Mobile Networks', level: 'Year 4 — Undergraduate' },
+          { code: 'EL3801', name: 'Wireless, Mobile and Fibre Optic Communication', level: 'Year 4 — Undergraduate' },
+          { code: 'EL3807', name: 'Mobile Technologies', level: 'Year 4 — Undergraduate' },
+        ],
+      },
+      {
+        label: 'Previously taught',
+        modules: [
+          { code: 'EL1785', name: 'Electronics and Instrumentation', level: 'Year 2 — Undergraduate' },
+          { code: 'CO2403', name: 'Professional Skills', level: 'Year 3 — Undergraduate' },
+          { code: 'CO3509', name: 'Network Design and Management', level: 'Year 4 — Undergraduate' },
+          { code: 'EL3808', name: 'Digital Communications', level: 'Year 4 — Undergraduate' },
+          { code: 'EL3996', name: 'Engineering Professionalism', level: 'Year 4 — Undergraduate' },
+          { code: 'EL3995', name: 'Undergraduate and Postgraduate Projects Supervision', level: '' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Open University of Cyprus',
+    period: '2012 – 2018',
+    url: 'https://www.ouc.ac.cy',
+    logo: '/images/affiliations/ouc_logo.png',
+    sections: [
+      {
+        label: 'Coordinated, developed and taught (postgraduate)',
+        modules: [
+          { code: 'PES 513', name: 'Communication Networks', level: 'Spring 2012-13, 2013-14, Autumn 2016-17' },
+          { code: 'SAE 511', name: 'Digital Communications', level: 'Autumn 2014-15, 2017-18' },
+          { code: 'PES 612', name: 'Mobile and Ubiquitous Computing', level: 'Spring 2012-13' },
+          { code: 'SAE 700', name: 'Supervision of Postgraduate Dissertations', level: '' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'University of Surrey',
+    period: '2004 – 2007',
+    url: 'https://www.surrey.ac.uk',
+    logo: '/images/affiliations/surrey_logo.png',
+    sections: [
+      {
+        label: 'Teaching assistant (postgraduate)',
+        modules: [
+          { code: '', name: 'Antennas and Propagation', level: '2004 – 2005' },
+          { code: '', name: 'Mobile and Personal Communications', level: '2004 – 2005' },
+          { code: '', name: 'Supervision of Postgraduate and Undergraduate Projects', level: '2004 – 2006' },
+        ],
+      },
+    ],
+  },
+];
+---
+
+<Base title="Teaching — Marios Raspopoulos" active="teaching">
+  <h1>Teaching</h1>
+  <p style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 60ch;">
+    Modules taught at undergraduate and postgraduate level across three universities since 2004, and PhD students currently supervised or recently completed.
+  </p>
+
+  <!-- PhD students section -->
+  <div class="status-group">
+    <div class="status-group-head">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Current PhD students
+      <span class="count">{phdStudents.current.length}</span>
+    </div>
+    <div class="status-group-body">
+      <ul class="phd-list">
+        {phdStudents.current.map((s) => (
+          <li class="phd-card">
+            <div class="phd-card-head">
+              <strong class="phd-name">{s.name}</strong>
+              <span class="phd-period">{s.period}</span>
+            </div>
+            <p class="phd-topic">{s.topic}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  {phdStudents.completed.length > 0 && (
+    <div class="status-group completed-group">
+      <div class="status-group-head completed">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Completed PhDs
+        <span class="count">{phdStudents.completed.length}</span>
+      </div>
+      <div class="status-group-body">
+        <ul class="phd-list">
+          {phdStudents.completed.map((s) => (
+            <li class="phd-card">
+              <div class="phd-card-head">
+                <strong class="phd-name">{s.name}</strong>
+                <span class="phd-period">{s.period}</span>
+              </div>
+              <p class="phd-topic">{s.topic}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
+
+  <!-- Taught modules at each institution -->
+  <div class="section-head">
+    <div>
+      <span class="section-eyebrow">Undergraduate &amp; postgraduate</span>
+      <h2>Modules taught</h2>
+    </div>
+  </div>
+
+  {institutions.map((inst) => (
+    <div class="institution-block">
+      <div class="institution-head">
+        {inst.logo && (
+          <div class="institution-logo">
+            <img src={inst.logo} alt={`${inst.name} logo`} loading="lazy" />
+          </div>
+        )}
+        <div class="institution-meta">
+          <h3 class="institution-name">
+            {inst.url ? <a href={inst.url}>{inst.name}</a> : inst.name}
+          </h3>
+          <span class="institution-period">{inst.period}</span>
+        </div>
+      </div>
+
+      {inst.sections.map((s) => (
+        <div class="module-section">
+          {s.label && <h4 class="module-section-label">{s.label}</h4>}
+          <ul class="module-list">
+            {s.modules.map((m) => (
+              <li class="module-item">
+                {m.code && <span class="module-code">{m.code}</span>}
+                <div class="module-info">
+                  <div class="module-name">{m.name}</div>
+                  {m.level && <div class="module-level">{m.level}</div>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  ))}
+
+  <div class="section-head" style="margin-top: 3rem;">
+    <div>
+      <span class="section-eyebrow">Open positions</span>
+      <h2>Prospective students</h2>
+    </div>
+  </div>
+  <p>
+    PhD, MPhil, MSc, and BEng project supervision in wireless communications, indoor positioning, RIS-aided systems, and the Internet of Things.
+    Prospective students with research interests in these areas are welcome to <a href="mailto:mraspopoulos@uclan.ac.uk">get in touch</a>.
+  </p>
+</Base>

@@ -1,0 +1,39 @@
+name: Refresh OpenAlex stats
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch OpenAlex stats
+        env:
+          ORCID: '0000-0003-1513-6018'
+          OPENALEX_EMAIL: 'mraspopoulos@uclan.ac.uk'
+        run: node scripts/fetch-openalex.mjs
+
+      - name: Commit updated stats
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add src/data/stats.json
+          if git diff --staged --quiet; then
+            echo 'No stats changes to commit'
+          else
+            git commit -m 'chore: refresh OpenAlex stats'
+            git push
+          fi

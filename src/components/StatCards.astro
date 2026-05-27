@@ -1,0 +1,36 @@
+---
+import stats from '../data/stats.json';
+
+const formatDate = (d: string) => {
+  if (d === '1970-01-01') return null;
+  return new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+
+const last = formatDate(stats.last_updated);
+const isPlaceholder = stats.works_count === 0;
+---
+
+<section class="stats">
+  <div class="stat-card">
+    <div class="stat-label">Works</div>
+    <div class="stat-value">{stats.works_count.toLocaleString()}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">Citations</div>
+    <div class="stat-value">{stats.cited_by_count.toLocaleString()}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">h-index</div>
+    <div class="stat-value">{stats.h_index}</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-label">i10-index</div>
+    <div class="stat-value">{stats.i10_index}</div>
+  </div>
+</section>
+{!isPlaceholder && last && (
+  <p class="stats-caption">Auto-updated weekly from <a href="https://openalex.org/" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">OpenAlex</a> · last refresh {last}</p>
+)}
+{isPlaceholder && (
+  <p class="stats-caption">Stats will appear after the first GitHub Action run.</p>
+)}

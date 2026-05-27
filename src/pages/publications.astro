@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import { getCollection } from 'astro:content';
+
+const all = (await getCollection('publications'))
+  .sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order);
+
+const byYear = all.reduce<Record<number, typeof all>>((acc, pub) => {
+  (acc[pub.data.year] ??= []).push(pub);
+  return acc;
+}, {});
+
+const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+---
+
+<Base title="Publications — Marios Raspopoulos" active="publications">
+  <h1>Publications</h1>
+  <p style="color: var(--text-muted); margin-bottom: 0.5rem;">
+    Full list, newest first. Selected works flagged on the <a href="/">homepage</a>.
+    Open Access PDFs are linked where available.
+  </p>
+  <p style="color: var(--text-faint); font-size: 0.8rem; margin-bottom: 2rem;">
+    Citation counts are sourced from
+    <a href="https://openalex.org/" style="color: inherit;">OpenAlex</a>
+    and update weekly. Numbers are typically within 10–15% of Google Scholar,
+    which has no public API.
+  </p>
+
+  {years.map((year) => (
+    <section style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">{year}</h2>
+      <ol class="pub-list">
+        {byYear[year].map((pub) => <PublicationItem pub={pub} />)}
+      </ol>
+    </section>
+  ))}
+</Base>

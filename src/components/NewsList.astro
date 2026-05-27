@@ -1,0 +1,32 @@
+---
+import { getCollection, render } from 'astro:content';
+
+interface Props {
+  limit?: number;
+}
+const { limit = 5 } = Astro.props;
+
+const all = await getCollection('news');
+const items = all
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, limit);
+
+const fmt = (d: Date) => d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+---
+
+<ul class="news-list">
+  {items.map(async (item) => {
+    const { Content } = await render(item);
+    return (
+      <li class="news-item">
+        <span class="news-date">{fmt(item.data.date)}</span>
+        <span>
+          <Content />
+          {item.data.link && (
+            <> <a href={item.data.link}>Read &rarr;</a></>
+          )}
+        </span>
+      </li>
+    );
+  })}
+</ul>

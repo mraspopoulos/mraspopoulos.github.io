@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mraspopoulos.github.io/sitemap-index.xml

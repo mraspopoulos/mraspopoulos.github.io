@@ -1,0 +1,15 @@
+---
+const built = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div>
+    <div><a href="https://www.uclancyprus.ac.cy/">UCLan Cyprus</a> · 12–14 University Avenue, Pyla 7080, Larnaka, Cyprus</div>
+    <div>Tel: +357 24694070</div>
+  </div>
+  <div style="text-align: right;">
+    <div>© {year} Marios Raspopoulos</div>
+    <div>Built {built} · <a href="/rss.xml">RSS</a></div>
+  </div>
+</footer>
