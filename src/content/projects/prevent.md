@@ -1,7 +1,7 @@
 ---
 title: 'PREVENT– Prevention of natural disasters using deep technology for advanced HEI curricula'
 role: 'WP2 Leader - Leading UCLan''s participation'
-status: 'ongoing'
+status: 'completed'
 startDate: 2024-01-01
 endDate: 2025-12-28
 budget: '€400,000'
@@ -16,7 +16,7 @@ partners:
   - 'Helix-Connect (RO)'
   - 'University of Vigo (ESP)'
 url: 'https://prevent-project.com/'
-featured: true
+featured: false
 order: 6
 ---
 
