@@ -5,6 +5,7 @@ venue: 'Computer, vol. 59, no. 6, pp. 73-84, June 2026'
 year: 2026
 type: 'journal'
 doi: '10.1109/MC.2026.3671749'
+pdf: '/files/interwovenxr-2026.pdf'
 url: 'https://doi.ieeecomputersociety.org/10.1109/MC.2026.3671749'
 selected: true
 order: 0
