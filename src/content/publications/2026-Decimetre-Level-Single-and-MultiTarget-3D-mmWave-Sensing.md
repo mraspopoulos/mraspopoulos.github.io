@@ -5,5 +5,5 @@ venue: '2026 International Conference on Indoor Positioning and Indoor Navigatio
 year: 2026
 type: 'conference'
 selected: false
-order: 2
+order: 0
 ---
