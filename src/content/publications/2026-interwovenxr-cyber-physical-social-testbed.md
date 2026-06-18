@@ -7,6 +7,7 @@ type: 'journal'
 doi: '10.1109/MC.2026.3671749'
 pdf: '/files/interwovenxr-2026.pdf'
 url: 'https://doi.ieeecomputersociety.org/10.1109/MC.2026.3671749'
+scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:vV6vV6tmYwMC'
 selected: true
 order: 0
 ---
