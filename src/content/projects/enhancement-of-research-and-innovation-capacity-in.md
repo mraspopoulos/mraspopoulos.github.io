@@ -16,6 +16,7 @@ partners:
   - 'CIU CAUCASUS INTERNATIONAL UNIVERSITY (GE)'
   - 'SJSU SAMTSKHE-JAVAKHETI STATE UNIVERSITY (GE)'
   - 'Alterbridge ALTERBRIDGE UNIVERSITY (GE)'
+url: 'https://eric-ge.edu.ge/home'
 featured: true
 order: 2
 ---
