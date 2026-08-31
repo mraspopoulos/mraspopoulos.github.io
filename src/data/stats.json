@@ -1,11 +1,11 @@
 {
-  "works_count": 59,
-  "cited_by_count": 566,
+  "works_count": 61,
+  "cited_by_count": 567,
   "h_index": 12,
   "i10_index": 14,
-  "two_year_mean_citedness": 2.409090909090909,
+  "two_year_mean_citedness": 2.25,
   "openalex_id": "https://openalex.org/A5016380055",
   "display_name": "Marios Raspopoulos",
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-31",
   "source": "OpenAlex"
 }
