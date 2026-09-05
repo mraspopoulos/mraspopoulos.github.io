@@ -5,7 +5,7 @@ venue: 'International Workshop on Intelligent Systems for the Internet of Things
 year: 2026
 type: 'conference'
 doi: '10.1109/DCOSS-IoT69657.2026.00104'
-pdf: '\files\DRL_based_Position_Aided_Beam_Management_in_RIS_Enabled_Indoor_Environments.pdf'
+pdf: '/files/DRL_based_Position_Aided_Beam_Management_in_RIS_Enabled_Indoor_Environments.pdf'
 scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:ldfaerwXgEUC'
 selected: false
 order: 5
