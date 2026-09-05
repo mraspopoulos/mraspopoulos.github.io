@@ -1,7 +1,7 @@
 ---
 title: 'Wi-Fi FTM Versus UWB for 3D Indoor Positioning'
 authors: 'M. Raspopoulos, I.Ioannou and N.Paspallis'
-venue: 'IEEE Computers, Software, and Applications Conference (COMPSAC 2026), Madrid, Spain, July 7-10, 2026, [Accepted - To be presented]'
+venue: 'IEEE Computers, Software, and Applications Conference (COMPSAC 2026), Madrid, Spain, July 7-10, 2026'
 year: 2026
 type: 'conference'
 doi: '10.1109/COMPSAC69091.2026.00276'
