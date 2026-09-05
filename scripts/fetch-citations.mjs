@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * Fetch academic stats and per-publication citation counts from Semantic Scholar.
+ *
  * Semantic Scholar typically reports counts closer to Google Scholar than
  * OpenAlex does — a better fit for engineering papers with heavy conference
  * citations.
@@ -11,9 +12,10 @@
  *
  * Runs weekly via .github/workflows/update-stats.yml
  *
- * No API key required for this volume (~2 requests per run). If you hit rate
- * limits, request a key at https://www.semanticscholar.org/product/api#api-key-form
- * and set the SEMANTIC_SCHOLAR_API_KEY env var (or GitHub secret).
+ * With an API key set via SEMANTIC_SCHOLAR_API_KEY: fast, ~1 req/second.
+ * Without a key: uses the shared pool with retry-with-backoff and 1.2s pacing.
+ * Either way the script goes through DOIs one at a time so a rate limit on
+ * one paper only affects that paper, not the whole run.
  */
 
 import { writeFileSync, readdirSync, readFileSync } from 'node:fs';
@@ -25,6 +27,9 @@ const ORCID = process.env.ORCID || '0000-0003-1513-6018';
 const AFFILIATION_HINT = (process.env.AFFILIATION_HINT || 'UCLan').toLowerCase();
 const API_KEY = process.env.SEMANTIC_SCHOLAR_API_KEY || null;
 
+// Pacing between per-DOI requests. With an API key you can drop this to ~300ms.
+const REQUEST_DELAY_MS = API_KEY ? 300 : 1200;
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = resolve(__dirname, '..', 'src', 'data');
 const pubsDir = resolve(__dirname, '..', 'src', 'content', 'publications');
@@ -32,23 +37,30 @@ const pubsDir = resolve(__dirname, '..', 'src', 'content', 'publications');
 const headers = { 'Accept': 'application/json' };
 if (API_KEY) headers['x-api-key'] = API_KEY;
 
+// ---- HTTP with retry-on-429 ----
+async function withRetry(fn, label) {
+  const delays = [2000, 5000, 15000, 30000]; // ms
+  for (let i = 0; i <= delays.length; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      const is429 = String(err.message).includes('429');
+      if (!is429 || i === delays.length) throw err;
+      console.log(`    rate limited on ${label}, waiting ${delays[i] / 1000}s ...`);
+      await new Promise((r) => setTimeout(r, delays[i]));
+    }
+  }
+}
+
 async function get(url) {
-  const res = await fetch(url, { headers });
-  if (!res.ok) throw new Error(`Semantic Scholar ${res.status} on ${url}`);
-  return res.json();
+  return withRetry(async () => {
+    const res = await fetch(url, { headers });
+    if (!res.ok) throw new Error(`Semantic Scholar ${res.status} on ${url}`);
+    return res.json();
+  }, url.split('?')[0].split('/').pop());
 }
 
-async function post(url, body) {
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { ...headers, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(`Semantic Scholar ${res.status} on ${url}`);
-  return res.json();
-}
-
-// Read all publication DOIs from src/content/publications/*.md
+// ---- Read local DOIs ----
 function readPublicationDois() {
   const files = readdirSync(pubsDir).filter((f) => f.endsWith('.md'));
   const dois = [];
@@ -63,42 +75,37 @@ function readPublicationDois() {
   return [...new Set(dois)];
 }
 
-// Find the Semantic Scholar author record for our person
+// ---- Find author on Semantic Scholar ----
 async function findAuthorId() {
-  const searchUrl =
+  const url =
     `https://api.semanticscholar.org/graph/v1/author/search?` +
     `query=${encodeURIComponent(AUTHOR_NAME)}` +
     `&fields=name,affiliations,externalIds,hIndex,paperCount,citationCount` +
     `&limit=25`;
-  const data = await get(searchUrl);
+  const data = await get(url);
   const candidates = data.data || [];
 
-  // 1) Prefer ORCID match
   let match = candidates.find(
     (c) => c.externalIds?.ORCID === ORCID || c.externalIds?.orcid === ORCID,
   );
-  if (match) return { authorId: match.authorId, matchedVia: 'ORCID', author: match };
+  if (match) return { authorId: match.authorId, matchedVia: 'ORCID' };
 
-  // 2) Name + affiliation
   match = candidates.find(
     (c) =>
       c.name?.toLowerCase().includes('raspopoulos') &&
       (c.affiliations || []).some((a) => a.toLowerCase().includes(AFFILIATION_HINT)),
   );
-  if (match) return { authorId: match.authorId, matchedVia: 'name+affiliation', author: match };
+  if (match) return { authorId: match.authorId, matchedVia: 'name+affiliation' };
 
-  // 3) Highest h-index Raspopoulos
   const raspopouloses = candidates
     .filter((c) => c.name?.toLowerCase().includes('raspopoulos'))
     .sort((a, b) => (b.hIndex || 0) - (a.hIndex || 0));
   if (raspopouloses.length > 0) {
-    return { authorId: raspopouloses[0].authorId, matchedVia: 'name (best h-index)', author: raspopouloses[0] };
+    return { authorId: raspopouloses[0].authorId, matchedVia: 'name (best h-index)' };
   }
-
   throw new Error('No matching author found on Semantic Scholar.');
 }
 
-// Fetch authoritative aggregate stats
 async function getAuthorStats(authorId) {
   return get(
     `https://api.semanticscholar.org/graph/v1/author/${authorId}` +
@@ -106,36 +113,52 @@ async function getAuthorStats(authorId) {
   );
 }
 
-// Batch-fetch citation counts by DOI (max 500 per request)
-async function getCitationsBatch(dois) {
+// ---- Fetch per-DOI citation counts, one at a time ----
+async function getCitationsPerDoi(dois) {
   if (dois.length === 0) return {};
-  const ids = dois.map((d) => `DOI:${d}`);
-  const results = await post(
-    `https://api.semanticscholar.org/graph/v1/paper/batch?fields=externalIds,citationCount`,
-    { ids },
-  );
-
   const counts = {};
-  results.forEach((paper, i) => {
-    if (paper && typeof paper.citationCount === 'number') {
-      counts[dois[i]] = paper.citationCount;
+  let ok = 0;
+  let fail = 0;
+
+  for (let i = 0; i < dois.length; i++) {
+    const doi = dois[i];
+    const url = `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(doi)}?fields=citationCount`;
+    try {
+      const paper = await get(url);
+      const n = typeof paper?.citationCount === 'number' ? paper.citationCount : null;
+      if (n !== null) {
+        counts[doi] = n;
+        ok++;
+      }
+      process.stdout.write(`  [${String(i + 1).padStart(3, ' ')}/${dois.length}] ${doi} → ${n ?? '—'}\n`);
+    } catch (err) {
+      fail++;
+      console.log(`  [${String(i + 1).padStart(3, ' ')}/${dois.length}] ${doi} → FAILED (${err.message})`);
     }
-  });
+    if (i < dois.length - 1) {
+      await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS));
+    }
+  }
+  console.log(`\nFetched ${ok}/${dois.length} papers (${fail} failed).`);
   return counts;
 }
 
-// ---------------- main ----------------
+// ---- main ----
 console.log(`Fetching Semantic Scholar data for ${AUTHOR_NAME} (${ORCID}) ...`);
+console.log(`API key: ${API_KEY ? 'present' : 'not set (using shared pool)'}`);
+console.log(`Request pacing: ${REQUEST_DELAY_MS}ms between calls\n`);
 
 try {
   const dois = readPublicationDois();
-  console.log(`Local DOIs found: ${dois.length}`);
+  console.log(`Local DOIs found: ${dois.length}\n`);
 
-  const { authorId, matchedVia, author } = await findAuthorId();
+  const { authorId, matchedVia } = await findAuthorId();
   console.log(`Matched author id ${authorId} via ${matchedVia}`);
+  console.log(`Verify at: https://www.semanticscholar.org/author/${authorId}\n`);
 
   const stats = await getAuthorStats(authorId);
-  const counts = await getCitationsBatch(dois);
+  console.log('Fetching per-paper citation counts ...\n');
+  const counts = await getCitationsPerDoi(dois);
 
   const i10 = Object.values(counts).filter((c) => c >= 10).length;
 
@@ -173,13 +196,13 @@ try {
     'utf8',
   );
 
-  console.log('Author stats (Semantic Scholar):');
+  console.log('\nAuthor stats (Semantic Scholar):');
   console.log('  works:    ', statsOut.works_count);
   console.log('  citations:', statsOut.cited_by_count);
   console.log('  h-index:  ', statsOut.h_index);
   console.log('  i10:      ', statsOut.i10_index, '(computed from local DOIs)');
-  console.log(`Per-DOI counts written: ${Object.keys(counts).length} of ${dois.length} DOIs matched`);
+  console.log(`\nWrote src/data/stats.json and src/data/citations.json`);
 } catch (err) {
-  console.error('Failed to fetch Semantic Scholar data:', err.message);
+  console.error('\nFailed to fetch Semantic Scholar data:', err.message);
   process.exit(1);
 }
