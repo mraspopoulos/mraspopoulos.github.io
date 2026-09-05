@@ -1,7 +1,7 @@
 ---
 title: 'Graph-Temporal Intrusion Detection for IoT: A Heterogeneous Ensemble Approach'
 authors: 'I. Ioannou, M. Georgiades, K. Katzis, K. Papanikolaou, M. Raspopoulos, C. Christoforou, M. Savva, V. Vasileiou'
-venue: '026 22nd International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT),Reykjavik, Iceland, 2026, pp. 653-662'
+venue: '2026 22nd International Conference on Distributed Computing in Smart Systems and the Internet of Things (DCOSS-IoT),Reykjavik, Iceland, 2026, pp. 653-662'
 year: 2026
 type: 'conference'
 doi: '10.1109/DCOSS-IoT69657.2026.00105'
