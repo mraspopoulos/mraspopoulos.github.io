@@ -7,7 +7,7 @@ type: 'journal'
 doi: '10.1109/ACCESS.2026.3704476'
 pdf: '/files/Artificial_Intelligence_and_Machine_Learning_in_Cyber-Physical_Systems_A_Unified_Review_of_Methodologies_for_Smart_Energy_Systems_and_Inte.pdf'
 url: 'https://ieeexplore.ieee.org/document/11568769'
-# scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:vV6vV6tmYwMC'
+scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:35N4QoGY0k4C'
 selected: false
 order: 0
 ---

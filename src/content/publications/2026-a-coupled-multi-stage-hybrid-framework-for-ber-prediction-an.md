@@ -6,6 +6,7 @@ year: 2026
 type: 'journal'
 doi: '10.3390/network6020035'
 pdf: '/files/network0600035.pdf'
+scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:lSLTfruPkqcC'
 selected: false
 order: 1
 ---
