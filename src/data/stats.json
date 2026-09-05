@@ -1,11 +1,12 @@
 {
-  "works_count": 61,
-  "cited_by_count": 568,
-  "h_index": 12,
-  "i10_index": 14,
-  "two_year_mean_citedness": 2.2916666666666665,
-  "openalex_id": "https://openalex.org/A5016380055",
-  "display_name": "Marios Raspopoulos",
+  "works_count": 36,
+  "cited_by_count": 341,
+  "h_index": 9,
+  "i10_index": 12,
+  "author_id": "2763452",
+  "author_url": "https://www.semanticscholar.org/author/2763452",
+  "display_name": "M. Raspopoulos",
   "last_updated": "2026-09-05",
-  "source": "OpenAlex"
+  "source": "Semantic Scholar",
+  "note": "i10_index computed from DOIs listed on this site; other stats from Semantic Scholar author record."
 }
