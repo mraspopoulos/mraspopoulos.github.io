@@ -2,7 +2,7 @@ name: Refresh citation stats
 
 on:
   schedule:
-    - cron: '0 6 * * 1'   # Every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -24,6 +24,9 @@ jobs:
           ORCID: 0000-0003-1513-6018
           AUTHOR_NAME: Marios Raspopoulos
           AFFILIATION_HINT: UCLan
+          # Force-include specific author IDs if auto-detection misses one.
+          # Comma-separated. Leave empty for auto-detect only.
+          MANUAL_AUTHOR_IDS: ""
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: node scripts/fetch-citations.mjs
 
