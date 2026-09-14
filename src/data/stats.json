@@ -1,6 +1,6 @@
 {
   "works_count": 36,
-  "cited_by_count": 353,
+  "cited_by_count": 355,
   "h_index": 9,
   "i10_index": 9,
   "combined_from_authors": [
@@ -9,7 +9,7 @@
   "author_urls": [
     "https://www.semanticscholar.org/author/2763452"
   ],
-  "last_updated": "2026-09-07",
+  "last_updated": "2026-09-14",
   "source": "Semantic Scholar",
   "note": "Aggregate stats combined across multiple Semantic Scholar author profiles that all belong to this person. Per-DOI counts are direct paper lookups."
 }
