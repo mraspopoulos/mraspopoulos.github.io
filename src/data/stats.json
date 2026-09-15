@@ -1,15 +1,9 @@
 {
-  "works_count": 36,
-  "cited_by_count": 355,
-  "h_index": 9,
-  "i10_index": 9,
-  "combined_from_authors": [
-    "2763452"
-  ],
-  "author_urls": [
-    "https://www.semanticscholar.org/author/2763452"
-  ],
-  "last_updated": "2026-09-14",
+  "works_count": 55,
+  "cited_by_count": 521,
+  "h_index": 12,
+  "i10_index": 13,
+  "last_updated": "2026-09-15",
   "source": "Semantic Scholar",
-  "note": "Aggregate stats combined across multiple Semantic Scholar author profiles that all belong to this person. Per-DOI counts are direct paper lookups."
+  "note": "Aggregates computed locally from per-DOI Semantic Scholar counts. works_count reflects all publications on the site; citations, h-index and i10 are computed from the DOIs Semantic Scholar has indexed."
 }
