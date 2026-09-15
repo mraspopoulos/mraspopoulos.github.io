@@ -1,16 +1,24 @@
 #!/usr/bin/env node
 /**
- * Fetch per-publication citation counts from Semantic Scholar, then compute
- * aggregate stats locally from those counts.
+ * Fetch per-publication citation counts from Semantic Scholar.
+ *
+ * Looks up each publication by whichever identifier it has:
+ *   1. doi:                    — preferred, works for most papers
+ *   2. semantic_scholar_id:    — for papers without a DOI (book chapters,
+ *                                old conference proceedings). Find the ID
+ *                                by opening the paper on semanticscholar.org
+ *                                and copying the 40-char hex from the URL.
+ *
+ * Papers with neither identifier are listed in missing.json as needing
+ * attention. Aggregate stats (total citations, h-index, i10) are computed
+ * locally from all successfully-looked-up counts.
  *
  * Outputs:
- *   - src/data/stats.json          works, citations, h-index, i10
- *   - src/data/citations.json      { "10.xxxx/yyyy": 42, ... }
- *   - src/data/missing.json        diagnostic — DOIs Semantic Scholar could
- *                                  not find, and pubs without a DOI
+ *   - src/data/stats.json
+ *   - src/data/citations.json   (keyed by DOI or by "s2:{paperId}")
+ *   - src/data/missing.json     (diagnostic)
  *
- * Env vars:
- *   SEMANTIC_SCHOLAR_API_KEY   optional but recommended
+ * Env: SEMANTIC_SCHOLAR_API_KEY   optional but recommended
  */
 
 import { writeFileSync, readdirSync, readFileSync } from 'node:fs';
@@ -40,7 +48,6 @@ async function withRetry(fn, label) {
     }
   }
 }
-
 async function get(url) {
   return withRetry(async () => {
     const res = await fetch(url, { headers });
@@ -49,7 +56,6 @@ async function get(url) {
   }, url.split('?')[0].split('/').pop());
 }
 
-// Read every publication .md file and extract useful metadata for logging.
 function readPublications() {
   const files = readdirSync(pubsDir).filter((f) => f.endsWith('.md'));
   return files.map((f) => {
@@ -61,52 +67,80 @@ function readPublications() {
     return {
       file: f,
       doi: (grab('doi') || '').toLowerCase() || null,
-      title: grab('title') || null,
+      semantic_scholar_id: grab('semantic_scholar_id') || null,
+      isbn: grab('isbn') || null,
+      title: grab('title'),
       year: grab('year') ? parseInt(grab('year'), 10) : null,
-      venue: grab('venue') || null,
-      type: grab('type') || null,
+      venue: grab('venue'),
+      type: grab('type'),
     };
   });
 }
 
-// Look up citation counts one DOI at a time. Returns {counts, notFoundDois, failedDois}.
-async function fetchCitations(dois) {
-  const counts = {};
-  const notFound = [];
-  const failed = [];
+// Build the lookup URL and the key to use in citations.json
+function planLookup(pub) {
+  if (pub.doi) {
+    return {
+      lookupUrl: `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(pub.doi)}?fields=citationCount`,
+      key: pub.doi,
+      via: 'doi',
+    };
+  }
+  if (pub.semantic_scholar_id) {
+    return {
+      lookupUrl: `https://api.semanticscholar.org/graph/v1/paper/${encodeURIComponent(pub.semantic_scholar_id)}?fields=citationCount`,
+      key: `s2:${pub.semantic_scholar_id}`,
+      via: 'semantic_scholar_id',
+    };
+  }
+  return null;
+}
 
-  for (let i = 0; i < dois.length; i++) {
-    const doi = dois[i];
-    const url = `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(doi)}?fields=citationCount`;
-    const idx = `[${String(i + 1).padStart(3, ' ')}/${dois.length}]`;
+async function fetchAllCitations(pubs) {
+  const counts = {};
+  const notFound = []; // has an identifier but S2 didn't find it
+  const failed = [];
+  const noIdentifier = []; // no doi and no semantic_scholar_id
+
+  const lookupPlans = [];
+  for (const p of pubs) {
+    const plan = planLookup(p);
+    if (plan) lookupPlans.push({ pub: p, ...plan });
+    else noIdentifier.push(p);
+  }
+
+  for (let i = 0; i < lookupPlans.length; i++) {
+    const { pub, lookupUrl, key, via } = lookupPlans[i];
+    const idx = `[${String(i + 1).padStart(3, ' ')}/${lookupPlans.length}]`;
     try {
-      const paper = await get(url);
+      const paper = await get(lookupUrl);
       const n = typeof paper?.citationCount === 'number' ? paper.citationCount : null;
       if (n !== null) {
-        counts[doi] = n;
-        process.stdout.write(`  ${idx} ${doi.padEnd(45)} → ${n}\n`);
+        counts[key] = n;
+        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  ${n}\n`);
       } else {
-        notFound.push({ doi, reason: 'paper found but citationCount was null' });
-        process.stdout.write(`  ${idx} ${doi.padEnd(45)} → no count\n`);
+        notFound.push({ pub, key, via, reason: 'paper found but citationCount was null' });
+        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  no count\n`);
       }
     } catch (err) {
       const is404 = String(err.message).includes('404');
       if (is404) {
-        notFound.push({ doi, reason: 'not indexed by Semantic Scholar' });
-        process.stdout.write(`  ${idx} ${doi.padEnd(45)} → not found\n`);
+        notFound.push({ pub, key, via, reason: 'not indexed by Semantic Scholar' });
+        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  not found\n`);
       } else {
-        failed.push({ doi, reason: err.message });
-        process.stdout.write(`  ${idx} ${doi.padEnd(45)} → FAILED (${err.message.slice(0, 40)}...)\n`);
+        failed.push({ pub, key, via, reason: err.message });
+        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  FAILED\n`);
       }
     }
-    if (i < dois.length - 1) await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS));
+    if (i < lookupPlans.length - 1) {
+      await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS));
+    }
   }
-  return { counts, notFound, failed };
+  return { counts, notFound, failed, noIdentifier };
 }
 
-// h-index (Hirsch): largest N such that N papers each have >= N citations
-function computeHIndex(countsArr) {
-  const sorted = [...countsArr].sort((a, b) => b - a);
+function computeHIndex(arr) {
+  const sorted = [...arr].sort((a, b) => b - a);
   let h = 0;
   for (let i = 0; i < sorted.length; i++) {
     if (sorted[i] >= i + 1) h = i + 1;
@@ -115,7 +149,6 @@ function computeHIndex(countsArr) {
   return h;
 }
 
-// ---- main ----
 console.log('Fetching Semantic Scholar per-paper counts and computing local aggregates.');
 console.log(`API key: ${API_KEY ? 'present' : 'not set (using shared pool)'}`);
 console.log(`Request pacing: ${REQUEST_DELAY_MS}ms\n`);
@@ -123,18 +156,18 @@ console.log(`Request pacing: ${REQUEST_DELAY_MS}ms\n`);
 try {
   const pubs = readPublications();
   const totalPubs = pubs.length;
-  const withDoi = pubs.filter((p) => p.doi);
-  const withoutDoi = pubs.filter((p) => !p.doi);
-  const dois = [...new Set(withDoi.map((p) => p.doi))];
+  const byDoi = pubs.filter((p) => p.doi).length;
+  const byS2Id = pubs.filter((p) => !p.doi && p.semantic_scholar_id).length;
+  const noId = pubs.filter((p) => !p.doi && !p.semantic_scholar_id).length;
 
   console.log(`Publications on site: ${totalPubs}`);
-  console.log(`  with DOI:    ${withDoi.length}`);
-  console.log(`  without DOI: ${withoutDoi.length}\n`);
+  console.log(`  looked up by DOI:               ${byDoi}`);
+  console.log(`  looked up by semantic_scholar_id: ${byS2Id}`);
+  console.log(`  no identifier at all:            ${noId}\n`);
 
-  console.log('Looking up each DOI ...\n');
-  const { counts, notFound, failed } = await fetchCitations(dois);
+  console.log('Looking up each paper ...\n');
+  const { counts, notFound, failed, noIdentifier } = await fetchAllCitations(pubs);
 
-  // ---- Aggregates from what we got ----
   const countsArr = Object.values(counts);
   const totalCitations = countsArr.reduce((s, n) => s + n, 0);
   const hIndex = computeHIndex(countsArr);
@@ -148,7 +181,7 @@ try {
     i10_index: i10Index,
     last_updated: today,
     source: 'Semantic Scholar',
-    note: `Aggregates computed locally from per-DOI Semantic Scholar counts. works_count reflects all publications on the site; citations, h-index and i10 are computed from the DOIs Semantic Scholar has indexed.`,
+    note: 'Aggregates computed locally from per-paper Semantic Scholar counts. Papers with a doi: or semantic_scholar_id: in their frontmatter are looked up; others count toward works_count only.',
   };
   writeFileSync(resolve(dataDir, 'stats.json'), JSON.stringify(statsOut, null, 2) + '\n', 'utf8');
 
@@ -158,48 +191,49 @@ try {
     'utf8',
   );
 
-  // ---- Diagnostic file for missing/problematic publications ----
-  const notFoundByDoi = new Map(notFound.map((x) => [x.doi, x.reason]));
-  const failedByDoi = new Map(failed.map((x) => [x.doi, x.reason]));
-
   const missing = {
     last_updated: today,
     summary: {
       publications_on_site: totalPubs,
-      with_doi: withDoi.length,
-      without_doi: withoutDoi.length,
-      doi_indexed_ok: Object.keys(counts).length,
-      doi_not_indexed: notFound.length,
-      doi_lookup_failed: failed.length,
+      looked_up_by_doi: byDoi,
+      looked_up_by_s2_id: byS2Id,
+      no_identifier: noId,
+      lookup_ok: Object.keys(counts).length,
+      not_indexed: notFound.length,
+      lookup_failed: failed.length,
     },
-    without_doi: withoutDoi.map((p) => ({
+    no_identifier: noIdentifier.map((p) => ({
       file: p.file,
       title: p.title,
       year: p.year,
       venue: p.venue,
       type: p.type,
-      action: 'Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up.',
+      isbn: p.isbn ?? null,
+      action:
+        p.isbn
+          ? 'Has ISBN — no DOI. To include in citation totals, look up the paper on semanticscholar.org, copy the 40-char hex id from the URL, and add: semantic_scholar_id: \'<id>\''
+          : 'No doi: or semantic_scholar_id: in frontmatter. Add one so this paper contributes to citation totals.',
     })),
-    not_indexed_by_semantic_scholar: withDoi
-      .filter((p) => notFoundByDoi.has(p.doi))
-      .map((p) => ({
-        file: p.file,
-        title: p.title,
-        year: p.year,
-        venue: p.venue,
-        doi: p.doi,
-        reason: notFoundByDoi.get(p.doi),
-        action: 'Verify the DOI is correct on doi.org. If correct but Semantic Scholar has not indexed the paper, contact them at feedback@semanticscholar.org with the DOI.',
-      })),
-    lookup_failed: withDoi
-      .filter((p) => failedByDoi.has(p.doi))
-      .map((p) => ({
-        file: p.file,
-        title: p.title,
-        doi: p.doi,
-        reason: failedByDoi.get(p.doi),
-        action: 'Transient failure. Should self-correct on the next run.',
-      })),
+    not_indexed_by_semantic_scholar: notFound.map((x) => ({
+      file: x.pub.file,
+      title: x.pub.title,
+      year: x.pub.year,
+      via: x.via,
+      identifier: x.key,
+      reason: x.reason,
+      action:
+        x.via === 'doi'
+          ? 'Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org.'
+          : 'Verify the semantic_scholar_id is correct — open the paper on semanticscholar.org and re-copy the id from the URL.',
+    })),
+    lookup_failed: failed.map((x) => ({
+      file: x.pub.file,
+      title: x.pub.title,
+      via: x.via,
+      identifier: x.key,
+      reason: x.reason,
+      action: 'Transient failure; should self-correct on the next run.',
+    })),
   };
   writeFileSync(resolve(dataDir, 'missing.json'), JSON.stringify(missing, null, 2) + '\n', 'utf8');
 
@@ -209,11 +243,12 @@ try {
   console.log(`  h-index:    ${statsOut.h_index}`);
   console.log(`  i10-index:  ${statsOut.i10_index}`);
 
-  console.log('\n=== Missing/problematic ===');
-  console.log(`  Without DOI in frontmatter: ${withoutDoi.length}`);
-  console.log(`  DOI not indexed by S2:      ${notFound.length}`);
-  console.log(`  DOI lookup failed:          ${failed.length}`);
-  console.log(`\nDetails written to src/data/missing.json for review.`);
+  console.log('\n=== Diagnostics ===');
+  console.log(`  successfully looked up:    ${Object.keys(counts).length}`);
+  console.log(`  no identifier:             ${noIdentifier.length}`);
+  console.log(`  not indexed by S2:         ${notFound.length}`);
+  console.log(`  lookup failed:             ${failed.length}`);
+  console.log('\nDetails in src/data/missing.json');
 } catch (err) {
   console.error('\nFailed:', err.message);
   process.exit(1);

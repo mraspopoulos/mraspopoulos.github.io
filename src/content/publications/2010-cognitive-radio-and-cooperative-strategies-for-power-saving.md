@@ -6,6 +6,7 @@ year: 2010
 type: 'conference'
 pdf: '/files/5722470.pdf'
 url: 'https://ieeexplore.ieee.org/abstract/document/5722470'
+semantic_scholar_id: '1065d598c83ca86a3fe7424e64e5956d0f15980d'
 scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:u-x6o8ySG0sC'
 selected: false
 order: 1

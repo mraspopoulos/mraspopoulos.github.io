@@ -5,6 +5,7 @@ venue: 'In A. Siarheyeva, C. Barry, M. Lang, H. Linger, & C. Schneider (Eds.), I
 year: 2019
 type: 'conference'
 url: 'https://aisel.aisnet.org/isd2014/proceedings2019/CurrentTopics/9/'
+semantic_scholar_id: '763c8ca188b208b834310ceae3d16cb15b65e103'
 scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:-f6ydRqryjwC'
 selected: false
 order: 1

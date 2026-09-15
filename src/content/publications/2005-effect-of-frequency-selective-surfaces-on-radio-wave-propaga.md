@@ -7,6 +7,7 @@ type: 'conference'
 pdf: '/files/5755370.pdf'
 url: 'https://ieeexplore.ieee.org/abstract/document/5755370'
 scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:zYLM7Y9cAGgC'
+semantic_scholar_id: '22920b517bfa96e6d85bc69f1bbaef9fa3610651'
 selected: false
 order: 1
 ---

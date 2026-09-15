@@ -39,6 +39,8 @@ const publications = defineCollection({
     year: z.number(),
     type: z.enum(['journal', 'conference', 'book', 'chapter', 'preprint']).default('journal'),
     doi: z.string().optional(),
+    semantic_scholar_id: z.string().optional(),
+    isbn: z.string().optional(),
     url: z.string().url().optional(),
     pdf: z.string().optional(),
     scholar: z.string().url().optional(),

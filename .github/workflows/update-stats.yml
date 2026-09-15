@@ -2,7 +2,7 @@ name: Refresh citation stats
 
 on:
   schedule:
-    - cron: '0 5 * * *'   # Every day at 05:00 UTC
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -13,17 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Fetch per-paper citations and compute aggregate stats
         env:
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: node scripts/fetch-citations.mjs
-
       - name: Commit updated data
         run: |
           git config user.name  "github-actions[bot]"
