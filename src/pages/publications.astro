@@ -3,15 +3,32 @@ import Base from '../layouts/Base.astro';
 import PublicationItem from '../components/PublicationItem.astro';
 import { getCollection } from 'astro:content';
 
-const all = (await getCollection('publications'))
-  .sort((a, b) => b.data.year - a.data.year || a.data.order - b.data.order);
+const all = await getCollection('publications');
+const sorted = all.sort((a, b) => {
+  if (b.data.year !== a.data.year) return b.data.year - a.data.year;
+  return (a.data.order ?? 0) - (b.data.order ?? 0);
+});
 
-const byYear = all.reduce<Record<number, typeof all>>((acc, pub) => {
-  (acc[pub.data.year] ??= []).push(pub);
-  return acc;
-}, {});
-
+// Group by year
+const byYear: Record<number, typeof sorted> = {};
+for (const pub of sorted) {
+  const year = pub.data.year;
+  if (!byYear[year]) byYear[year] = [];
+  byYear[year].push(pub);
+}
 const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+
+// Counts for dropdown labels
+const total = sorted.length;
+const countBy = (t: string) => sorted.filter((p) => p.data.type === t).length;
+const typeCounts = {
+  all: total,
+  journal: countBy('journal'),
+  conference: countBy('conference'),
+  chapter: countBy('chapter'),
+  book: countBy('book'),
+  preprint: countBy('preprint'),
+};
 ---
 
 <Base title="Publications — Marios Raspopoulos" active="publications">
@@ -20,19 +37,143 @@ const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
     Full list, newest first. Selected works flagged on the <a href="/">homepage</a>.
     Open Access PDFs are linked where available.
   </p>
-  <p style="color: var(--text-faint); font-size: 0.8rem; margin-bottom: 2rem;">
-    Citation counts are sourced from
-    <a href="https://www.semanticscholar.org/" style="color: inherit;">Semantic Scholar</a>
-    and update weekly. Numbers are typically within 10–15% of Google Scholar,
-    which has no public API.
+  <p style="color: var(--text-faint); font-size: 0.8rem; margin-bottom: 1.5rem;">
+    Citations from <a href="https://www.semanticscholar.org/">Semantic Scholar</a>,
+    updated daily. Numbers may differ from Google Scholar or Scopus.
   </p>
 
+  <!-- Filter bar -->
+  <div class="pub-filter">
+    <label for="pub-type-filter">Filter by type</label>
+    <select id="pub-type-filter">
+      <option value="all">All types ({typeCounts.all})</option>
+      {typeCounts.journal > 0 && <option value="journal">Journal articles ({typeCounts.journal})</option>}
+      {typeCounts.conference > 0 && <option value="conference">Conference papers ({typeCounts.conference})</option>}
+      {typeCounts.chapter > 0 && <option value="chapter">Book chapters ({typeCounts.chapter})</option>}
+      {typeCounts.book > 0 && <option value="book">Books ({typeCounts.book})</option>}
+      {typeCounts.preprint > 0 && <option value="preprint">Preprints ({typeCounts.preprint})</option>}
+    </select>
+    <span class="pub-filter-count" id="pub-filter-count">Showing all {total} publications</span>
+  </div>
+
   {years.map((year) => (
-    <section style="margin-bottom: 2rem;">
-      <h2 style="font-size: 1.1rem; color: var(--accent); margin-bottom: 0.5rem;">{year}</h2>
-      <ol class="pub-list">
+    <div class="year-group" data-year={year}>
+      <h2>{year}</h2>
+      <ul class="pub-list">
         {byYear[year].map((pub) => <PublicationItem pub={pub} />)}
-      </ol>
-    </section>
+      </ul>
+    </div>
   ))}
+
+  <p class="no-results-msg" id="no-results-msg" hidden>
+    No publications match this filter.
+  </p>
 </Base>
+
+<style>
+  .pub-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.85rem 1.1rem;
+    background: var(--bg-soft, #fafbfd);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+  }
+  .pub-filter label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .pub-filter select {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    padding: 0.4rem 2rem 0.4rem 0.7rem;
+    background: #ffffff;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231d3557' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.55rem center;
+    background-size: 12px;
+    transition: border-color 0.15s;
+  }
+  .pub-filter select:hover { border-color: var(--accent); }
+  .pub-filter select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+  }
+  .pub-filter-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: auto;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 640px) {
+    .pub-filter { padding: 0.75rem 0.9rem; }
+    .pub-filter-count { margin-left: 0; width: 100%; }
+  }
+
+  .no-results-msg {
+    text-align: center;
+    color: var(--text-muted);
+    font-style: italic;
+    padding: 2rem 0;
+  }
+</style>
+
+<script>
+  const select = document.getElementById('pub-type-filter') as HTMLSelectElement | null;
+  const countDisplay = document.getElementById('pub-filter-count');
+  const noResults = document.getElementById('no-results-msg');
+
+  function applyFilter() {
+    if (!select) return;
+    const value = select.value;
+
+    // Show/hide individual publication items
+    let visibleCount = 0;
+    document.querySelectorAll<HTMLElement>('li.pub-item').forEach((item) => {
+      const t = item.getAttribute('data-pub-type');
+      const show = value === 'all' || t === value;
+      item.style.display = show ? '' : 'none';
+      if (show) visibleCount++;
+    });
+
+    // Hide year groups whose items are all hidden
+    document.querySelectorAll<HTMLElement>('.year-group').forEach((group) => {
+      const anyVisible = Array.from(
+        group.querySelectorAll<HTMLElement>('li.pub-item'),
+      ).some((item) => item.style.display !== 'none');
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    // Update count text
+    if (countDisplay) {
+      if (value === 'all') {
+        countDisplay.textContent = `Showing all ${visibleCount} publications`;
+      } else {
+        const label = select.options[select.selectedIndex].text
+          .replace(/\s*\(\d+\)$/, '')
+          .toLowerCase();
+        countDisplay.textContent = `Showing ${visibleCount} ${label}`;
+      }
+    }
+
+    // Show/hide "no results" message
+    if (noResults) {
+      noResults.hidden = visibleCount > 0;
+    }
+  }
+
+  select?.addEventListener('change', applyFilter);
+</script>
