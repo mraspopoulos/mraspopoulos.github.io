@@ -1,9 +1,9 @@
 {
   "works_count": 55,
-  "cited_by_count": 521,
+  "cited_by_count": 567,
   "h_index": 12,
   "i10_index": 13,
-  "last_updated": "2026-09-15",
+  "last_updated": "2026-09-17",
   "source": "Semantic Scholar",
-  "note": "Aggregates computed locally from per-DOI Semantic Scholar counts. works_count reflects all publications on the site; citations, h-index and i10 are computed from the DOIs Semantic Scholar has indexed."
+  "note": "Aggregates computed locally from per-paper Semantic Scholar counts. Papers with a doi: or semantic_scholar_id: in their frontmatter are looked up; others count toward works_count only."
 }

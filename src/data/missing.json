@@ -1,69 +1,23 @@
 {
-  "last_updated": "2026-09-15",
+  "last_updated": "2026-09-17",
   "summary": {
     "publications_on_site": 55,
-    "with_doi": 47,
-    "without_doi": 8,
-    "doi_indexed_ok": 46,
-    "doi_not_indexed": 1,
-    "doi_lookup_failed": 0
+    "looked_up_by_doi": 47,
+    "looked_up_by_s2_id": 6,
+    "no_identifier": 2,
+    "lookup_ok": 51,
+    "not_indexed": 1,
+    "lookup_failed": 1
   },
-  "without_doi": [
-    {
-      "file": "2005-effect-of-frequency-selective-surfaces-on-radio-wave-propaga.md",
-      "title": "Effect of Frequency Selective Surfaces on radio wave propagation in indoor environments",
-      "year": 2005,
-      "venue": "11th European Wireless Conference 2005 - Next Generation wireless and Mobile Communications and Services, Nicosia, Cyprus, 2006, pp. 1-5",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
-    {
-      "file": "2010-cognitive-radio-and-cooperative-strategies-for-power-saving.md",
-      "title": "Cognitive radio and cooperative strategies for power saving in multi-standard wireless devices",
-      "year": 2010,
-      "venue": "2010 Future Network & Mobile Summit, Florence, Italy, 2010, pp. 1-8",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
-    {
-      "file": "2012-self-positioning-and-mapping-of-rectangular-rooms-with-secto.md",
-      "title": "Self-positioning and mapping of rectangular rooms with sectorized narrowband antennas",
-      "year": 2012,
-      "venue": "SoftCOM 2012, 20th International Conference on Software, Telecommunications and Computer Networks, Split, Croatia, 2012, pp. 1-5",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
-    {
-      "file": "2013-anchor-less-self-positioning-in-rectangular-room-based-on-se.md",
-      "title": "Anchor-less Self-Positioning in Rectangular Room Based on Sectorized Narrowband Antennas",
-      "year": 2013,
-      "venue": "European Wireless 2013; 19th European Wireless Conference, Guildford, UK, 2013, pp. 1-6",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
-    {
-      "file": "2016-active-life-coach-towards-a-framework-for-holistic-care-of-c.md",
-      "title": "Active Life Coach: Towards a Framework for Holistic Care of Citizens as They Age",
-      "year": 2016,
-      "venue": "(2016). MCIS 2016 Proceedings. 42",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
-    {
-      "file": "2019-pinspot-an-open-platform-for-intelligent-context-based-indoo.md",
-      "title": "PINSPOT: An oPen platform for INtelligent context-baSed Indoor POsiTioning",
-      "year": 2019,
-      "venue": "In A. Siarheyeva, C. Barry, M. Lang, H. Linger, & C. Schneider (Eds.), Information Systems Development: Information Systems Beyond 2020 (ISD2019 Proceedings). Toulon, France: ISEN Yncréa Méditerranée",
-      "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
-    },
+  "no_identifier": [
     {
       "file": "2025-topology-aware-deep-reinforcement-learning-for-ris-beamformi.md",
       "title": "Topology-Aware Deep Reinforcement Learning for RIS Beamforming: A GNN-PPO and Risk-Sensitive Evaluation",
       "year": 2025,
       "venue": "2025 Asian Conference on Communication and Networks (ASIANComNet 2025), [Presented - To be published]",
       "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
+      "isbn": null,
+      "action": "No doi: or semantic_scholar_id: in frontmatter. Add one so this paper contributes to citation totals."
     },
     {
       "file": "2026-Decimetre-Level-Single-and-MultiTarget-3D-mmWave-Sensing.md",
@@ -71,7 +25,8 @@
       "year": 2026,
       "venue": "2026 International Conference on Indoor Positioning and Indoor Navigation (IPIN), Rome, Italy, 2026 [Accepted - To be presented]",
       "type": "conference",
-      "action": "Add a doi: line to the publication .md frontmatter so Semantic Scholar can look it up."
+      "isbn": null,
+      "action": "No doi: or semantic_scholar_id: in frontmatter. Add one so this paper contributes to citation totals."
     }
   ],
   "not_indexed_by_semantic_scholar": [
@@ -79,11 +34,20 @@
       "file": "2026-AI-Machine-Learning-in-Cyber-PhysicalSystems.md",
       "title": "Artificial Intelligence and Machine Learning in Cyber-Physical Systems A Unified Review of Methodologies for Smart Energy Systems and Intelligent Localization",
       "year": 2026,
-      "venue": "IEEE Access",
-      "doi": "10.1109/access.2026.3704476",
+      "via": "doi",
+      "identifier": "10.1109/access.2026.3704476",
       "reason": "not indexed by Semantic Scholar",
-      "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar has not indexed the paper, contact them at feedback@semanticscholar.org with the DOI."
+      "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2024-deeprisbeam-deep-learning-based-ris-beam-management-for-radi.md",
+      "title": "DeepRISBeam: Deep Learning-based RIS Beam Management for Radio Channel Optimization",
+      "via": "doi",
+      "identifier": "10.1109/access.2024.3411929",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Faccess.2024.3411929?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
