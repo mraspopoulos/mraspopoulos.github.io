@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-18",
+  "last_updated": "2026-09-19",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 48,
     "looked_up_by_s2_id": 6,
     "no_identifier": 2,
-    "lookup_ok": 52,
+    "lookup_ok": 51,
     "not_indexed": 2,
-    "lookup_failed": 0
+    "lookup_failed": 1
   },
   "no_identifier": [
     {
@@ -49,5 +49,14 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2025-3d-millimeter-wave-multi-target-sensing.md",
+      "title": "3D millimeter-Wave Multi-Target Sensing",
+      "via": "doi",
+      "identifier": "10.1109/ipin66788.2025.11213372",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fipin66788.2025.11213372?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
