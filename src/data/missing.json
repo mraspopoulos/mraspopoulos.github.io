@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-21",
+  "last_updated": "2026-09-22",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 48,
     "looked_up_by_s2_id": 6,
     "no_identifier": 2,
-    "lookup_ok": 51,
+    "lookup_ok": 53,
     "not_indexed": 1,
-    "lookup_failed": 2
+    "lookup_failed": 0
   },
   "no_identifier": [
     {
@@ -40,22 +40,5 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": [
-    {
-      "file": "2012-cross-device-fingerprint-based-positioning-using-3d-ray-trac.md",
-      "title": "Cross device fingerprint-based positioning using 3D Ray Tracing",
-      "via": "doi",
-      "identifier": "10.1109/iwcmc.2012.6314193",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fiwcmc.2012.6314193?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2013-anchor-less-self-positioning-in-rectangular-room-based-on-se.md",
-      "title": "Anchor-less Self-Positioning in Rectangular Room Based on Sectorized Narrowband Antennas",
-      "via": "semantic_scholar_id",
-      "identifier": "s2:a1bb946818a155b35caa79fc7afc0dd522fe60db",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/a1bb946818a155b35caa79fc7afc0dd522fe60db?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    }
-  ]
+  "lookup_failed": []
 }
