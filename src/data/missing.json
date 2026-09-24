@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-23",
+  "last_updated": "2026-09-24",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 48,
     "looked_up_by_s2_id": 6,
     "no_identifier": 2,
-    "lookup_ok": 47,
+    "lookup_ok": 53,
     "not_indexed": 1,
-    "lookup_failed": 6
+    "lookup_failed": 0
   },
   "no_identifier": [
     {
@@ -40,54 +40,5 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": [
-    {
-      "file": "2008-capacity-of-mimo-systems-in-fss-environments.md",
-      "title": null,
-      "via": "doi",
-      "identifier": "10.1049/el:20082983",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1049%2Fel%3A20082983?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2013-a-binomial-distribution-approach-for-the-evaluation-of-indoo.md",
-      "title": "A binomial distribution approach for the evaluation of indoor positioning systems",
-      "via": "doi",
-      "identifier": "10.1109/ictel.2013.6632085",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fictel.2013.6632085?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2013-anchor-less-self-positioning-in-rectangular-room-based-on-se.md",
-      "title": "Anchor-less Self-Positioning in Rectangular Room Based on Sectorized Narrowband Antennas",
-      "via": "semantic_scholar_id",
-      "identifier": "s2:a1bb946818a155b35caa79fc7afc0dd522fe60db",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/a1bb946818a155b35caa79fc7afc0dd522fe60db?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2023-cnn-based-real-time-forest-fire-detection-system-for-low-pow.md",
-      "title": "CNN based Real-time Forest Fire Detection System for Low-power Embedded Devices",
-      "via": "doi",
-      "identifier": "10.1109/med59994.2023.10185692",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fmed59994.2023.10185692?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2026-Graph-Temporal-Intrusion-Detection-for-IoT-A-Heterogeneous-Ensemble-Approach.md",
-      "title": "Graph-Temporal Intrusion Detection for IoT: A Heterogeneous Ensemble Approach",
-      "via": "doi",
-      "identifier": "10.1109/dcoss-iot69657.2026.00105",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fdcoss-iot69657.2026.00105?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2026-drl-based-position-aided-beam-managementin-ris-enabled-indoo.md",
-      "title": "DRL-based Position-Aided Beam-Management in RIS-Enabled Indoor Environments",
-      "via": "doi",
-      "identifier": "10.1109/dcoss-iot69657.2026.00104",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fdcoss-iot69657.2026.00104?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    }
-  ]
+  "lookup_failed": []
 }
