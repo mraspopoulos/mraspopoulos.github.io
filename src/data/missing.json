@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-24",
+  "last_updated": "2026-09-25",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 48,
     "looked_up_by_s2_id": 6,
     "no_identifier": 2,
-    "lookup_ok": 53,
+    "lookup_ok": 50,
     "not_indexed": 1,
-    "lookup_failed": 0
+    "lookup_failed": 3
   },
   "no_identifier": [
     {
@@ -40,5 +40,30 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2005-effect-of-frequency-selective-surfaces-on-radio-wave-propaga.md",
+      "title": "Effect of Frequency Selective Surfaces on radio wave propagation in indoor environments",
+      "via": "semantic_scholar_id",
+      "identifier": "s2:22920b517bfa96e6d85bc69f1bbaef9fa3610651",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/22920b517bfa96e6d85bc69f1bbaef9fa3610651?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2012-cross-device-fingerprint-based-positioning-using-3d-ray-trac.md",
+      "title": "Cross device fingerprint-based positioning using 3D Ray Tracing",
+      "via": "doi",
+      "identifier": "10.1109/iwcmc.2012.6314193",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fiwcmc.2012.6314193?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2014-optimizing-route-prior-knowledge-for-map-aided-fingerprint-b.md",
+      "title": "Optimizing route prior knowledge for map-aided fingerprint-based positioning systems",
+      "via": "doi",
+      "identifier": "10.1109/eucap.2014.6902232",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Feucap.2014.6902232?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
