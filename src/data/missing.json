@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-27",
+  "last_updated": "2026-09-28",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 48,
     "looked_up_by_s2_id": 6,
     "no_identifier": 2,
-    "lookup_ok": 53,
+    "lookup_ok": 52,
     "not_indexed": 1,
-    "lookup_failed": 0
+    "lookup_failed": 1
   },
   "no_identifier": [
     {
@@ -40,5 +40,14 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2013-a-binomial-distribution-approach-for-the-evaluation-of-indoo.md",
+      "title": "A binomial distribution approach for the evaluation of indoor positioning systems",
+      "via": "doi",
+      "identifier": "10.1109/ictel.2013.6632085",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fictel.2013.6632085?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
