@@ -3,7 +3,11 @@ name: Build and deploy
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'astro.config.mjs'
 
 # Allow only one concurrent deployment, skipping runs queued between the in-progress
 # run and the latest queued one.
