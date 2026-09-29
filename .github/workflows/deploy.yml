@@ -5,10 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Allow only one concurrent deployment, skipping runs queued between the in-progress
-# run and the latest queued one.
+# Only one Pages deploy at a time; skip runs queued between an in-progress
+# run and the latest queued one so we always publish the newest content.
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: false
 
 permissions:
@@ -25,14 +25,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
 
       - name: Install dependencies
         run: npm ci || npm install
 
       - name: Build Astro site
-        run: npm run build
+        run: npx astro build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

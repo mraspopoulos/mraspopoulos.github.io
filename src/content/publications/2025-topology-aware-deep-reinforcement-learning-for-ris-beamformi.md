@@ -6,6 +6,7 @@ year: 2025
 type: 'conference'
 pdf: '/files/final_paper_1127854_td5gery5nfafgkke_v2.pdf'
 url: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC'
+doi: '10.1109/ASIANComNet68615.2025.11579631'
 scholar: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=5UUd8nYAAAAJ&sortby=pubdate&citation_for_view=5UUd8nYAAAAJ:GnPB-g6toBAC'
 selected: false
 order: 1

@@ -5,30 +5,88 @@ on:
     - cron: '0 5 * * *'
   workflow_dispatch:
 
+# Grants needed to commit data AND publish Pages
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# Only one deploy at a time
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    outputs:
+      committed: ${{ steps.commit.outputs.committed }}
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Fetch per-paper citations and compute aggregate stats
         env:
           SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
         run: node scripts/fetch-citations.mjs
+
       - name: Commit updated data
+        id: commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/data/stats.json src/data/citations.json src/data/missing.json
           if git diff --staged --quiet; then
             echo "No changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Refresh citation stats (Semantic Scholar)"
             git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
           fi
+
+  # Build the site right after refresh, so the deploy fires from THIS workflow
+  # (bot commits via GITHUB_TOKEN do not trigger the separate deploy.yml).
+  build:
+    needs: refresh
+    if: needs.refresh.outputs.committed == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # pick up the commit the refresh job just pushed
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Astro site
+        run: npx astro build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    if: needs.refresh.outputs.committed == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
