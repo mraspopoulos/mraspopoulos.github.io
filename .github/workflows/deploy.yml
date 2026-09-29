@@ -3,7 +3,11 @@ name: Build and deploy
 on:
   push:
     branches: [main]
-  workflow_dispatch:
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'package.json'
+      - 'astro.config.mjs'
 
 # Only one Pages deploy at a time; skip runs queued between an in-progress
 # run and the latest queued one so we always publish the newest content.
