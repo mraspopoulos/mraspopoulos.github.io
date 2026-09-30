@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-09-29",
+  "last_updated": "2026-09-30",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 49,
     "looked_up_by_s2_id": 6,
     "no_identifier": 1,
-    "lookup_ok": 53,
+    "lookup_ok": 52,
     "not_indexed": 1,
-    "lookup_failed": 1
+    "lookup_failed": 2
   },
   "no_identifier": [
     {
@@ -33,11 +33,19 @@
   ],
   "lookup_failed": [
     {
-      "file": "2012-cross-device-fingerprint-based-positioning-using-3d-ray-trac.md",
-      "title": "Cross device fingerprint-based positioning using 3D Ray Tracing",
+      "file": "2021-an-adaptive-load-shedding-method-for-blackout-prevention-in.md",
+      "title": "An Adaptive Load Shedding Method For Blackout Prevention In Active Distribution Networks",
       "via": "doi",
-      "identifier": "10.1109/iwcmc.2012.6314193",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fiwcmc.2012.6314193?fields=citationCount",
+      "identifier": "10.1049/icp.2021.1227",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1049%2Ficp.2021.1227?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2021-load-shedding-schemes-for-islanding-distribution-network-ope.md",
+      "title": "Load Shedding Schemes For Islanding Distribution Network Operation",
+      "via": "doi",
+      "identifier": "10.1049/icp.2021.1268",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1049%2Ficp.2021.1268?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     }
   ]
