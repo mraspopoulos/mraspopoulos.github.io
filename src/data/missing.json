@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-10",
+  "last_updated": "2026-10-11",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 49,
@@ -33,11 +33,11 @@
   ],
   "lookup_failed": [
     {
-      "file": "2021-an-adaptive-load-shedding-method-for-blackout-prevention-in.md",
-      "title": "An Adaptive Load Shedding Method For Blackout Prevention In Active Distribution Networks",
+      "file": "2022-a-survey-of-3d-indoor-localization-systems-and-technologies.md",
+      "title": "A Survey of 3D Indoor Localization Systems and Technologies",
       "via": "doi",
-      "identifier": "10.1049/icp.2021.1227",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1049%2Ficp.2021.1227?fields=citationCount",
+      "identifier": "10.3390/s22239380",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.3390%2Fs22239380?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     }
   ]
