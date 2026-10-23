@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-10-22",
+  "last_updated": "2026-10-23",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 49,
     "looked_up_by_s2_id": 6,
     "no_identifier": 1,
-    "lookup_ok": 54,
+    "lookup_ok": 53,
     "not_indexed": 1,
-    "lookup_failed": 0
+    "lookup_failed": 1
   },
   "no_identifier": [
     {
@@ -31,5 +31,14 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2006-radio-propagation-in-frequency-selective-buildings.md",
+      "title": "Radio propagation in frequency selective buildings",
+      "via": "doi",
+      "identifier": "10.1002/ett.1127",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1002%2Fett.1127?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
