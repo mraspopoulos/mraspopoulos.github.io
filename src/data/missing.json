@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-10-28",
+  "last_updated": "2026-10-29",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 49,
     "looked_up_by_s2_id": 6,
     "no_identifier": 1,
-    "lookup_ok": 54,
-    "not_indexed": 1,
-    "lookup_failed": 0
+    "lookup_ok": 52,
+    "not_indexed": 0,
+    "lookup_failed": 3
   },
   "no_identifier": [
     {
@@ -20,16 +20,31 @@
       "action": "No doi: or semantic_scholar_id: in frontmatter. Add one so this paper contributes to citation totals."
     }
   ],
-  "not_indexed_by_semantic_scholar": [
+  "not_indexed_by_semantic_scholar": [],
+  "lookup_failed": [
     {
-      "file": "2026-AI-Machine-Learning-in-Cyber-PhysicalSystems.md",
-      "title": "Artificial Intelligence and Machine Learning in Cyber-Physical Systems A Unified Review of Methodologies for Smart Energy Systems and Intelligent Localization",
-      "year": 2026,
+      "file": "2012-self-positioning-and-mapping-of-rectangular-rooms-with-secto.md",
+      "title": "Self-positioning and mapping of rectangular rooms with sectorized narrowband antennas",
+      "via": "semantic_scholar_id",
+      "identifier": "s2:9a6dfe148d79cce509d3b93e4a61afbc8e31a243",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/9a6dfe148d79cce509d3b93e4a61afbc8e31a243?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2024-exploring-gaming-technologies-digital-twins-and-vr-to-visual.md",
+      "title": "Exploring Gaming Technologies, Digital Twins, and VR to Visualise Wireless Propagation Simulations",
       "via": "doi",
-      "identifier": "10.1109/access.2026.3704476",
-      "reason": "not indexed by Semantic Scholar",
-      "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
+      "identifier": "10.1109/compsac61105.2024.00094",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fcompsac61105.2024.00094?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2025-topology-aware-deep-reinforcement-learning-for-ris-beamformi.md",
+      "title": "Topology-Aware Deep Reinforcement Learning for RIS Beamforming: A GNN-PPO and Risk-Sensitive Evaluation",
+      "via": "doi",
+      "identifier": "10.1109/asiancomnet68615.2025.11579631",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fasiancomnet68615.2025.11579631?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
     }
-  ],
-  "lookup_failed": []
+  ]
 }
