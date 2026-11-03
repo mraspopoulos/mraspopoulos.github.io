@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-02",
+  "last_updated": "2026-11-03",
   "summary": {
     "publications_on_site": 56,
     "looked_up_by_doi": 49,
@@ -23,11 +23,11 @@
   "not_indexed_by_semantic_scholar": [],
   "lookup_failed": [
     {
-      "file": "2025-enhancing-digital-heritage-experiences-evaluating-fine-tuned.md",
-      "title": "Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System",
-      "via": "doi",
-      "identifier": "10.1109/isemv67326.2025.00016",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fisemv67326.2025.00016?fields=citationCount",
+      "file": "2012-self-positioning-and-mapping-of-rectangular-rooms-with-secto.md",
+      "title": "Self-positioning and mapping of rectangular rooms with sectorized narrowband antennas",
+      "via": "semantic_scholar_id",
+      "identifier": "s2:9a6dfe148d79cce509d3b93e4a61afbc8e31a243",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/9a6dfe148d79cce509d3b93e4a61afbc8e31a243?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     }
   ]
