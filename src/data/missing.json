@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-13",
+  "last_updated": "2026-11-14",
   "summary": {
     "publications_on_site": 57,
     "looked_up_by_doi": 51,
     "looked_up_by_s2_id": 6,
     "no_identifier": 0,
-    "lookup_ok": 55,
+    "lookup_ok": 53,
     "not_indexed": 2,
-    "lookup_failed": 0
+    "lookup_failed": 2
   },
   "no_identifier": [],
   "not_indexed_by_semantic_scholar": [
@@ -30,5 +30,22 @@
       "action": "Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org."
     }
   ],
-  "lookup_failed": []
+  "lookup_failed": [
+    {
+      "file": "2025-enhancing-digital-heritage-experiences-evaluating-fine-tuned.md",
+      "title": "Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System",
+      "via": "doi",
+      "identifier": "10.1109/isemv67326.2025.00016",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fisemv67326.2025.00016?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    },
+    {
+      "file": "2026-adaptive-active-defense-hardening-of-ml-based-nids-against-r.md",
+      "title": "Adaptive active-defense hardening of ML-based NIDS against RL-driven adversaries: A comparative analysis with static defenses",
+      "via": "doi",
+      "identifier": "10.1016/j.jisa.2026.104496",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016%2Fj.jisa.2026.104496?fields=citationCount",
+      "action": "Transient failure; should self-correct on the next run."
+    }
+  ]
 }
