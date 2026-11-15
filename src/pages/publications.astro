@@ -9,7 +9,7 @@ const sorted = all.sort((a, b) => {
   return (a.data.order ?? 0) - (b.data.order ?? 0);
 });
 
-// Group by year
+// Group by year for the section headings — no numbering on items any more.
 const byYear: Record<number, typeof sorted> = {};
 for (const pub of sorted) {
   const year = pub.data.year;
@@ -18,7 +18,6 @@ for (const pub of sorted) {
 }
 const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
 
-// Counts for dropdown labels
 const total = sorted.length;
 const countBy = (t: string) => sorted.filter((p) => p.data.type === t).length;
 const typeCounts = {
@@ -34,7 +33,7 @@ const typeCounts = {
 <Base title="Publications — Marios Raspopoulos" active="publications">
   <h1>Publications</h1>
   <p style="color: var(--text-muted); margin-bottom: 0.5rem;">
-    Full list, newest first. Selected works flagged on the <a href="/">homepage</a>.
+    Full list in IEEE reference style, newest first. Selected works flagged on the <a href="/">homepage</a>.
     Open Access PDFs are linked where available.
   </p>
   <p style="color: var(--text-faint); font-size: 0.8rem; margin-bottom: 1.5rem;">
@@ -42,7 +41,6 @@ const typeCounts = {
     updated daily. Numbers may differ from Google Scholar or Scopus.
   </p>
 
-  <!-- Filter bar -->
   <div class="pub-filter">
     <label for="pub-type-filter">Filter by type</label>
     <select id="pub-type-filter">
@@ -58,9 +56,11 @@ const typeCounts = {
 
   {years.map((year) => (
     <div class="year-group" data-year={year}>
-      <h2>{year}</h2>
-      <ul class="pub-list">
-        {byYear[year].map((pub) => <PublicationItem pub={pub} />)}
+      <h2 class="pub-year-heading">{year}</h2>
+      <ul class="pub-cite-list">
+        {byYear[year].map((pub) => (
+          <PublicationItem pub={pub} />
+        ))}
       </ul>
     </div>
   ))}
@@ -71,63 +71,17 @@ const typeCounts = {
 </Base>
 
 <style>
-  .pub-filter {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    padding: 0.85rem 1.1rem;
-    background: var(--bg-soft, #fafbfd);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    margin-bottom: 2rem;
+  .pub-year-heading {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 2rem 0 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--border);
   }
-  .pub-filter label {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--text);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .pub-filter select {
-    font-family: var(--font-sans);
-    font-size: 0.9rem;
-    padding: 0.4rem 2rem 0.4rem 0.7rem;
-    background: #ffffff;
-    color: var(--text);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231d3557' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.55rem center;
-    background-size: 12px;
-    transition: border-color 0.15s;
-  }
-  .pub-filter select:hover { border-color: var(--accent); }
-  .pub-filter select:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-bg);
-  }
-  .pub-filter-count {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    margin-left: auto;
-    font-variant-numeric: tabular-nums;
-  }
-  @media (max-width: 640px) {
-    .pub-filter { padding: 0.75rem 0.9rem; }
-    .pub-filter-count { margin-left: 0; width: 100%; }
-  }
-
-  .no-results-msg {
-    text-align: center;
-    color: var(--text-muted);
-    font-style: italic;
-    padding: 2rem 0;
+  .pub-cite-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 </style>
 
@@ -139,25 +93,19 @@ const typeCounts = {
   function applyFilter() {
     if (!select) return;
     const value = select.value;
-
-    // Show/hide individual publication items
     let visibleCount = 0;
-    document.querySelectorAll<HTMLElement>('li.pub-item').forEach((item) => {
+    document.querySelectorAll<HTMLElement>('li.pub-cite-item').forEach((item) => {
       const t = item.getAttribute('data-pub-type');
       const show = value === 'all' || t === value;
       item.style.display = show ? '' : 'none';
       if (show) visibleCount++;
     });
-
-    // Hide year groups whose items are all hidden
     document.querySelectorAll<HTMLElement>('.year-group').forEach((group) => {
       const anyVisible = Array.from(
-        group.querySelectorAll<HTMLElement>('li.pub-item'),
+        group.querySelectorAll<HTMLElement>('li.pub-cite-item'),
       ).some((item) => item.style.display !== 'none');
       group.style.display = anyVisible ? '' : 'none';
     });
-
-    // Update count text
     if (countDisplay) {
       if (value === 'all') {
         countDisplay.textContent = `Showing all ${visibleCount} publications`;
@@ -168,11 +116,7 @@ const typeCounts = {
         countDisplay.textContent = `Showing ${visibleCount} ${label}`;
       }
     }
-
-    // Show/hide "no results" message
-    if (noResults) {
-      noResults.hidden = visibleCount > 0;
-    }
+    if (noResults) noResults.hidden = visibleCount > 0;
   }
 
   select?.addEventListener('change', applyFilter);

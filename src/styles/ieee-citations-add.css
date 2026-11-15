@@ -1,0 +1,127 @@
+/* =====================================================================
+   IEEE REFERENCE-STYLE PUBLICATION LIST
+   ---------------------------------------------------------------------
+   Append this block to the end of your existing src/styles/global.css.
+   Reuses the `.pub-type` chip styles you already have (journal /
+   conference / book / chapter / preprint) so the left-column type pill
+   looks exactly like it did before, just placed under the number.
+   ===================================================================== */
+
+.pub-cite-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pub-cite-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1rem;
+  padding: 0.95rem 0;
+  border-top: 1px solid var(--border);
+  align-items: baseline;
+}
+.pub-cite-item:last-child { border-bottom: 1px solid var(--border); }
+.pub-cite-item:first-child { border-top: none; }
+
+/* Left column — number on top, type chip (icon + label) beneath */
+.pub-cite-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  padding-top: 0.1rem;
+  font-variant-numeric: tabular-nums;
+}
+.pub-cite-num {
+  font-family: var(--font-serif, 'Source Serif 4', Georgia, serif);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--accent, #1d3557);
+}
+
+/* Citation body */
+.pub-cite-body { min-width: 0; }
+
+.pub-cite-text {
+  font-family: var(--font-serif, 'Source Serif 4', Georgia, serif);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text, #1a2233);
+  margin: 0 0 0.5rem;
+}
+
+.pub-cite-authors { color: var(--text, #1a2233); }
+.pub-cite-authors strong {
+  font-weight: 700;
+  color: var(--accent, #1d3557);
+}
+.pub-cite-title { color: var(--text, #1a2233); }
+.pub-cite-venue {
+  font-style: italic;
+  color: var(--text-muted, #515c6d);
+}
+.pub-cite-year {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted, #515c6d);
+}
+.pub-cite-doi {
+  color: var(--accent, #1d3557);
+  text-decoration: none;
+  word-break: break-all;
+}
+.pub-cite-doi:hover { text-decoration: underline; }
+
+/* Secondary action chips row — kept small and understated */
+.pub-cite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-top: 0.3rem;
+  align-items: center;
+}
+
+.pub-cite-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-sans, 'IBM Plex Sans', system-ui, sans-serif);
+  font-size: 0.68rem;
+  line-height: 1.2;
+  color: var(--text-muted, #515c6d);
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+.pub-cite-chip > svg {
+  width: 10px !important;
+  height: 10px !important;
+  flex-shrink: 0;
+  stroke-width: 1.6;
+}
+.pub-cite-chip:hover {
+  background: var(--bg-muted, #f1f4f9);
+  color: var(--accent, #1d3557);
+  text-decoration: none;
+}
+
+.pub-cite-chip-citations {
+  background: var(--accent-bg, #e2eaf3);
+  color: var(--accent, #1d3557);
+  font-weight: 600;
+}
+.pub-cite-chip-citations:hover {
+  background: var(--accent, #1d3557);
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .pub-cite-item {
+    grid-template-columns: 80px 1fr;
+    gap: 0.7rem;
+  }
+  .pub-cite-text { font-size: 0.9rem; }
+  .pub-cite-num { font-size: 0.85rem; }
+}

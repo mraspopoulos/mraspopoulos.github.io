@@ -20,6 +20,23 @@ const citationLink = doi
   ? `https://doi.org/${doi}`
   : (d.semantic_scholar_id ? `https://www.semanticscholar.org/paper/${d.semantic_scholar_id}` : null);
 
+function highlightAuthor(authors: string): string {
+  if (!authors) return '';
+  const escape = (s: string) =>
+    s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  let out = escape(authors);
+  out = out.replace(
+    /\b(M\.?(?:arios)?\s+Raspopoulos)\b/gi,
+    '<strong>$1</strong>',
+  );
+  out = out.replace(
+    /\b(Raspopoulos,?\s+M\.?(?:arios)?)\b/gi,
+    '<strong>$1</strong>',
+  );
+  return out;
+}
+const authorsHtml = highlightAuthor(d.authors);
+
 const typeLabels: Record<string, string> = {
   journal: 'journal',
   conference: 'conf.',
@@ -39,56 +56,195 @@ const typeIcons: Record<string, string> = {
 const t = d.type;
 const label = typeLabels[t] ?? t;
 const icon = typeIcons[t] ?? typeIcons.journal;
+
+// Inline sizes so nothing in external CSS can override them.
+const chipIconStyle = 'width:11px;height:11px;flex-shrink:0;display:inline-block;vertical-align:-1px;';
+const typeIconStyle = 'width:9px;height:9px;flex-shrink:0;display:inline-block;';
 ---
 
-<li class="pub-item" data-pub-type={t}>
-  <div class="pub-year">
-    <span>{d.year}</span>
-    <span class={`pub-type ${t}`} title={`${label} publication`}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={icon} />
+<li class="pub-cite-item" data-pub-type={t}>
+  <div class="pub-cite-left">
+    <span class="pub-cite-year">{d.year}</span>
+    <span class={`pub-cite-type ${t}`} title={`${label} publication`}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={typeIconStyle} set:html={icon} />
       {label}
     </span>
   </div>
-  <div class="pub-body">
-    <p class="pub-title">{d.title}</p>
-    <p class="pub-venue">{d.authors} · <em>{d.venue}</em></p>
-    <div class="pub-links">
+  <div class="pub-cite-body">
+    <p class="pub-cite-text">
+      <span class="pub-cite-authors" set:html={authorsHtml} />{' '}
+      &ldquo;<span class="pub-cite-title">{d.title}</span>,&rdquo;{' '}
+      <em class="pub-cite-venue">{d.venue}</em>{', '}
+      <span class="pub-cite-year-inline">{d.year}</span>{d.doi && (
+        <>
+          {', doi: '}<a href={`https://doi.org/${d.doi}`} class="pub-cite-doi">{d.doi}</a>
+        </>
+      )}.
+    </p>
+    <div class="pub-cite-actions">
       {d.pdf && (
-        <a href={d.pdf}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <a href={d.pdf} class="pub-cite-chip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={chipIconStyle}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           PDF
         </a>
       )}
-      {d.doi && (
-        <a href={`https://doi.org/${d.doi}`}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          DOI
-        </a>
-      )}
       {d.url && !d.doi && (
-        <a href={d.url}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <a href={d.url} class="pub-cite-chip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={chipIconStyle}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           Link
         </a>
       )}
       {d.scholar && (
-        <a href={d.scholar}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <a href={d.scholar} class="pub-cite-chip">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={chipIconStyle}><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           Scholar
         </a>
       )}
       {citationCount !== null && citationCount > 0 && citationLink && (
-        <a href={citationLink} class="pub-citations"  title="Citation count from Semantic Scholar">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c0-4 3-7 7-7h.5"/><path d="M14 21c0-4 3-7 7-7"/><path d="M3 3h7v7h-7z"/><path d="M14 3h7v7h-7z"/></svg>
+        <a href={citationLink} class="pub-cite-chip pub-cite-chip-citations" title="Citation count from Semantic Scholar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={chipIconStyle}><path d="M3 21c0-4 3-7 7-7h.5"/><path d="M14 21c0-4 3-7 7-7"/><path d="M3 3h7v7h-7z"/><path d="M14 3h7v7h-7z"/></svg>
           Cited by {citationCount}
         </a>
       )}
       {d.bibtex && (
-        <a href={d.bibtex}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-13a2 2 0 0 1 2-2h3l2-3h6l2 3h3a2 2 0 0 1 2 2v13z"/><path d="M9 14l2 2 4-4"/></svg>
+        <a href={d.bibtex} class="pub-cite-chip" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style={chipIconStyle}><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           BibTeX
         </a>
       )}
     </div>
   </div>
 </li>
+
+<style>
+  .pub-cite-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    border-top: 1px solid rgba(29, 53, 87, 0.14);
+    align-items: baseline;
+    list-style: none;
+  }
+
+  .pub-cite-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding-top: 0.15rem;
+  }
+  .pub-cite-year {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--accent, #1d3557);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
+  }
+
+  /* Smaller type pill — scoped to the citation item, won't affect
+     other .pub-type usages elsewhere on the site */
+  .pub-cite-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-family: inherit;
+    font-size: 0.58rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    padding: 3px 7px 3px 5px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pub-cite-type.journal {
+    background: var(--accent-bg, #e2eaf3);
+    color: var(--accent, #1d3557);
+  }
+  .pub-cite-type.conference {
+    background: rgba(100, 116, 139, 0.12);
+    color: #475569;
+  }
+  .pub-cite-type.book,
+  .pub-cite-type.chapter {
+    background: #fff7e6;
+    color: #a16207;
+    border: 1px solid #fde68a;
+  }
+  .pub-cite-type.preprint {
+    background: rgba(100, 116, 139, 0.08);
+    color: #64748b;
+    font-style: italic;
+  }
+
+  .pub-cite-body { min-width: 0; }
+  .pub-cite-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0 0 0.5rem;
+    color: var(--text, #1a2233);
+  }
+  .pub-cite-authors strong {
+    font-weight: 700;
+    color: var(--accent, #1d3557);
+  }
+  .pub-cite-venue {
+    font-style: italic;
+    color: var(--text-muted, #515c6d);
+  }
+  .pub-cite-year-inline {
+    color: var(--text-muted, #515c6d);
+    font-variant-numeric: tabular-nums;
+  }
+  .pub-cite-doi {
+    color: var(--accent, #1d3557);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .pub-cite-doi:hover { text-decoration: underline; }
+
+  .pub-cite-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.5rem;
+    margin-top: 0.3rem;
+    align-items: center;
+  }
+  .pub-cite-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    color: var(--text-muted, #515c6d);
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-decoration: none;
+    background: transparent;
+    transition: background 0.15s, color 0.15s;
+  }
+  .pub-cite-chip:hover {
+    background: var(--bg-muted, #f1f4f9);
+    color: var(--accent, #1d3557);
+    text-decoration: none;
+  }
+  .pub-cite-chip-citations {
+    background: var(--accent-bg, #e2eaf3);
+    color: var(--accent, #1d3557);
+    font-weight: 600;
+  }
+  .pub-cite-chip-citations:hover {
+    background: var(--accent, #1d3557);
+    color: white;
+  }
+
+  @media (max-width: 640px) {
+    .pub-cite-item {
+      grid-template-columns: 68px 1fr;
+      gap: 0.7rem;
+    }
+    .pub-cite-text { font-size: 0.9rem; }
+    .pub-cite-year { font-size: 0.8rem; }
+  }
+</style>
