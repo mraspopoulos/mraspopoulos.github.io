@@ -57,7 +57,6 @@ const t = d.type;
 const label = typeLabels[t] ?? t;
 const icon = typeIcons[t] ?? typeIcons.journal;
 
-// Inline sizes so nothing in external CSS can override them.
 const chipIconStyle = 'width:11px;height:11px;flex-shrink:0;display:inline-block;vertical-align:-1px;';
 const typeIconStyle = 'width:9px;height:9px;flex-shrink:0;display:inline-block;';
 ---
@@ -142,8 +141,6 @@ const typeIconStyle = 'width:9px;height:9px;flex-shrink:0;display:inline-block;'
     letter-spacing: 0.02em;
   }
 
-  /* Smaller type pill — scoped to the citation item, won't affect
-     other .pub-type usages elsewhere on the site */
   .pub-cite-type {
     display: inline-flex;
     align-items: center;
@@ -188,6 +185,11 @@ const typeIconStyle = 'width:9px;height:9px;flex-shrink:0;display:inline-block;'
   .pub-cite-authors strong {
     font-weight: 700;
     color: var(--accent, #1d3557);
+  }
+  /* Paper title — now bold for emphasis */
+  .pub-cite-title {
+    color: var(--text, #1a2233);
+    font-weight: 700;
   }
   .pub-cite-venue {
     font-style: italic;

@@ -9,7 +9,6 @@ const sorted = all.sort((a, b) => {
   return (a.data.order ?? 0) - (b.data.order ?? 0);
 });
 
-// Group by year for the section headings — no numbering on items any more.
 const byYear: Record<number, typeof sorted> = {};
 for (const pub of sorted) {
   const year = pub.data.year;
@@ -56,7 +55,10 @@ const typeCounts = {
 
   {years.map((year) => (
     <div class="year-group" data-year={year}>
-      <h2 class="pub-year-heading">{year}</h2>
+      <h2 class="pub-year-heading">
+        <span class="pub-year-count">{byYear[year].length} {byYear[year].length === 1 ? 'publication' : 'publications'}</span>
+        <span>{year}</span>
+      </h2>
       <ul class="pub-cite-list">
         {byYear[year].map((pub) => (
           <PublicationItem pub={pub} />
@@ -71,13 +73,36 @@ const typeCounts = {
 </Base>
 
 <style>
+  /* Year banner — grey background with accent left border, stands out
+     clearly as a section divider without dominating the citation list. */
   .pub-year-heading {
-    font-size: 1.1rem;
-    color: var(--accent);
-    margin: 2rem 0 0.5rem;
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent, #1d3557);
+    background: var(--bg-tint, #eef2f7);
+    padding: 0.55rem 1rem;
+    margin: 2.25rem 0 0.75rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent, #1d3557);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
   }
+  .pub-year-count {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted, #515c6d);
+    order: 2;
+  }
+  .pub-year-heading > span:last-child { order: 1; }
+
+  .year-group:first-of-type .pub-year-heading { margin-top: 1rem; }
+
   .pub-cite-list {
     list-style: none !important;
     padding: 0 !important;
