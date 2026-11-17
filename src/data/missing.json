@@ -5,9 +5,9 @@
     "looked_up_by_doi": 51,
     "looked_up_by_s2_id": 6,
     "no_identifier": 0,
-    "lookup_ok": 52,
+    "lookup_ok": 53,
     "not_indexed": 1,
-    "lookup_failed": 4
+    "lookup_failed": 3
   },
   "no_identifier": [],
   "not_indexed_by_semantic_scholar": [
@@ -31,27 +31,19 @@
       "action": "Transient failure; should self-correct on the next run."
     },
     {
-      "file": "2012-mobility-concepts-for-imt-advanced.md",
-      "title": "Mobility Concepts for IMT-Advanced",
+      "file": "2018-multidevice-map-constrained-fingerprint-based-indoor-positio.md",
+      "title": "Multidevice Map-Constrained Fingerprint-Based Indoor Positioning Using 3-D Ray Tracing",
       "via": "doi",
-      "identifier": "10.1007/978-3-642-35155-6_25",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007%2F978-3-642-35155-6_25?fields=citationCount",
+      "identifier": "10.1109/tim.2017.2774181",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Ftim.2017.2774181?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     },
     {
-      "file": "2025-a-deep-q-network-dqn-framework-for-joint-optimization-of-ev.md",
-      "title": "A Deep Q-Network (DQN) Framework for Joint Optimization of EV Charging Station Placement and Vehicle Routing",
+      "file": "2026-AI-Machine-Learning-in-Cyber-PhysicalSystems.md",
+      "title": "Artificial Intelligence and Machine Learning in Cyber-Physical Systems A Unified Review of Methodologies for Smart Energy Systems and Intelligent Localization",
       "via": "doi",
-      "identifier": "10.1109/isc266238.2025.11293297",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fisc266238.2025.11293297?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2026-wi-fi-ftm-versus-uwb-for-3d-indoor-positioning.md",
-      "title": "Wi-Fi FTM Versus UWB for 3D Indoor Positioning",
-      "via": "doi",
-      "identifier": "10.1109/compsac69091.2026.00276",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fcompsac69091.2026.00276?fields=citationCount",
+      "identifier": "10.1109/access.2026.3704476",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Faccess.2026.3704476?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     }
   ]
