@@ -5,9 +5,9 @@
     "looked_up_by_doi": 51,
     "looked_up_by_s2_id": 6,
     "no_identifier": 0,
-    "lookup_ok": 49,
+    "lookup_ok": 52,
     "not_indexed": 1,
-    "lookup_failed": 7
+    "lookup_failed": 4
   },
   "no_identifier": [],
   "not_indexed_by_semantic_scholar": [
@@ -23,51 +23,27 @@
   ],
   "lookup_failed": [
     {
-      "file": "2013-a-binomial-distribution-approach-for-the-evaluation-of-indoo.md",
-      "title": "A binomial distribution approach for the evaluation of indoor positioning systems",
+      "file": "2006-radio-propagation-in-frequency-selective-buildings.md",
+      "title": "Radio propagation in frequency selective buildings",
       "via": "doi",
-      "identifier": "10.1109/ictel.2013.6632085",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fictel.2013.6632085?fields=citationCount",
+      "identifier": "10.1002/ett.1127",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1002%2Fett.1127?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     },
     {
-      "file": "2013-anchor-less-self-positioning-in-rectangular-room-based-on-se.md",
-      "title": "Anchor-less Self-Positioning in Rectangular Room Based on Sectorized Narrowband Antennas",
-      "via": "semantic_scholar_id",
-      "identifier": "s2:a1bb946818a155b35caa79fc7afc0dd522fe60db",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/a1bb946818a155b35caa79fc7afc0dd522fe60db?fields=citationCount",
+      "file": "2012-mobility-concepts-for-imt-advanced.md",
+      "title": "Mobility Concepts for IMT-Advanced",
+      "via": "doi",
+      "identifier": "10.1007/978-3-642-35155-6_25",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007%2F978-3-642-35155-6_25?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     },
     {
-      "file": "2013-map-aided-fingerprint-based-indoor-positioning.md",
-      "title": "Map-aided fingerprint-based indoor positioning",
+      "file": "2025-a-deep-q-network-dqn-framework-for-joint-optimization-of-ev.md",
+      "title": "A Deep Q-Network (DQN) Framework for Joint Optimization of EV Charging Station Placement and Vehicle Routing",
       "via": "doi",
-      "identifier": "10.1109/pimrc.2013.6666144",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fpimrc.2013.6666144?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2017-an-open-platform-for-studying-and-testing-context-aware-indo.md",
-      "title": "An Open Platform for Studying and Testing Context-Aware Indoor Positioning Algorithms",
-      "via": "doi",
-      "identifier": "10.1007/978-3-319-52593-8_3",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007%2F978-3-319-52593-8_3?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2025-3d-millimeter-wave-multi-target-sensing.md",
-      "title": "3D millimeter-Wave Multi-Target Sensing",
-      "via": "doi",
-      "identifier": "10.1109/ipin66788.2025.11213372",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fipin66788.2025.11213372?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
-    },
-    {
-      "file": "2025-enhancing-digital-heritage-experiences-evaluating-fine-tuned.md",
-      "title": "Enhancing Digital Heritage Experiences: Evaluating Fine-Tuned LLM Integration within a Cyber-Physical-Social Virtual Museum System",
-      "via": "doi",
-      "identifier": "10.1109/isemv67326.2025.00016",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fisemv67326.2025.00016?fields=citationCount",
+      "identifier": "10.1109/isc266238.2025.11293297",
+      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:10.1109%2Fisc266238.2025.11293297?fields=citationCount",
       "action": "Transient failure; should self-correct on the next run."
     },
     {
