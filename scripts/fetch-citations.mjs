@@ -1,40 +1,45 @@
 #!/usr/bin/env node
 /**
- * Fetch per-publication citation counts from Semantic Scholar.
+ * Fetch per-publication citation counts from Semantic Scholar, with
+ * monotonic protection against transient API glitches.
  *
- * Looks up each publication by whichever identifier it has:
- *   1. doi:                    — preferred, works for most papers
- *   2. semantic_scholar_id:    — for papers without a DOI (book chapters,
- *                                old conference proceedings). Find the ID
- *                                by opening the paper on semanticscholar.org
- *                                and copying the 40-char hex from the URL.
+ * Citation counts only ever go UP in reality — papers do not un-get-cited.
+ * If the fetched count for a paper is LOWER than what we already have on
+ * disk from yesterday, we treat that as suspicious, retry the lookup a
+ * few more times, and if it is STILL lower we keep the previous (higher)
+ * value and log the incident in missing.json.
  *
- * Papers with neither identifier are listed in missing.json as needing
- * attention. Aggregate stats (total citations, h-index, i10) are computed
- * locally from all successfully-looked-up counts.
+ * Supports lookup by:
+ *   - doi:                    preferred, works for most papers
+ *   - semantic_scholar_id:    for papers without a DOI
  *
  * Outputs:
  *   - src/data/stats.json
  *   - src/data/citations.json   (keyed by DOI or by "s2:{paperId}")
- *   - src/data/missing.json     (diagnostic)
+ *   - src/data/missing.json     diagnostic
  *
- * Env: SEMANTIC_SCHOLAR_API_KEY   optional but recommended
+ * Env:
+ *   SEMANTIC_SCHOLAR_API_KEY   optional but recommended
+ *   DISABLE_MONOTONIC_CLAMP    set to "1" to allow decreases (rare — for
+ *                              one-off manual recalibration only)
  */
 
-import { writeFileSync, readdirSync, readFileSync } from 'node:fs';
+import { writeFileSync, readdirSync, readFileSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const API_KEY = process.env.SEMANTIC_SCHOLAR_API_KEY || null;
 const REQUEST_DELAY_MS = API_KEY ? 300 : 1200;
+const DISABLE_CLAMP = process.env.DISABLE_MONOTONIC_CLAMP === '1';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = resolve(__dirname, '..', 'src', 'data');
 const pubsDir = resolve(__dirname, '..', 'src', 'content', 'publications');
 
-const headers = { 'Accept': 'application/json' };
+const headers = { Accept: 'application/json' };
 if (API_KEY) headers['x-api-key'] = API_KEY;
 
+// -------- HTTP with retry-on-429 --------
 async function withRetry(fn, label) {
   const delays = [2000, 5000, 15000, 30000];
   for (let i = 0; i <= delays.length; i++) {
@@ -56,6 +61,7 @@ async function get(url) {
   }, url.split('?')[0].split('/').pop());
 }
 
+// -------- Read publications --------
 function readPublications() {
   const files = readdirSync(pubsDir).filter((f) => f.endsWith('.md'));
   return files.map((f) => {
@@ -77,18 +83,34 @@ function readPublications() {
   });
 }
 
-// Build the lookup URL and the key to use in citations.json
+// -------- Read previous citations.json for comparison --------
+function readPreviousCounts() {
+  const path = resolve(dataDir, 'citations.json');
+  if (!existsSync(path)) return {};
+  try {
+    const parsed = JSON.parse(readFileSync(path, 'utf8'));
+    return parsed?.counts ?? {};
+  } catch {
+    return {};
+  }
+}
+
+// -------- Lookup plan per publication --------
 function planLookup(pub) {
   if (pub.doi) {
     return {
-      lookupUrl: `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(pub.doi)}?fields=citationCount`,
+      lookupUrl: (d) =>
+        `https://api.semanticscholar.org/graph/v1/paper/DOI:${encodeURIComponent(d)}?fields=citationCount`,
+      arg: pub.doi,
       key: pub.doi,
       via: 'doi',
     };
   }
   if (pub.semantic_scholar_id) {
     return {
-      lookupUrl: `https://api.semanticscholar.org/graph/v1/paper/${encodeURIComponent(pub.semantic_scholar_id)}?fields=citationCount`,
+      lookupUrl: (id) =>
+        `https://api.semanticscholar.org/graph/v1/paper/${encodeURIComponent(id)}?fields=citationCount`,
+      arg: pub.semantic_scholar_id,
       key: `s2:${pub.semantic_scholar_id}`,
       via: 'semantic_scholar_id',
     };
@@ -96,49 +118,135 @@ function planLookup(pub) {
   return null;
 }
 
-async function fetchAllCitations(pubs) {
-  const counts = {};
-  const notFound = []; // has an identifier but S2 didn't find it
-  const failed = [];
-  const noIdentifier = []; // no doi and no semantic_scholar_id
+// -------- Fetch a single count, returns number or null --------
+async function fetchCount(plan) {
+  const paper = await get(plan.lookupUrl(plan.arg));
+  return typeof paper?.citationCount === 'number' ? paper.citationCount : null;
+}
 
-  const lookupPlans = [];
+// -------- Main fetch loop with monotonic protection --------
+async function fetchAllCitations(pubs, previousCounts) {
+  const counts = {};
+  const notFound = [];
+  const failed = [];
+  const noIdentifier = [];
+  const suspiciousDecreases = [];
+
+  const plans = [];
   for (const p of pubs) {
     const plan = planLookup(p);
-    if (plan) lookupPlans.push({ pub: p, ...plan });
+    if (plan) plans.push({ pub: p, ...plan });
     else noIdentifier.push(p);
   }
 
-  for (let i = 0; i < lookupPlans.length; i++) {
-    const { pub, lookupUrl, key, via } = lookupPlans[i];
-    const idx = `[${String(i + 1).padStart(3, ' ')}/${lookupPlans.length}]`;
+  for (let i = 0; i < plans.length; i++) {
+    const { pub, key, via } = plans[i];
+    const idx = `[${String(i + 1).padStart(3, ' ')}/${plans.length}]`;
+    const previous = previousCounts[key];
+    const hasPrevious = typeof previous === 'number';
+
     try {
-      const paper = await get(lookupUrl);
-      const n = typeof paper?.citationCount === 'number' ? paper.citationCount : null;
-      if (n !== null) {
-        counts[key] = n;
-        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  ${n}\n`);
+      let fetchedCount = await fetchCount(plans[i]);
+
+      // Monotonic protection: if the new count is lower than what we had
+      // from yesterday, retry a couple more times with longer delays.
+      if (
+        !DISABLE_CLAMP &&
+        hasPrevious &&
+        fetchedCount !== null &&
+        fetchedCount < previous
+      ) {
+        const extraDelays = [3000, 8000]; // ms between retries
+        const attempts = [fetchedCount];
+        for (const delay of extraDelays) {
+          await new Promise((r) => setTimeout(r, delay));
+          try {
+            const retried = await fetchCount(plans[i]);
+            attempts.push(retried);
+            if (retried !== null && retried >= previous) {
+              fetchedCount = retried;
+              break;
+            }
+          } catch {
+            attempts.push(null);
+          }
+        }
+
+        // After all retries, if still lower than previous, keep previous
+        const finalMax = Math.max(previous, ...attempts.filter((n) => typeof n === 'number'));
+        if (finalMax > fetchedCount) {
+          suspiciousDecreases.push({
+            pub,
+            key,
+            via,
+            previous,
+            fetched: fetchedCount,
+            retried: attempts.slice(1),
+            kept: previous,
+          });
+          counts[key] = previous;
+          process.stdout.write(
+            `  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  ${fetchedCount} → kept ${previous} (decrease)\n`,
+          );
+          if (i < plans.length - 1) await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS));
+          continue;
+        }
+        // Retry succeeded in getting the correct (higher) number
+      }
+
+      if (fetchedCount !== null) {
+        counts[key] = fetchedCount;
+        const marker = hasPrevious && fetchedCount > previous ? ` (↑${fetchedCount - previous})` : '';
+        process.stdout.write(
+          `  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  ${fetchedCount}${marker}\n`,
+        );
       } else {
-        notFound.push({ pub, key, via, reason: 'paper found but citationCount was null' });
-        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  no count\n`);
+        // No count returned at all — if we had a previous value, keep it
+        if (hasPrevious) {
+          counts[key] = previous;
+          process.stdout.write(
+            `  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  no count → kept ${previous}\n`,
+          );
+        } else {
+          notFound.push({ pub, key, via, reason: 'paper found but citationCount was null' });
+          process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  no count\n`);
+        }
       }
     } catch (err) {
       const is404 = String(err.message).includes('404');
       if (is404) {
-        notFound.push({ pub, key, via, reason: 'not indexed by Semantic Scholar' });
-        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  not found\n`);
+        if (hasPrevious) {
+          // Paper vanished from the index temporarily — keep previous
+          counts[key] = previous;
+          process.stdout.write(
+            `  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  not found → kept ${previous}\n`,
+          );
+        } else {
+          notFound.push({ pub, key, via, reason: 'not indexed by Semantic Scholar' });
+          process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  not found\n`);
+        }
       } else {
-        failed.push({ pub, key, via, reason: err.message });
-        process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 45).padEnd(45)}  FAILED\n`);
+        if (hasPrevious) {
+          counts[key] = previous;
+          process.stdout.write(
+            `  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  FAILED → kept ${previous}\n`,
+          );
+        } else {
+          failed.push({ pub, key, via, reason: err.message });
+          process.stdout.write(`  ${idx} ${via.padEnd(4)}  ${key.slice(0, 40).padEnd(40)}  FAILED\n`);
+        }
       }
     }
-    if (i < lookupPlans.length - 1) {
+
+    if (i < plans.length - 1) {
       await new Promise((r) => setTimeout(r, REQUEST_DELAY_MS));
     }
   }
-  return { counts, notFound, failed, noIdentifier };
+
+  return { counts, notFound, failed, noIdentifier, suspiciousDecreases };
 }
 
+// -------- h-index (Hirsch) --------
 function computeHIndex(arr) {
   const sorted = [...arr].sort((a, b) => b - a);
   let h = 0;
@@ -149,9 +257,11 @@ function computeHIndex(arr) {
   return h;
 }
 
-console.log('Fetching Semantic Scholar per-paper counts and computing local aggregates.');
+// -------- main --------
+console.log('Fetching Semantic Scholar per-paper counts with monotonic protection.');
 console.log(`API key: ${API_KEY ? 'present' : 'not set (using shared pool)'}`);
-console.log(`Request pacing: ${REQUEST_DELAY_MS}ms\n`);
+console.log(`Request pacing: ${REQUEST_DELAY_MS}ms`);
+console.log(`Monotonic clamp: ${DISABLE_CLAMP ? 'DISABLED (allowing decreases)' : 'enabled (decreases blocked)'}\n`);
 
 try {
   const pubs = readPublications();
@@ -161,12 +271,17 @@ try {
   const noId = pubs.filter((p) => !p.doi && !p.semantic_scholar_id).length;
 
   console.log(`Publications on site: ${totalPubs}`);
-  console.log(`  looked up by DOI:               ${byDoi}`);
+  console.log(`  looked up by DOI:                ${byDoi}`);
   console.log(`  looked up by semantic_scholar_id: ${byS2Id}`);
-  console.log(`  no identifier at all:            ${noId}\n`);
+  console.log(`  no identifier at all:             ${noId}\n`);
+
+  const previousCounts = readPreviousCounts();
+  const previousCount = Object.keys(previousCounts).length;
+  console.log(`Previous citations.json: ${previousCount} entries from last run\n`);
 
   console.log('Looking up each paper ...\n');
-  const { counts, notFound, failed, noIdentifier } = await fetchAllCitations(pubs);
+  const { counts, notFound, failed, noIdentifier, suspiciousDecreases } =
+    await fetchAllCitations(pubs, previousCounts);
 
   const countsArr = Object.values(counts);
   const totalCitations = countsArr.reduce((s, n) => s + n, 0);
@@ -181,7 +296,7 @@ try {
     i10_index: i10Index,
     last_updated: today,
     source: 'Semantic Scholar',
-    note: 'Aggregates computed locally from per-paper Semantic Scholar counts. Papers with a doi: or semantic_scholar_id: in their frontmatter are looked up; others count toward works_count only.',
+    note: 'Aggregates computed locally from per-paper Semantic Scholar counts. Monotonic protection: decreases vs the previous day are retried and, if still lower, the older higher value is kept.',
   };
   writeFileSync(resolve(dataDir, 'stats.json'), JSON.stringify(statsOut, null, 2) + '\n', 'utf8');
 
@@ -201,6 +316,7 @@ try {
       lookup_ok: Object.keys(counts).length,
       not_indexed: notFound.length,
       lookup_failed: failed.length,
+      suspicious_decreases: suspiciousDecreases.length,
     },
     no_identifier: noIdentifier.map((p) => ({
       file: p.file,
@@ -209,10 +325,9 @@ try {
       venue: p.venue,
       type: p.type,
       isbn: p.isbn ?? null,
-      action:
-        p.isbn
-          ? 'Has ISBN — no DOI. To include in citation totals, look up the paper on semanticscholar.org, copy the 40-char hex id from the URL, and add: semantic_scholar_id: \'<id>\''
-          : 'No doi: or semantic_scholar_id: in frontmatter. Add one so this paper contributes to citation totals.',
+      action: p.isbn
+        ? 'Has ISBN but no DOI. To include in totals, look up the paper on semanticscholar.org, copy the 40-char hex id from the URL, and add: semantic_scholar_id: \'<id>\''
+        : 'No doi: or semantic_scholar_id: in frontmatter.',
     })),
     not_indexed_by_semantic_scholar: notFound.map((x) => ({
       file: x.pub.file,
@@ -223,8 +338,8 @@ try {
       reason: x.reason,
       action:
         x.via === 'doi'
-          ? 'Verify the DOI is correct on doi.org. If correct but Semantic Scholar still cannot find it, contact feedback@semanticscholar.org.'
-          : 'Verify the semantic_scholar_id is correct — open the paper on semanticscholar.org and re-copy the id from the URL.',
+          ? 'Verify the DOI on doi.org. If correct but Semantic Scholar has not indexed it, email feedback@semanticscholar.org.'
+          : 'Verify the semantic_scholar_id is correct.',
     })),
     lookup_failed: failed.map((x) => ({
       file: x.pub.file,
@@ -234,10 +349,21 @@ try {
       reason: x.reason,
       action: 'Transient failure; should self-correct on the next run.',
     })),
+    suspicious_decreases: suspiciousDecreases.map((x) => ({
+      file: x.pub.file,
+      title: x.pub.title,
+      via: x.via,
+      identifier: x.key,
+      previous: x.previous,
+      fetched_values: [x.fetched, ...x.retried],
+      kept: x.kept,
+      action:
+        'Semantic Scholar returned a lower citation count than yesterday. After 3 attempts the lower value persisted. Keeping the previous higher value as a safety measure. If the true count really did drop (very rare), you can run the script locally with DISABLE_MONOTONIC_CLAMP=1 to force a reset.',
+    })),
   };
   writeFileSync(resolve(dataDir, 'missing.json'), JSON.stringify(missing, null, 2) + '\n', 'utf8');
 
-  console.log('\n=== Aggregate stats (computed locally) ===');
+  console.log('\n=== Aggregate stats ===');
   console.log(`  works:      ${statsOut.works_count}`);
   console.log(`  citations:  ${statsOut.cited_by_count}`);
   console.log(`  h-index:    ${statsOut.h_index}`);
@@ -248,6 +374,7 @@ try {
   console.log(`  no identifier:             ${noIdentifier.length}`);
   console.log(`  not indexed by S2:         ${notFound.length}`);
   console.log(`  lookup failed:             ${failed.length}`);
+  console.log(`  suspicious decreases:      ${suspiciousDecreases.length} (reverted to previous value)`);
   console.log('\nDetails in src/data/missing.json');
 } catch (err) {
   console.error('\nFailed:', err.message);
