@@ -1,26 +1,27 @@
 {
-  "last_updated": "2026-11-25",
+  "last_updated": "2026-11-26",
   "summary": {
     "publications_on_site": 57,
     "looked_up_by_doi": 51,
     "looked_up_by_s2_id": 6,
     "no_identifier": 0,
     "lookup_ok": 56,
-    "not_indexed": 0,
-    "lookup_failed": 1,
+    "not_indexed": 1,
+    "lookup_failed": 0,
     "suspicious_decreases": 0
   },
   "no_identifier": [],
-  "not_indexed_by_semantic_scholar": [],
-  "lookup_failed": [
+  "not_indexed_by_semantic_scholar": [
     {
       "file": "2026-3-D-UWB-Anchor Autocalibration.md",
       "title": "3-D UWB Anchor Autocalibration via MDS and Multilateration With Paired-Anchor Height Decoupling",
+      "year": 2026,
       "via": "doi",
       "identifier": "doi: 10.1109/jispin.2026.3749195",
-      "reason": "Semantic Scholar 429 on https://api.semanticscholar.org/graph/v1/paper/DOI:doi%3A%2010.1109%2Fjispin.2026.3749195?fields=citationCount",
-      "action": "Transient failure; should self-correct on the next run."
+      "reason": "not indexed by Semantic Scholar",
+      "action": "Verify the DOI on doi.org. If correct but Semantic Scholar has not indexed it, email feedback@semanticscholar.org."
     }
   ],
+  "lookup_failed": [],
   "suspicious_decreases": []
 }
